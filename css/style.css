@@ -13,6 +13,8 @@
 
   --header-box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.04);
   --card-box-shadow: 0px 0.83348px 9.16833px 0px rgba(0, 0, 0, 0.07);
+  --card-box-shadow-hover: 0px 2px 15px 0px rgba(0, 0, 0, 0.15);
+
 }
 
 /* Fonts */
@@ -124,6 +126,9 @@ h6 {
 .shadow {
   box-shadow: var(--card-box-shadow) !important;
 }
+.shadow:hover {
+  box-shadow: var(--card-box-shadow-hover) !important;
+}
 
 /* Borders */
 .border-secondary {
@@ -156,6 +161,14 @@ h6 {
   appearance: none;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
+/* Animations */
+.scale-up {
+  transition: transform 0.2s ease;
+}
+.scale-up:hover {
+  transform: scale(1.075);
+}
+
 
 /* Custom styles */
 .container-fluid {
