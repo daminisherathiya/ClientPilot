@@ -63,6 +63,9 @@ body {
 p {
   margin-bottom: 0;
 }
+a {
+  text-decoration: none;
+}
 h1,
 h2,
 h3,
@@ -70,6 +73,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+  margin-bottom: 0;
 }
 
 /* Text colors */
@@ -158,7 +162,7 @@ nav {
 .navbar .nav-link:hover {
   color: var(--primary-color) !important;
 }
-.navbar .navbar-brand img {
+.logo {
   width: 14.625rem;
 }
 .tab-content.recommended-spacing {
@@ -207,6 +211,19 @@ nav {
   top: 62%;
   border-top: 0.094rem solid var(--light-gray);
   transform: translateY(-50%);
+}
+
+/* Footer */
+footer {
+  padding-top: 3.375rem;
+  font-feature-settings: 'salt' on, 'liga' off;
+}
+footer ul {
+  padding: 0;
+  list-style-type: none;
+}
+footer .border-bottom {
+  border-width: 0.09375rem !important;
 }
 
 @media (max-width: 992px) {
