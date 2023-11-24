@@ -1,0 +1,141 @@
+/* Variables */
+:root {
+  --primary-color: #ff6600;
+  --secondary-color: #757575;
+  --gray-color: #f3f3f3;
+  --green-color: #229427;
+
+  --divider-line-color: #e8e8ed;
+
+  --header-box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.04);
+  --card-box-shadow: 0px 0.83348px 9.16833px 0px rgba(0, 0, 0, 0.07);
+}
+
+/* Fonts */
+@font-face {
+  font-family: "OpenSans";
+  src: url("../font/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  /* font-display: swap; This ensures text remains visible during font loading */
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../font/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: "OpenSans";
+  src: url("../font/OpenSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../font/OpenSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../font/OpenSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../font/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+html {
+  font-size: max(13px,1.111vw);
+}
+
+body {
+  font-family: "OpenSans", sans-serif;
+  font-size: 0.9375rem; /* 15px */
+}
+
+/* Text color */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+.text-secondary {
+  color: var(--secondary-color) !important;
+}
+
+/* Background color */
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+.bg-gray {
+  background-color: var(--gray-color) !important;
+}
+.bg-green {
+  background-color: var(--green-color) !important;
+}
+
+/* Font size */
+.fs-12px {
+  font-size: 0.75rem;
+}
+.fs-14px {
+  font-size: 0.875rem;
+}
+.fs-15px {
+  font-size: 0.9375rem;
+}
+.fs-16px {
+  font-size: 1rem;
+}
+.fs-18px {
+  font-size: 1.125rem;
+}
+.fs-22px {
+  font-size: 1.375rem;
+}
+.fs-24px {
+  font-size: 1.5rem;
+}
+.fs-26px {
+  font-size: 1.625rem;
+}
+.fs-32px {
+  font-size: 2rem;
+}
+
+/* Custom styles */
+
+.container-fluid {
+  max-width: 120rem;
+  padding: 0 3.4375rem;
+}
+nav {
+  box-shadow: var(--header-box-shadow);
+}
+.navbar .nav-link.active {
+  color: var(--primary-color) !important;
+  font-weight: 700;
+}
+.navbar .nav-link:hover {
+  color: var(--primary-color) !important;
+}
+.navbar .navbar-brand img {
+  width: 14.625rem;
+}
+
+@media (max-width: 992px) {
+  /* .container-fluid {
+    padding: 0 1.4375rem;
+  } */
+  /* .navbar .navbar-brand img {
+    width: 11.625rem;
+  } */
+}
