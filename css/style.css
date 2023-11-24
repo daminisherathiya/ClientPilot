@@ -19,47 +19,42 @@
   src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
-  /* font-display: swap; This ensures text remains visible during font loading */
 }
-
 @font-face {
   font-family: "OpenSans";
   src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
-
 @font-face {
   font-family: "OpenSans";
   src: url("../fonts/OpenSans-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
-
 @font-face {
   font-family: "OpenSans";
   src: url("../fonts/OpenSans-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
-
 @font-face {
   font-family: "OpenSans";
   src: url("../fonts/OpenSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
-
 @font-face {
   font-family: "OpenSans";
   src: url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
+
+/* Custom resets */
 html {
   font-size: max(13px, 1.111vw);
 }
-
 body {
   font-family: "OpenSans", sans-serif;
   font-size: 0.9375rem; /* 15px */
@@ -76,7 +71,8 @@ h5,
 h6 {
   font-weight: 700;
 }
-/* Text color */
+
+/* Text colors */
 .text-primary {
   color: var(--primary-color) !important;
 }
@@ -87,7 +83,7 @@ h6 {
   color: var(--light-gray) !important;
 }
 
-/* Background color */
+/* Background colors */
 .bg-primary {
   background-color: var(--primary-color) !important;
 }
@@ -98,7 +94,7 @@ h6 {
   background-color: var(--green-color) !important;
 }
 
-/* Font size */
+/* Font sizes */
 .fs-12px {
   font-size: 0.781rem;
 }
@@ -127,11 +123,12 @@ h6 {
   font-size: 2rem;
 }
 
-/* Box shadow */
+/* Box shadows */
 .shadow {
   box-shadow: var(--card-box-shadow) !important;
 }
-/* Border */
+
+/* Borders */
 .border-secondary {
   border-color: var(--border-color-primary) !important;
 }
@@ -145,8 +142,8 @@ h6 {
 .border-start {
   border-width: 0.052rem !important;
 }
-/* Custom styles */
 
+/* Custom styles */
 .container-fluid {
   max-width: 120rem;
   padding: 0 3.4375rem;
@@ -198,7 +195,7 @@ nav {
   display: inline-block;
 }
 .strikethrough::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
