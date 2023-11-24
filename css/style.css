@@ -161,11 +161,13 @@ nav {
 .navbar .navbar-brand img {
   width: 14.625rem;
 }
+.tab-content.recommended-spacing {
+  margin-top: 2rem;
+}
 .billed-card {
   padding: 0.625rem;
   border-radius: 0.625rem;
   position: relative;
-  margin-top: 2rem;
 }
 .billed-card .gridImg {
   width: 6.25rem;
@@ -178,10 +180,13 @@ nav {
   height: 11px;
 }
 .billed-card .key-feature-divider-up {
-  padding: 0 0.625rem 2.125rem 0.625rem;
+  padding: 0 0.625rem;
+}
+.billed-card .key-feature-divider-up button {
+  margin-bottom: 2.125rem;
 }
 .billed-card .key-feature-divider-down {
-  padding-top: 2.125rem;
+  padding: 2.125rem 0.625rem 0 0.625rem;
 }
 .billed-card .recommended {
   position: absolute;
