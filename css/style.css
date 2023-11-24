@@ -5,6 +5,7 @@
   --gray-color: #f3f3f3;
   --green-color: #229427;
   --light-gray: #ababab;
+  --midnight-blue: #3B3E66;
 
   --divider-line-color: #e8e8ed;
   --border-color-primary: #f5f5f5;
@@ -84,7 +85,10 @@ h6 {
   color: var(--secondary-color) !important;
 }
 .text-light-gray {
-  color: var(--light-gray) !important;
+  color: var(--light-gray);
+}
+.text-midnight-blue {
+  color: var(--midnight-blue);
 }
 
 /* Background colors */
@@ -147,6 +151,25 @@ h6 {
   border-width: 0.052rem !important;
 }
 
+/* Radio button */
+.input-radio:checked {
+  box-shadow: 0px 0px 0px 1px var(--primary-color);
+  background-color: var(--primary-color);
+}
+.input-radio {
+  box-shadow: 0px 0px 0px 1px#E2E2E2;
+  border: 1px solid;
+  border: 3px solid #fff;
+  font-size: 3em;
+  width: 1.354375rem;
+  height: 1.354375rem;
+  margin-right: 1.296875rem;
+  background-clip: border-box;
+  border-radius: 50%;
+  appearance: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
 /* Custom styles */
 .container-fluid {
   max-width: 120rem;
@@ -199,6 +222,16 @@ nav {
   left: 0;
   border-radius: 0.625rem 0.625rem 0px 0px;
 }
+.nav.nav-pills {
+  margin-top: 3.75rem;
+  margin-bottom: 3.33375rem;
+}
+.nav.nav-pills .active label p {
+  font-weight: 700;
+}
+.spacing {
+  margin-bottom: 8.091875rem;
+}
 .strikethrough {
   position: relative;
   display: inline-block;
@@ -216,7 +249,7 @@ nav {
 /* Footer */
 footer {
   padding-top: 3.375rem;
-  font-feature-settings: 'salt' on, 'liga' off;
+  font-feature-settings: "salt" on, "liga" off;
 }
 footer ul {
   padding: 0;

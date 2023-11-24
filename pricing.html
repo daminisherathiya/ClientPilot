@@ -13,7 +13,7 @@
 </head>
 
 <body class="bg-white">
-  <nav class="navbar navbar-expand-lg pt-3 pb-2">
+  <nav class="navbar navbar-expand-lg pt-3 pb-2 bg-white sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand py-0" href="#" aria-label="Home page"><img class="logo" src="./images/logo-with-name.svg"
           alt="Company logo with name"></a>
@@ -52,35 +52,32 @@
     <section>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12 mb-5">
-            <div class="d-flex justify-content-center">
-              <ul class="nav nav-pills mb-3 d-inline-flex shadow border border-secondary p-4 rounded-3" id="pills-tab"
-                role="tablist">
-                <li class="nav-item" role="presentation">
-                  <div id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab"
-                    aria-controls="pills-home" aria-selected="true">
-                    <div class="form-check">
-                      <input class="form-check-input radio-button__input" type="radio" name="flexRadioDefault"
-                        id="flexRadioDefault1">
-                      <label class="form-check-label" for="flexRadioDefault1">
-                        Billed monthly
+          <div class="col-12 spacing">
+            <div class="row justify-content-center">
+              <div class="col-6">
+                <ul class="nav nav-pills d-inline-flex shadow border border-secondary py-3 px-4 rounded-3 w-100"
+                  id="pills-tab" role="tablist">
+                  <li class="nav-item w-50" role="presentation">
+                    <div class="active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                      type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                      <label class="d-flex align-items-center"><input type="radio" class="input-radio py-1" name="pilih"
+                          checked>
+                        <p class="text-midnight-blue py-1 ps-4 border-start">Billed monthly</p>
                       </label>
                     </div>
-                  </div>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <div id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
-                    role="tab" aria-controls="pills-profile" aria-selected="false">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-                        checked>
-                      <label class="form-check-label" for="flexRadioDefault2">
-                        Billed annually
+                  </li>
+                  <li class="nav-item w-50" role="presentation">
+                    <div id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
+                      role="tab" aria-controls="pills-profile" aria-selected="false">
+                      <label class="d-flex align-items-center"><input type="radio" class="input-radio py-1"
+                          name="pilih">
+                        <p class="text-midnight-blue py-1 ps-4 border-start">Billed annually</p><button
+                          class="btn bg-green text-white fw-bold fs-14px ms-4">Save 30%</button>
                       </label>
                     </div>
-                  </div>
-                </li>
-              </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="tab-content recommended-spacing" id="pills-tabContent">
               <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
