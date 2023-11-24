@@ -24,16 +24,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a class="nav-link text-secondary px-0 px-lg-3" aria-current="page" href="#">Home</a>
+            <a class="nav-link text-medium-gray px-0 px-lg-3" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-secondary px-0 px-lg-3 active" href="#">Pricing</a>
+            <a class="nav-link text-medium-gray px-0 px-lg-3 active" href="#">Pricing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-secondary px-0 px-lg-3" href="#">Why Client Pilot?</a>
+            <a class="nav-link text-medium-gray px-0 px-lg-3" href="#">Why Client Pilot?</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-secondary px-0 px-lg-3" href="#">Contact Us</a>
+            <a class="nav-link text-medium-gray px-0 px-lg-3" href="#">Contact Us</a>
           </li>
         </ul>
         <form class="d-lg-flex align-items-center" role="search">
@@ -58,20 +58,21 @@
                 <ul class="nav nav-pills d-inline-flex shadow border border-secondary py-3 px-4 rounded-3 w-100"
                   id="pills-tab" role="tablist">
                   <li class="nav-item w-50" role="presentation">
-                    <div class="active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-                      type="button" role="tab" aria-controls="pills-home" aria-selected="true">
-                      <label class="d-flex align-items-center"><input type="radio" class="input-radio py-1" name="pilih"
+                    <div id="pills-billed-monthly-tab" class="active" data-bs-toggle="pill"
+                      data-bs-target="#pills-billed-monthly" role="tab" aria-controls="pills-billed-monthly"
+                      aria-selected="true">
+                      <label class="d-flex align-items-center cursor-pointer"><input type="radio" class="input-radio py-1 cursor-pointer" name="pilih"
                           checked>
-                        <p class="text-midnight-blue py-1 ps-4 border-start">Billed monthly</p>
+                        <p class="text-midnight-blue py-1 ps-4 border-start">Billed Monthly</p>
                       </label>
                     </div>
                   </li>
                   <li class="nav-item w-50" role="presentation">
-                    <div id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
-                      role="tab" aria-controls="pills-profile" aria-selected="false">
-                      <label class="d-flex align-items-center"><input type="radio" class="input-radio py-1"
+                    <div id="pills-billed-annually-tab" data-bs-toggle="pill" data-bs-target="#pills-billed-annually"
+                      role="tab" aria-controls="pills-billed-annually" aria-selected="false">
+                      <label class="d-flex align-items-center cursor-pointer"><input type="radio" class="input-radio py-1 cursor-pointer"
                           name="pilih">
-                        <p class="text-midnight-blue py-1 ps-4 border-start">Billed annually</p><button
+                        <p class="text-midnight-blue py-1 ps-4 border-start">Billed Annually</p><button
                           class="btn bg-green text-white fw-bold fs-14px ms-4">Save 30%</button>
                       </label>
                     </div>
@@ -80,18 +81,18 @@
               </div>
             </div>
             <div class="tab-content recommended-spacing" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
-                tabindex="0">
+              <div class="tab-pane fade show active" id="pills-billed-monthly" role="tabpanel"
+                aria-labelledby="pills-billed-monthly-tab" tabindex="0">
                 <div class="row">
                   <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                     <div class="billed-card shadow pt-5 h-100">
-                      <div class="mb-3"><img class="gridImg" src="./images/square-circle-grid-icon.svg"
+                      <div class="mb-3"><img class="gridImg" src="./images/essential.svg"
                           alt="Square circle grid icon">
                       </div>
                       <div class="key-feature-divider-up">
                         <h3 class="fs-18px text-black mb-2">Essential</h3>
-                        <h4 class="fs-15px text-black mb-3">1 location</h4>
-                        <p class="mb-4">Get organized and set up simple sales processes quickly</p>
+                        <h4 class="fs-15px text-black mb-3">1 Location</h4>
+                        <p class="mb-4 text-capitalize">Get organized and set up simple sales processes quickly</p>
                         <p class="fs-26px text-black mb-0 fw-bold">$19.99</p>
                         <span class="text-light-gray fs-14px pb-3 d-inline-block">Per Month</span>
                         <div class="border-bottom border-divider"><button
@@ -101,9 +102,9 @@
                       <div class="key-feature-divider-down">
                         <h4 class="text-primary fs-15px mb-4">ALL PLANS INCLUDE:</h4>
                         <ul>
-                          <li class="mb-3">Lead, deal, contact, calendar and Client Pilot management</li>
-                          <li class="mb-3">Seamless data import and 400+ integrations</li>
-                          <li class="mb-3">24/7, multi-language support</li>
+                          <li class="mb-3 text-capitalize">Lead, deal, contact, calendar and Client Pilot management</li>
+                          <li class="mb-3 text-capitalize">Seamless data import and 400+ integrations</li>
+                          <li class="mb-3 text-capitalize">24/7, multi-language support</li>
                         </ul>
                       </div>
                     </div>
@@ -113,86 +114,86 @@
                       <div class="recommended bg-primary py-1 w-100 text-center">
                         <p class="text-white fw-bold">Recommended</p>
                       </div>
-                      <div class="mb-3"><img class="gridImg" src="./images/square-circle-grid-icon.svg"
+                      <div class="mb-3"><img class="gridImg" src="./images/advanced.svg"
                           alt="Square circle grid icon">
                       </div>
-                      <div class="border-bottom border-divider key-feature-divider-up">
+                      <div class="key-feature-divider-up">
                         <h3 class="fs-18px text-black mb-2">Advanced</h3>
-                        <h4 class="fs-15px text-black mb-3">3 locations</h4>
-                        <p class="mb-4">Never miss the next step with easy-to-use email and automation</p>
+                        <h4 class="fs-15px text-black mb-3">3 Locations</h4>
+                        <p class="mb-4 text-capitalize">Never miss the next step with easy-to-use email and automation</p>
                         <p class="fs-26px text-black mb-0 fw-bold">$17.99<span
                             class="ms-4 fw-normal text-light-gray strikethrough">$19.99</span></p>
                         <span class="text-light-gray fs-14px pb-3 d-inline-block">Per Month</span>
-                        <button
+                        <div class="border-bottom border-divider"><button
                           class="btn bg-primary text-white fs-12px fw-bold px-4 py-2 w-100 rounded-pill mt-1">Start 14
-                          days free trial</button>
+                          days free trial</button></div>
                       </div>
                       <div class="key-feature-divider-down">
                         <h4 class="text-primary fs-15px mb-4">KEY FEATURES:</h4>
                         <ul>
-                          <li class="mb-3">Full email sync with templates, open and click tracking and group emailing
+                          <li class="mb-3 text-capitalize">Full email sync with templates, open and click tracking and group emailing
                           </li>
-                          <li class="mb-3">Automations builder, including email sequences</li>
-                          <li class="mb-3">Meeting, email and video call scheduling</li>
+                          <li class="mb-3 text-capitalize">Automations builder, including email sequences</li>
+                          <li class="mb-3 text-capitalize">Meeting, email and video call scheduling</li>
                         </ul>
                       </div>
                     </div>
                   </div>
                   <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                     <div class="billed-card shadow pt-5 h-100">
-                      <div class="mb-3"><img class="gridImg" src="./images/square-circle-grid-icon.svg"
+                      <div class="mb-3"><img class="gridImg" src="./images/professional.svg"
                           alt="Square circle grid icon">
                       </div>
-                      <div class="border-bottom border-divider key-feature-divider-up">
+                      <div class="key-feature-divider-up">
                         <h3 class="fs-18px text-black mb-2">Professional</h3>
-                        <h4 class="fs-15px text-black mb-3">5 locations</h4>
-                        <p class="mb-4">Optimize performance with more customizations and reporting</p>
+                        <h4 class="fs-15px text-black mb-3">5 Locations</h4>
+                        <p class="mb-4 text-capitalize">Optimize performance with more customizations and reporting</p>
                         <p class="fs-26px text-black mb-0 fw-bold">$16.99<span
                             class="ms-4 fw-normal text-light-gray strikethrough">$19.99</span></p>
                         <span class="text-light-gray fs-14px pb-3 d-inline-block">Per Month</span>
-                        <button
+                        <div class="border-bottom border-divider"><button
                           class="btn bg-gray text-black fs-12px fw-bold px-4 py-2 w-100 rounded-pill mt-1">Selected
-                          Plan</button>
+                          Plan</button></div>
                       </div>
                       <div class="key-feature-divider-down">
                         <h4 class="text-primary fs-15px mb-4">KEY FEATURES:</h4>
                         <ul>
-                          <li class="mb-3">Streamlined lead routing and account access controls for teams</li>
-                          <li class="mb-3">Revenue forecasts and deeper reporting capabilities</li>
-                          <li class="mb-3">Extra deal and field customization options</li>
+                          <li class="mb-3 text-capitalize">Streamlined lead routing and account access controls for teams</li>
+                          <li class="mb-3 text-capitalize">Revenue forecasts and deeper reporting capabilities</li>
+                          <li class="mb-3 text-capitalize">Extra deal and field customization options</li>
                         </ul>
                       </div>
                     </div>
                   </div>
                   <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                     <div class="billed-card shadow pt-5 h-100">
-                      <div class="mb-3"><img class="gridImg" src="./images/square-circle-grid-icon.svg"
+                      <div class="mb-3"><img class="gridImg" src="./images/enterprise.svg"
                           alt="Square circle grid icon">
                       </div>
-                      <div class="border-bottom border-divider key-feature-divider-up">
+                      <div class="key-feature-divider-up">
                         <h3 class="fs-18px text-black mb-2">Enterprise</h3>
                         <h4 class="fs-15px text-black mb-3">Unlimited Locations</h4>
-                        <p class="mb-4">Experience Client Pilot without limits and have ultimate peace of mind</p>
-                        <p class="fs-26px text-black mb-0 fw-bold">$19.99</p>
+                        <p class="mb-4 text-capitalize">Experience Client Pilot without limits and have ultimate peace of mind</p>
+                        <p class="fs-26px text-black mb-0 fw-bold">$99.99</p>
                         <span class="text-light-gray fs-14px pb-3 d-inline-block">Per Month</span>
-                        <button
+                        <div class="border-bottom border-divider"><button
                           class="btn bg-primary text-white fs-12px fw-bold px-4 py-2 w-100 rounded-pill mt-1">Start 14
-                          days free trial</button>
+                          days free trial</button></div>
                       </div>
                       <div class="key-feature-divider-down">
                         <h4 class="text-primary fs-15px mb-4">KEY FEATURES:</h4>
                         <ul>
-                          <li class="mb-3">Enhanced security preferences</li>
-                          <li class="mb-3">Complete access to all features</li>
-                          <li class="mb-3">Unlimited reports and customizations</li>
+                          <li class="mb-3 text-capitalize">Enhanced security preferences</li>
+                          <li class="mb-3 text-capitalize">Complete access to all features</li>
+                          <li class="mb-3 text-capitalize">Unlimited reports and customizations</li>
                         </ul>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
-                tabindex="0">
+              <div class="tab-pane fade" id="pills-billed-annually" role="tabpanel"
+                aria-labelledby="pills-billed-annually-tab" tabindex="0">
                 ...
               </div>
             </div>
@@ -204,12 +205,16 @@
       <div class="container-fluid">
         <div class="row pb-4 border-bottom border-white">
           <div class="col-sm-5">
-            <div class="text-center d-inline-block">
+            <div class="d-inline-block">
               <div class="mb-2">
                 <a href="#" aria-label="Home page"><img class="logo" src="./images/footer-logo-with-name.svg"
                     alt="Company logo with name"></a>
               </div>
-              <div class="pt-1"><img src="./images/social-icon.svg" alt="Social icon"></div>
+              <div class="pt-1 social-links d-flex align-items-center justify-content-end me-4">
+                <div class="me-4"><a href="#" aria-label="Instagram account"><img src="./images/instagram.svg" alt=""></a></div>
+                <div class="me-4"><a href="#" aria-label="Facebook account"><img src="./images/facebook.svg" alt=""></a></div>
+                <div><a href="#" aria-label="Twitter account"><img src="./images/twitter.svg" alt=""></a></div>
+              </div>
             </div>
           </div>
           <div class="col-sm-7 mt-4 mt-sm-0">
