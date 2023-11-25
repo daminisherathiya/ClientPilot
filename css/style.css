@@ -186,6 +186,7 @@ nav {
   padding: 0.625rem;
   border-radius: 0.625rem;
   position: relative;
+  padding-top: 2.5525rem;
 }
 .billed-card .gridImg {
   width: 6.25rem;
@@ -317,5 +318,8 @@ footer .social-links div img {
   }
   .input-radio {
     margin-right: 0.9rem;
+  }
+  .billed-card {
+    padding-top: 1.7525rem;
   }
 }
