@@ -125,7 +125,7 @@ h6 {
 .shadow {
   box-shadow: var(--card-box-shadow) !important;
 }
-.shadow:hover {
+.card-hover:hover {
   box-shadow: var(--card-box-shadow-hover) !important;
 }
 
@@ -185,6 +185,10 @@ h6 {
 .cursor-pointer {
   cursor: pointer;
 }
+.btn-lg {
+  padding: 0.66875rem 1.5rem;
+  min-height: 2.875rem;
+}
 
 /* Custom styles */
 .container-fluid {
@@ -196,6 +200,7 @@ nav .container-fluid {
 }
 nav {
   box-shadow: var(--header-box-shadow);
+  min-height: 5rem;
 }
 .navbar .nav-link.active {
   color: var(--primary-color) !important;
@@ -296,6 +301,11 @@ footer .social-links div img {
 @media (max-width: 992px) {
   .spacing {
     margin-bottom: 3.091875rem;
+  }
+  .btn-lg {
+    padding-top: 0.46875rem;
+    padding-bottom: 0.46875rem;
+    min-height: auto;
   }
 }
 @media (max-width: 768px) {
