@@ -168,6 +168,23 @@ h6 {
   appearance: none;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
+/* Common styles */
+.strikethrough {
+  position: relative;
+  display: inline-block;
+}
+.strikethrough::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 62%;
+  border-top: 0.094rem solid var(--dusty-gray-color);
+  transform: translateY(-50%);
+}
+.cursor-pointer {
+  cursor: pointer;
+}
 
 /* Custom styles */
 .container-fluid {
@@ -246,22 +263,6 @@ nav {
 .spacing {
   margin-bottom: 8.091875rem;
 }
-.strikethrough {
-  position: relative;
-  display: inline-block;
-}
-.strikethrough::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 62%;
-  border-top: 0.094rem solid var(--dusty-gray-color);
-  transform: translateY(-50%);
-}
-.cursor-pointer {
-  cursor: pointer;
-}
 
 /* Footer */
 footer {
@@ -298,7 +299,8 @@ footer .social-links div img {
   }
 }
 @media (max-width: 768px) {
-  .container-fluid, nav .container-fluid {
+  .container-fluid,
+  nav .container-fluid {
     padding: 0 1.6375rem;
   }
   .nav.nav-pills {
