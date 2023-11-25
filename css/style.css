@@ -172,7 +172,10 @@ h6 {
 /* Custom styles */
 .container-fluid {
   max-width: 120rem;
-  padding: 0 3.4375rem;
+  padding: 0 4.375rem;
+}
+nav .container-fluid {
+  padding: 0 3.75rem;
 }
 nav {
   box-shadow: var(--header-box-shadow);
@@ -238,7 +241,7 @@ nav {
   font-weight: 700;
 }
 .nav.nav-pills label span {
-  min-width: 8.75rem;
+  min-width: 8.55rem;
 }
 .spacing {
   margin-bottom: 8.091875rem;
@@ -295,7 +298,7 @@ footer .social-links div img {
   }
 }
 @media (max-width: 768px) {
-  .container-fluid {
+  .container-fluid, nav .container-fluid {
     padding: 0 1.6375rem;
   }
   .nav.nav-pills {
