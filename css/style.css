@@ -9,6 +9,8 @@
   --stone-gray-color: #707070;
   --warning-color: #ff3f3f;
   --input-placeholder-color: #d1d3dd;
+  --light-peach: #fff4ec;
+  --lign-blue: #eaeef6;
 
   --divider-line-color: #e8e8ed;
   --border-primary-color: #f5f5f5;
@@ -97,6 +99,12 @@ h6 {
 .bg-green {
   background-color: var(--green-color) !important;
 }
+.bg-light-peach {
+  background-color: var(--light-peach);
+}
+.bg-light-blue {
+  background-color: var(--lign-blue);
+}
 
 /* Font sizes */
 .fs-12px {
@@ -136,11 +144,20 @@ h6 {
 }
 
 /* Borders */
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
 .border-gray {
   border-color: var(--gray-color) !important;
 }
 .border-divider {
   border-color: var(--divider-line-color) !important;
+}
+.border-light-gray {
+  border-color: var(--input-border-color) !important;
+}
+.border-dusty-gray {
+  border-color: var(--dusty-gray-color) !important;
 }
 .border-thin {
   border-width: 0.053rem !important;
@@ -203,6 +220,14 @@ input.custom-input:focus {
 .btn-lg {
   padding: 0.66875rem 1.5rem;
   min-height: 2.875rem;
+}
+.icon-sm {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.icon-md {
+  width: 1.3125rem;
+  height: 1.3125rem;
 }
 
 /* Custom styles */
@@ -292,6 +317,36 @@ nav {
 .registration > div:nth-child(2) {
   padding: 2.375rem 5.1875rem 2.75rem 3.375rem;
 }
+.add-ons {
+  padding: 2rem 5.3125rem;
+  margin-top: 5rem;
+  margin-bottom: 6.625rem;
+}
+.add-ons .sub-header {
+  margin-bottom: 4.0625rem;
+}
+.add-ons-card {
+  border-radius: 0.75rem;
+  padding: 3.125rem 1.875rem 3.125rem 1.75rem;
+  margin-bottom: 2.8125rem;
+}
+.add-ons-card .gridImg {
+  width: 7.625rem;
+  margin-right: 1.25rem;
+}
+.add-ons-card .watch-video-btn {
+  margin-top: 1.25rem;
+}
+.add-ons-card .feature-list {
+  margin-top: 0.625rem;
+}
+.add-ons-card .feature-list .feature-item {
+  padding: 0.625rem 0;
+}
+.add-ons-card .free-trial-period {
+  padding-left: 2.875rem;
+  width: 15rem;
+}
 
 /* Footer */
 footer {
@@ -322,7 +377,13 @@ footer .social-links div img {
 }
 
 /* Media queries */
-@media (max-width: 992px) {
+@media (max-width: 1199px) {
+  .add-ons {
+    padding-left: 4.3125rem;
+    padding-right: 4.3125rem;
+  }
+}
+@media (max-width: 991px) {
   .spacing {
     margin-bottom: 3.091875rem;
   }
@@ -337,8 +398,22 @@ footer .social-links div img {
     padding-bottom: 0.46875rem;
     min-height: auto;
   }
+  .add-ons-card .border-end {
+    border-right: none !important;
+    border-bottom: 1px solid;
+  }
+  .add-ons-card .free-trial-period {
+    padding-left: 0;
+    width: auto;
+  }
+  .add-ons-card .gridImg {
+    width: 6.625rem;
+  }
+  .add-ons .sub-header {
+    margin-bottom: 3.0625rem;
+  }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container-fluid,
   nav .container-fluid {
     padding: 0 1.6375rem;
@@ -368,8 +443,19 @@ footer .social-links div img {
   .box-border-radius {
     border-radius: 0.825rem;
   }
+  .add-ons {
+    padding-left: 2.3125rem;
+    padding-right: 2.3125rem;
+  }
+  .add-ons-card {
+    padding: 2.125rem 1.25rem 1.25rem 1.25rem;
+    margin-bottom: 1.8125rem;
+  }
+  .add-ons .sub-header {
+    margin-bottom: 2.0625rem;
+  }
 }
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .nav.nav-pills .nav-item {
     width: 100%;
   }
@@ -398,5 +484,17 @@ footer .social-links div img {
   .registration {
     margin-left: 0;
     margin-right: 0;
+  }
+  .add-ons {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin: 2.75rem 0;
+  }
+  .add-ons h3,
+  .add-ons h4 {
+    font-size: 1.125rem;
+  }
+  .add-ons-card .gridImg {
+    width: 5.625rem;
   }
 }
