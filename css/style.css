@@ -296,7 +296,7 @@ nav {
 .billed-card .key-feature-divider-up {
   padding: 0 0.625rem;
 }
-.billed-card .key-feature-divider-up button {
+.billed-card .key-feature-divider-up a {
   margin-bottom: 2.125rem;
 }
 .billed-card .key-feature-divider-down {
@@ -420,7 +420,7 @@ nav {
   padding: 2.5625rem 9.25rem;
 }
 .purchase-modal.modal-dialog.modal-lg {
-  max-width: 700px;
+  max-width: 43.75rem;
 }
 .purchase-modal .all-set {
   width: 9.8125rem;
