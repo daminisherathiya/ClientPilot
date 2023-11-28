@@ -15,8 +15,8 @@
 <body class="bg-white">
   <nav class="navbar navbar-expand-lg py-2 bg-white sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand pt-2 pb-0" href="#" aria-label="Home page"><img class="logo" src="./images/logo-with-name.svg"
-          alt="Company logo with name"></a>
+      <a class="navbar-brand pt-2 pb-0" href="#" aria-label="Home page"><img class="logo"
+          src="./images/logo-with-name.svg" alt="Company logo with name"></a>
       <button class="navbar-toggler shadow-none scale-up" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -44,8 +44,8 @@
               In</a>
           </div>
           <div class="py-2 py-lg-1">
-            <a class="btn btn-lg bg-primary text-white fs-14px fw-bold rounded-pill scale-up" href="#"
-              role="button">Try for
+            <a class="btn btn-lg bg-primary text-white fs-14px fw-bold rounded-pill scale-up" href="#" role="button">Try
+              for
               free</a>
           </div>
         </form>
@@ -57,7 +57,7 @@
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-md-11 col-lg-10 col-xl-9">
-            <div class="registration box-border-radius border border-divider shadow">
+            <div class="registration box-border-radius border border-divider custom-shadow">
               <div class="border-bottom border-divider">
                 <h3 class="text-center fs-24px text-black">Register and get 14 days FREE Trial!!</h3>
               </div>
@@ -65,83 +65,93 @@
                 <form>
                   <div class="row gx-1 mb-3 mb-sm-4 align-items-center">
                     <div class="col-sm-3">
-                      <label for="exampleInputEmail1" class="form-label font-black fs-14px">First name <span
+                      <label for="firstName" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">First name <span
                           class="text-warning">*</span></label>
                     </div>
                     <div class="col-sm-9">
-                      <input type="email" class="form-control border border-divider fs-14px shadow-none custom-input text-black"
-                        id="exampleInputEmail1" placeholder="Enter First name" aria-describedby="emailHelp">
+                      <input type="text"
+                        class="form-control border border-divider fs-14px shadow-none custom-input text-black rounded-1"
+                        id="firstName" placeholder="Enter First name" aria-describedby="firstName">
                     </div>
                   </div>
                   <div class="row gx-1 mb-3 mb-sm-4 align-items-center">
                     <div class="col-sm-3">
-                      <label for="exampleInputEmail1" class="form-label font-black fs-14px">Last Name <span
+                      <label for="lastName" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Last Name <span
                           class="text-warning">*</span></label>
                     </div>
                     <div class="col-sm-9">
-                      <input type="email" class="form-control border border-divider fs-14px shadow-none custom-input text-black"
-                        id="exampleInputEmail1" placeholder="Enter last name" aria-describedby="emailHelp">
+                      <input type="text"
+                        class="form-control border border-divider fs-14px shadow-none custom-input text-black rounded-1"
+                        id="lastName" placeholder="Enter last name" aria-describedby="lastName">
                     </div>
                   </div>
                   <div class="row gx-1 mb-3 mb-sm-4 align-items-center">
                     <div class="col-sm-3">
-                      <label for="exampleInputEmail1" class="form-label font-black fs-14px">Email <span
+                      <label for="email" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Email <span
                           class="text-warning">*</span></label>
                     </div>
                     <div class="col-sm-9">
-                      <input type="email" class="form-control border border-divider fs-14px shadow-none custom-input text-black"
-                        id="exampleInputEmail1" placeholder="Enter email" aria-describedby="emailHelp">
+                      <input type="email"
+                        class="form-control border border-divider fs-14px shadow-none custom-input text-black rounded-1"
+                        id="email" placeholder="Enter email" aria-describedby="emailHelp">
                       <div id="emailHelp" class="text-light-gray fs-12px">We will be sending invoices to this email
                       </div>
                     </div>
                   </div>
                   <div class="row gx-1 mb-3 mb-sm-4 align-items-center">
                     <div class="col-sm-3">
-                      <label for="exampleInputEmail1" class="form-label font-black fs-14px">Company Name <span
-                          class="text-warning">*</span></label>
+                      <label for="companyName" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Company Name
+                        <span class="text-warning">*</span></label>
                     </div>
                     <div class="col-sm-9">
-                      <input type="email" class="form-control border border-divider fs-14px shadow-none custom-input text-black"
-                        id="exampleInputEmail1" placeholder="Enter company name" aria-describedby="emailHelp">
+                      <input type="text"
+                        class="form-control border border-divider fs-14px shadow-none custom-input text-black rounded-1"
+                        id="companyName" placeholder="Enter company name" aria-describedby="companyName">
                     </div>
                   </div>
                   <div class="row gx-1 mb-3 mb-sm-4 align-items-center">
                     <div class="col-sm-3">
-                      <label for="exampleInputEmail1" class="form-label font-black fs-14px">Phone:</label>
+                      <label for="phone" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Phone:</label>
                     </div>
                     <div class="col-sm-9">
-                      <input type="email" class="form-control border border-divider fs-14px shadow-none custom-input text-black"
-                        id="exampleInputEmail1" placeholder="Enter a phone" aria-describedby="emailHelp">
+                      <input type="tel"
+                        class="form-control border border-divider fs-14px shadow-none custom-input text-black rounded-1"
+                        id="phone" placeholder="Enter a phone" aria-describedby="phone">
                     </div>
                   </div>
                   <div class="row gx-1 mb-3 mb-sm-4 align-items-center">
                     <div class="col-sm-3">
-                      <label for="exampleInputEmail1" class="form-label font-black fs-14px">Website url</label>
+                      <label for="websiteurl" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Website
+                        url</label>
                     </div>
                     <div class="col-sm-9">
-                      <input type="email" class="form-control border border-divider fs-14px shadow-none custom-input text-black"
-                        id="exampleInputEmail1" placeholder="Enter website link" aria-describedby="emailHelp">
+                      <input type="url"
+                        class="form-control border border-divider fs-14px shadow-none custom-input text-black rounded-1"
+                        id="websiteurl" placeholder="Enter website link" aria-describedby="websiteurl">
                     </div>
                   </div>
                   <div class="row gx-1 mb-3 mb-sm-4 align-items-center">
                     <div class="col-sm-3">
-                      <label for="exampleInputEmail1" class="form-label font-black fs-14px">Password</label>
+                      <label for="password" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Password</label>
                     </div>
                     <div class="col-sm-9">
-                      <input type="email" class="form-control border border-divider fs-14px shadow-none custom-input text-black"
-                        id="exampleInputEmail1" placeholder="Create Password" aria-describedby="emailHelp">
+                      <input type="password"
+                        class="form-control border border-divider fs-14px shadow-none custom-input text-black rounded-1"
+                        id="password" placeholder="Create Password" aria-describedby="password">
                     </div>
                   </div>
                   <div class="row gx-1 mb-3 mb-sm-4 align-items-center">
                     <div class="col-sm-3">
-                      <label for="exampleInputEmail1" class="form-label font-black fs-14px">Confirm Password</label>
+                      <label for="confirmPassword" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Confirm
+                        Password</label>
                     </div>
                     <div class="col-sm-9">
                       <div class="input-group mb-3">
-                        <input type="email" class="form-control border border-divider fs-14px shadow-none custom-input text-black border-end-0"
-                          id="exampleInputEmail1" placeholder="Confirm Password" aria-describedby="emailHelp">
-                        <span class="input-group-text cursor-pointer bg-transparent border-divider pe-4" id="basic-addon2"><img
-                            src="./images/view-filled.svg" alt="View password"></span>
+                        <input type="password"
+                          class="form-control border border-divider fs-14px shadow-none custom-input text-black rounded-1 border-end-0"
+                          id="confirmPassword" placeholder="Confirm Password" aria-describedby="emailHelp">
+                        <span class="input-group-text cursor-pointer bg-transparent border-divider pe-4"
+                          id="basic-addon2"><img src="./images/view-filled.svg" alt="View password"></span>
                       </div>
                     </div>
                   </div>

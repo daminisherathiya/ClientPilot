@@ -2,13 +2,13 @@
 :root {
   --primary-color: #ff6600;
   --secondary-color: #757575;
-  --gray-color: #f3f3f3;
+  --gray-color: #f5f5f5;
   --green-color: #229427;
   --dusty-gray-color: #ababab;
   --midnight-blue-color: #3b3e66;
   --stone-gray-color: #707070;
   --warning-color: #ff3f3f;
-  --input-placeholder-color: #d1d3dd;
+  /* --input-placeholder-color: #d1d3dd; */
   --light-peach: #fff4ec;
   --lign-blue: #eaeef6;
 
@@ -42,6 +42,12 @@
   font-weight: 300;
   font-style: normal;
   font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
 
 /* Custom resets */
@@ -136,7 +142,7 @@ h6 {
 }
 
 /* Box shadows */
-.shadow {
+.custom-shadow {
   box-shadow: var(--card-box-shadow) !important;
 }
 .card-hover:hover {
@@ -195,9 +201,10 @@ input.custom-input {
   padding: 0.78125rem 1.0625rem !important;
 }
 input.custom-input::placeholder {
-  color: var(--input-placeholder-color) !important;
+  color: var(--dusty-gray-color) !important;
 }
-input.custom-input:focus {
+input.custom-input:focus,
+input.custom-input:focus ~ .input-group-text {
   border-color: var(--primary-color) !important;
 }
 /* Common styles */
@@ -292,29 +299,32 @@ nav {
   left: 0;
   border-radius: 0.625rem 0.625rem 0px 0px;
 }
-.nav.nav-pills {
+.pricing .nav.nav-pills {
   margin-top: 3.75rem;
   margin-bottom: 3.33375rem;
 }
-.nav.nav-pills .nav-item {
+.pricing .nav.nav-pills .nav-item {
   width: 50%;
 }
-.nav.nav-pills .active label span {
+.pricing .nav.nav-pills .active label span {
   font-weight: 700;
 }
-.nav.nav-pills label span {
+.pricing .nav.nav-pills label span {
   min-width: 8.55rem;
 }
-.spacing {
+.pricing {
   margin-bottom: 8.091875rem;
 }
-.registration {
+.registration,
+.billing {
   margin: 5rem 0.625rem 3.375rem 0.625rem;
 }
-.registration > div:first-child {
+.registration > div:first-child,
+.billing > div:first-child {
   padding: 2.4rem;
 }
-.registration > div:nth-child(2) {
+.registration > div:nth-child(2),
+.billing > div:nth-child(2) {
   padding: 2.375rem 5.1875rem 2.75rem 3.375rem;
 }
 .add-ons {
@@ -347,7 +357,64 @@ nav {
   padding-left: 2.875rem;
   width: 15rem;
 }
+.billing h5 {
+  margin-bottom: 1.125rem;
+}
+.billing .selected-plan {
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.625rem;
+}
+.billing .selected-plan .gridImg {
+  width: 2.5rem;
+}
+.billing .label-width {
+  min-width: 8.9375rem;
+}
+.billing .summary {
+  padding-bottom: 1.875rem;
+}
+.billing .payment-method {
+  padding-top: 1.875rem;
+}
+.billing .payment-method .cards {
+  width: 18.0625rem;
+}
+.billing .payment-method .paypal {
+  width: 5.125rem;
+}
+.billing .payment-method .nav.nav-pills {
+  margin-top: 3.125rem;
+  margin-bottom: 1.875rem;
+}
+.billing .payment-method .nav.nav-pills > div:first-child {
+  padding-right: 1.3125rem;
+}
+.billing .payment-method .nav.nav-pills > div:nth-child(2) {
+  padding-left: 1.3125rem;
+}
+.leads {
+  padding: 4.625rem 0;
+}
+.leads > div {
+  box-shadow: var(--header-box-shadow);
+}
+.leads .leadsImg {
+  width: 27.4375rem;
+}
 
+/* modal */
+.purchase-modal .modal-content {
+  border-radius: 0.9375rem;
+}
+.purchase-modal .modal-body {
+  padding: 2.5625rem 9.25rem;
+}
+.purchase-modal.modal-dialog.modal-lg {
+  max-width: 700px;
+}
+.purchase-modal .all-set {
+  width: 9.8125rem;
+}
 /* Footer */
 footer {
   padding-top: 3.375rem;
@@ -384,18 +451,20 @@ footer .social-links div img {
   }
 }
 @media (max-width: 991px) {
-  .spacing {
+  .pricing {
     margin-bottom: 3.091875rem;
   }
-  .registration {
+  .registration,
+  .billing {
     margin-top: 3.375rem;
   }
-  .registration > div:nth-child(2) {
+  .registration > div:nth-child(2),
+  .billing > div:nth-child(2) {
     padding-right: 3.375rem;
   }
   .btn-lg {
-    padding-top: 0.46875rem;
-    padding-bottom: 0.46875rem;
+    /* padding-top: 0.46875rem;
+    padding-bottom: 0.46875rem; */
     min-height: auto;
   }
   .add-ons-card .border-end {
@@ -412,32 +481,47 @@ footer .social-links div img {
   .add-ons .sub-header {
     margin-bottom: 3.0625rem;
   }
+  .purchase-modal.modal-dialog.modal-lg {
+    max-width: 500px;
+  }
+  .purchase-modal .modal-body {
+    padding: 2.5625rem 5.25rem;
+  }
+  .leads {
+    padding: 3.625rem 0;
+  }
+  .leads h4 {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 767px) {
   .container-fluid,
   nav .container-fluid {
     padding: 0 1.6375rem;
   }
-  .nav.nav-pills {
+  .pricing .nav.nav-pills {
     margin-top: 2.75rem;
     margin-bottom: 2.33375rem;
   }
-  .spacing {
+  .pricing {
     margin-bottom: 2.091875rem;
   }
-  .nav.nav-pills label span {
+  .pricing .nav.nav-pills label span {
     min-width: 7rem;
   }
   .scale-up:hover {
     transform: scale(1.025);
   }
-  .registration {
+  .registration,
+  .billing {
     margin-top: 2.26rem;
   }
-  .registration > div:first-child {
+  .registration > div:first-child,
+  .billing > div:first-child {
     padding: 1.4rem;
   }
-  .registration h3 {
+  .registration h3,
+  .billing h3 {
     font-size: 1.25rem;
   }
   .box-border-radius {
@@ -454,16 +538,28 @@ footer .social-links div img {
   .add-ons .sub-header {
     margin-bottom: 2.0625rem;
   }
+  .billing .label-width {
+    min-width: 6.9375rem;
+  }
+  .billing .payment-method .nav.nav-pills > div:first-child {
+    padding-right: 1rem;
+  }
+  .billing .payment-method .nav.nav-pills > div:nth-child(2) {
+    padding-left: 1rem;
+  }
+  .purchase-modal .all-set {
+    width: 7.8125rem;
+  }
 }
 @media (max-width: 575px) {
-  .nav.nav-pills .nav-item {
+  .pricing .nav.nav-pills .nav-item {
     width: 100%;
   }
-  .nav.nav-pills {
+  .pricing .nav.nav-pills {
     margin-top: 2.75rem;
     margin-bottom: 1rem;
   }
-  .nav.nav-pills label span {
+  .pricing .nav.nav-pills label span {
     min-width: 9rem;
   }
   .input-radio {
@@ -472,16 +568,20 @@ footer .social-links div img {
   .billed-card {
     padding-top: 1.7525rem;
   }
-  .registration > div:first-child {
+  .registration > div:first-child,
+  .billing > div:first-child {
     padding: 1.4rem 0.875rem;
   }
-  .registration h3 {
+  .registration h3,
+  .billing h3 {
     font-size: 1rem;
   }
-  .registration > div:nth-child(2) {
+  .registration > div:nth-child(2),
+  .billing > div:nth-child(2) {
     padding: 1.375rem;
   }
-  .registration {
+  .registration,
+  .billing {
     margin-left: 0;
     margin-right: 0;
   }
@@ -496,5 +596,19 @@ footer .social-links div img {
   }
   .add-ons-card .gridImg {
     width: 5.625rem;
+  }
+  .billing .label-width,
+  .billing .label-sm-width {
+    min-width: 8.9375rem;
+  }
+  .billing .payment-method .nav.nav-pills > div:first-child,
+  .billing .payment-method .nav.nav-pills > div:nth-child(2) {
+    padding: 0;
+  }
+  .purchase-modal.modal-dialog.modal-lg {
+    max-width: none;
+  }
+  .purchase-modal .modal-body {
+    padding: 2.5625rem 2.25rem;
   }
 }
