@@ -236,7 +236,16 @@ input.custom-input:focus ~ .input-group-text {
   width: 1.3125rem;
   height: 1.3125rem;
 }
-
+.playIcon {
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
+.plusIcon {
+  width: 0.875rem;
+}
+.minusIcon {
+  width: 0.9375rem;
+}
 /* Custom styles */
 .container-fluid {
   max-width: 120rem;
