@@ -208,6 +208,13 @@ input.custom-input:focus,
 input.custom-input:focus ~ .input-group-text {
   border-color: var(--primary-color) !important;
 }
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"] {
+  font-size: 0.875rem;
+}
 /* Common styles */
 .strikethrough {
   position: relative;
@@ -563,6 +570,13 @@ footer .social-links div img {
   .billing .payment-method .nav.nav-pills > div:first-child,
   .billing .payment-method .nav.nav-pills > div:nth-child(2) {
     padding: 0;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="url"],
+  input[type="tel"] {
+    font-size: 1.143rem;
   }
 }
 @media (max-width: 575px) {
