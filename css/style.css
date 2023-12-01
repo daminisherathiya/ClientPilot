@@ -473,8 +473,6 @@ footer .social-links div img {
     padding-right: 3.375rem;
   }
   .btn-lg {
-    /* padding-top: 0.46875rem;
-    padding-bottom: 0.46875rem; */
     min-height: auto;
   }
   .add-ons-card .border-end {
@@ -502,6 +500,14 @@ footer .social-links div img {
   }
   .leads h4 {
     font-size: 1.5rem;
+  }
+  .billing .payment-method .nav.nav-pills > div:first-child {
+    padding-left: 0;
+    padding-right: 0.625rem;
+  }
+  .billing .payment-method .nav.nav-pills > div:nth-child(2) {
+    padding-right: 0;
+    padding-left: 0.625rem;
   }
 }
 @media (max-width: 767px) {
@@ -551,14 +557,12 @@ footer .social-links div img {
   .billing .label-width {
     min-width: 6.9375rem;
   }
-  .billing .payment-method .nav.nav-pills > div:first-child {
-    padding-right: 1rem;
-  }
-  .billing .payment-method .nav.nav-pills > div:nth-child(2) {
-    padding-left: 1rem;
-  }
   .purchase-modal .all-set {
     width: 7.8125rem;
+  }
+  .billing .payment-method .nav.nav-pills > div:first-child,
+  .billing .payment-method .nav.nav-pills > div:nth-child(2) {
+    padding: 0;
   }
 }
 @media (max-width: 575px) {
@@ -610,10 +614,6 @@ footer .social-links div img {
   .billing .label-width,
   .billing .label-sm-width {
     min-width: 8.9375rem;
-  }
-  .billing .payment-method .nav.nav-pills > div:first-child,
-  .billing .payment-method .nav.nav-pills > div:nth-child(2) {
-    padding: 0;
   }
   .purchase-modal.modal-dialog.modal-lg {
     max-width: none;
