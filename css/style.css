@@ -197,6 +197,7 @@ h6 {
   appearance: none;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
+
 /* input */
 input.custom-input {
   padding: 0.78125rem 1.0625rem !important;
@@ -262,9 +263,10 @@ input[type="tel"] {
 nav .container-fluid {
   padding: 0 3.75rem;
 }
-nav {
+.navbar {
   box-shadow: var(--header-box-shadow);
   min-height: 5rem;
+  padding: 0.5rem 0;
 }
 .navbar .nav-link.active {
   color: var(--primary-color) !important;
@@ -326,7 +328,7 @@ nav {
 .pricing .nav.nav-pills .active label span {
   font-weight: 700;
 }
-.pricing .nav.nav-pills label span {
+.pricing .nav.nav-pills label .tab-name {
   min-width: 8.55rem;
 }
 .pricing {
@@ -516,6 +518,10 @@ footer .social-links div img {
     padding-right: 0;
     padding-left: 0.625rem;
   }
+  .navbar {
+    min-height: auto;
+    padding: 0.625rem 0;
+  }
 }
 @media (max-width: 767px) {
   .container-fluid,
@@ -528,9 +534,6 @@ footer .social-links div img {
   }
   .pricing {
     margin-bottom: 2.091875rem;
-  }
-  .pricing .nav.nav-pills label span {
-    min-width: 7rem;
   }
   .scale-up:hover {
     transform: scale(1.025);
@@ -587,7 +590,7 @@ footer .social-links div img {
     margin-top: 2.75rem;
     margin-bottom: 1rem;
   }
-  .pricing .nav.nav-pills label span {
+  .pricing .nav.nav-pills label .tab-name {
     min-width: 9rem;
   }
   .input-radio {
