@@ -343,6 +343,9 @@ input[type="tel"] {
 .billing-dashboard .billing-history .billing-history-table tr:not(.toggle-dropdown) td {
   border-top: 0.0625rem solid var(--border-primary-color);
 }
+.billing-dashboard .billing-history .billing-history-table tr td:not(.active) img {
+  transform: rotate(180deg);
+}
 .billing-dashboard .billing-history .billing-history-table tr:nth-last-child(2) td {
   border-bottom: 0.0625rem solid var(--border-primary-color);
 }
