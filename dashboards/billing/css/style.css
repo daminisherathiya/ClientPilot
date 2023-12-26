@@ -244,6 +244,7 @@ input[type="tel"] {
 }
 .sidebar-space {
   padding-left: 6.25rem;
+  padding-top: 5.125rem;
 }
 .plus-icon {
   width: 0.75rem;
@@ -371,13 +372,17 @@ input[type="tel"] {
 
 /* Billing details */
 .billing-details {
-  margin: 2.625rem 0;
+  /* margin: 2.625rem 0; */
   border-radius: 0.4375rem;
   max-width: 58.1875rem;
 }
 .billing-details .navigation,
 .subscription .navigation {
   padding: 2.5rem 2.3125rem 3.4rem 2.3125rem;
+}
+.billing-details .navigation ~ div,
+.subscription .navigation ~ div {
+  padding: 2rem 0;
 }
 .billing-details .navigation li,
 .subscription .navigation li {
@@ -450,7 +455,7 @@ input[type="tel"] {
 .subscription #select-add-ons,
 .subscription #add-billing-details,
 .subscription #confirm-purchase {
-  padding: 2.8125rem;
+  padding: 0 2.8125rem;
 }
 .billing-details form .row,
 .subscription form .row,
@@ -482,9 +487,11 @@ input[type="tel"] {
 /* Subscription */
 
 .subscription {
-  margin: 2.625rem 0;
   border-radius: 0.4375rem;
   padding: 0 2.625rem;
+}
+.outer-space {
+  padding: 2.625rem 0;
 }
 .subscription .waving-hand {
   width: 10.5625rem;
@@ -543,9 +550,9 @@ input[type="tel"] {
 .pricing .nav.nav-pills label .tab-name {
   min-width: 8.55rem;
 }
-.pricing {
+/* .pricing {
   margin-bottom: 8.091875rem;
-}
+} */
 .add-ons .sub-header {
   margin-bottom: 4.0625rem;
 }
@@ -580,9 +587,6 @@ input[type="tel"] {
   width: 19.4375rem;
   margin-bottom: 6.125rem;
   margin-top: 3.25rem;
-}
-.edit-card {
-  margin: 3.75rem 0;
 }
 /* Media queries */
 @media (max-width: 1440px) {
@@ -622,12 +626,15 @@ input[type="tel"] {
     padding: 2.125rem 1.5rem;
   }
   .subscription .strikethrough {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+  }
+  .billed-card {
+    padding: 2.5525rem 1rem 1.825rem 1rem;
   }
 }
 @media (max-width: 1199px) {
   .sidebar-space {
-    padding: 0;
+    padding-left: 0;
   }
   .btn-lg {
     padding: 0.45rem 0.75rem;
@@ -645,10 +652,7 @@ input[type="tel"] {
   .subscription #select-add-ons,
   .subscription #add-billing-details,
   .subscription #confirm-purchase {
-    padding: 2rem;
-  }
-  .subscription .strikethrough {
-    font-size: 1.5rem;
+    padding: 0 2rem;
   }
 }
 @media (max-width: 991px) {
@@ -686,11 +690,11 @@ input[type="tel"] {
   .subscription #trial-expired h4.fs-36px {
     font-size: 1.8rem;
   }
-  .edit-card {
-    margin: 2.75rem 0;
-  }
   .edit-card .heading {
     padding: 2.1875rem 1.5rem 1.8125rem 1.5rem;
+  }
+  .subscription .strikethrough {
+    font-size: 2rem;
   }
 }
 @media (max-width: 767px) {
@@ -804,7 +808,9 @@ input[type="tel"] {
   }
   .subscription {
     padding: 0 0.35rem;
-    margin: 2rem 0;
+  }
+  .outer-space {
+    padding: 2rem 0;
   }
   .add-ons .sub-header {
     margin-bottom: 2.0625rem;
@@ -820,6 +826,9 @@ input[type="tel"] {
   .billing-details .navigation li,
   .subscription .navigation li {
     min-width: 5.5rem;
+  }
+  .subscription .navigation li {
+    min-width: auto;
   }
 }
 @media (max-width: 575px) {

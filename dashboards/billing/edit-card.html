@@ -13,206 +13,217 @@
 </head>
 
 <body class="bg-white vh-100">
-  <nav class="sticky-top"
-    style="height: 5.125rem; width: 100%; box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.06); background-color: white;">
+  <nav
+    style="height: 5.125rem; width: 100%; box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.06); background-color: white; position: fixed; top: 0; z-index: 3;">
   </nav>
   <main class="sidebar-space h-100">
     <aside class="d-none d-xl-block"
       style="width: 6.25rem; background-color: #FF6600; height: 100vh; position: fixed; top: 0; left: 0;"></aside>
     <section class="h-100">
       <div class="container-fluid h-100">
-        <div class="row justify-content-center">
-          <div class="col-sm-12 col-md-11 col-lg-8 col-xl-8 col-xxl-7">
-            <div class="border border-primary custom-shadow-primary rounded-7 edit-card">
-              <div class="heading border-bottom border-primary">
-                <h6 class="">Edit Payment Method</h6>
-              </div>
-              <div id="payment-method" class="px-4 px-md-0">
-                <div class="px-0 px-sm-5">
-                  <div class="nav nav-pills row mx-0 gx-0 gx-md-4" id="pills-tab" role="tablist">
-                    <div class="col-md-6 mb-3 mb-md-0 pe-md-3">
-                      <div
-                        class="custom-shadow card-hover border border-thin border-gray py-3 pe-2 rounded-3 h-100 d-flex align-items-center"
-                        role="presentation">
-                        <div id="card-payment-tab" class="w-100 active" data-bs-toggle="pill"
-                          data-bs-target="#card-payment" role="tab" aria-controls="card-payment" aria-selected="true">
-                          <label class="d-flex align-items-center cursor-pointer"><input type="radio"
-                              class="input-radio py-1 cursor-pointer flex-shrink-0" name="payment-method" checked>
-                            <span class="border-start border-thin border-gray"><img class="cards img-fluid py-md-2"
-                                src="./images/cards.png" alt="cards"></span>
-                          </label>
+        <div class="outer-space overflow-auto h-100">
+          <div class="row gx-0 justify-content-center h-100">
+            <div class="col-sm-12 col-md-11 col-lg-8 col-xl-8 col-xxl-7 overflow-auto h-100">
+              <div class="border border-primary custom-shadow-primary rounded-7 edit-card overflow-auto h-100">
+                <div class="overflow-auto h-100">
+                  <div class="heading border-bottom border-primary">
+                    <h6 class="">Edit Payment Method</h6>
+                  </div>
+                  <div id="payment-method" class="px-4 px-md-0">
+                    <div class="px-0 px-sm-5">
+                      <div class="nav nav-pills row mx-0 gx-0 gx-md-4" id="pills-tab" role="tablist">
+                        <div class="col-md-6 mb-3 mb-md-0 pe-md-3">
+                          <div
+                            class="custom-shadow card-hover border border-thin border-gray py-3 pe-2 rounded-3 h-100 d-flex align-items-center"
+                            role="presentation">
+                            <div id="card-payment-tab" class="w-100 active" data-bs-toggle="pill"
+                              data-bs-target="#card-payment" role="tab" aria-controls="card-payment"
+                              aria-selected="true">
+                              <label class="d-flex align-items-center cursor-pointer"><input type="radio"
+                                  class="input-radio py-1 cursor-pointer flex-shrink-0" name="payment-method" checked>
+                                <span class="border-start border-thin border-gray"><img class="cards img-fluid py-md-2"
+                                    src="./images/cards.png" alt="cards"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 ps-md-3">
+                          <div
+                            class="custom-shadow card-hover border border-thin border-gray py-3 pe-3 pe-sm-4 rounded-3 h-100 d-flex align-items-center"
+                            role="presentation">
+                            <div id="payPal-payment-tab" class="w-100" data-bs-toggle="pill"
+                              data-bs-target="#payPal-payment" role="tab" aria-controls="payPal-payment"
+                              aria-selected="false">
+                              <label class="d-flex align-items-center cursor-pointer"><input type="radio"
+                                  class="input-radio py-1 cursor-pointer flex-shrink-0" name="payment-method">
+                                <span class="border-start border-thin border-gray ps-3"><img
+                                    class="paypal img-fluid py-md-2" src="./images/paypal.svg" alt="Paypal"></span>
+                              </label>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 ps-md-3">
-                      <div
-                        class="custom-shadow card-hover border border-thin border-gray py-3 pe-3 pe-sm-4 rounded-3 h-100 d-flex align-items-center"
-                        role="presentation">
-                        <div id="payPal-payment-tab" class="w-100" data-bs-toggle="pill"
-                          data-bs-target="#payPal-payment" role="tab" aria-controls="payPal-payment"
-                          aria-selected="false">
-                          <label class="d-flex align-items-center cursor-pointer"><input type="radio"
-                              class="input-radio py-1 cursor-pointer flex-shrink-0" name="payment-method">
-                            <span class="border-start border-thin border-gray ps-3"><img
-                                class="paypal img-fluid py-md-2" src="./images/paypal.svg" alt="Paypal"></span>
-                          </label>
+                    <div class="tab-content recommended-spacing mt-5 px-0 px-md-5" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="card-payment" role="tabpanel"
+                        aria-labelledby="card-payment-tab" tabindex="0">
+                        <form>
+                          <div class="row gx-1 align-items-center">
+                            <div class="col-md-3">
+                              <label for="nameOnTheCard" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Name
+                                on
+                                the card</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text"
+                                class="form-control border border-divider shadow-none custom-input text-black rounded-1"
+                                id="nameOnTheCard" placeholder="Enter Name on the card"
+                                aria-describedby="nameOnTheCard">
+                            </div>
+                          </div>
+                          <div class="row gx-1 align-items-center">
+                            <div class="col-md-3">
+                              <label for="creditCardNumber"
+                                class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Credit
+                                card number</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text"
+                                class="form-control border border-divider shadow-none custom-input text-black rounded-1"
+                                id="creditCardNumber" placeholder="1234 1234 1234 1234"
+                                aria-describedby="creditCardNumber">
+                            </div>
+                          </div>
+                          <div class="row gx-1 align-items-center">
+                            <div class="col-md-3">
+                              <label for="cardExpirationDate"
+                                class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Card
+                                expiration date</label>
+                            </div>
+                            <div class="col-md-4">
+                              <input type="text"
+                                class="form-control border border-divider shadow-none custom-input text-black rounded-1"
+                                id="cardExpirationDate" placeholder="MM / YYYY" aria-describedby="cardExpirationDate">
+                            </div>
+                            <div class="col-md-1 text-md-end mt-3 mt-sm-4 mt-md-0">
+                              <label for="cvv"
+                                class="form-label mb-0 text-black fs-14px mb-2 mb-md-0 ms-md-1 me-2 me-lg-3">CVV</label>
+                            </div>
+                            <div class="col-md-4">
+                              <input type="text"
+                                class="form-control border border-divider shadow-none custom-input text-black rounded-1"
+                                id="cvv" placeholder="CVV" aria-describedby="cvv">
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="payPal-payment" role="tabpanel"
+                        aria-labelledby="payPal-payment-tab" tabindex="1">
+                        <p class="fw-bold fs-16px text-center mb-3">Log in to PayPal. You can review your purchase
+                          on
+                          the
+                          next step.</p>
+                        <div class="d-flex align-items-center justify-content-center pt-4">
+                          <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue">Cancel</button>
+                          </div>
+                          <div><button class="btn btn-lg bg-yellow text-white fs-15px fw-bold ms-3"><img class="paypal"
+                                src="./images/paypal.svg" alt="paypal"></button>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="tab-content recommended-spacing mt-5 px-0 px-md-5" id="pills-tabContent">
-                  <div class="tab-pane fade show active" id="card-payment" role="tabpanel"
-                    aria-labelledby="card-payment-tab" tabindex="0">
-                    <form>
-                      <div class="row gx-1 align-items-center">
-                        <div class="col-md-3">
-                          <label for="nameOnTheCard" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Name
-                            on
-                            the card</label>
-                        </div>
-                        <div class="col-md-9">
-                          <input type="text"
-                            class="form-control border border-divider shadow-none custom-input text-black rounded-1"
-                            id="nameOnTheCard" placeholder="Enter Name on the card" aria-describedby="nameOnTheCard">
-                        </div>
-                      </div>
-                      <div class="row gx-1 align-items-center">
-                        <div class="col-md-3">
-                          <label for="creditCardNumber" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Credit
-                            card number</label>
-                        </div>
-                        <div class="col-md-9">
-                          <input type="text"
-                            class="form-control border border-divider shadow-none custom-input text-black rounded-1"
-                            id="creditCardNumber" placeholder="1234 1234 1234 1234" aria-describedby="creditCardNumber">
-                        </div>
-                      </div>
-                      <div class="row gx-1 align-items-center">
-                        <div class="col-md-3">
-                          <label for="cardExpirationDate" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Card
-                            expiration date</label>
-                        </div>
-                        <div class="col-md-4">
-                          <input type="text"
-                            class="form-control border border-divider shadow-none custom-input text-black rounded-1"
-                            id="cardExpirationDate" placeholder="MM / YYYY" aria-describedby="cardExpirationDate">
-                        </div>
-                        <div class="col-md-1 text-md-end mt-3 mt-sm-4 mt-md-0">
-                          <label for="cvv"
-                            class="form-label mb-0 text-black fs-14px mb-2 mb-md-0 ms-md-1 me-2 me-lg-3">CVV</label>
-                        </div>
-                        <div class="col-md-4">
-                          <input type="text"
-                            class="form-control border border-divider shadow-none custom-input text-black rounded-1"
-                            id="cvv" placeholder="CVV" aria-describedby="cvv">
-                        </div>
-                      </div>
-                    </form>
+                  <div class="heading border-bottom border-primary mt-0 mt-md-3 mt-lg-5">
+                    <h6 class="">Edit Billing Address</h6>
                   </div>
-                  <div class="tab-pane fade" id="payPal-payment" role="tabpanel" aria-labelledby="payPal-payment-tab"
-                    tabindex="1">
-                    <p class="fw-bold fs-16px text-center mb-3">Log in to PayPal. You can review your purchase
-                      on
-                      the
-                      next step.</p>
-                    <div class="d-flex align-items-center justify-content-center pt-4">
-                      <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue">Cancel</button>
+                  <form id="billing-address" class="px-4 px-md-5">
+                    <div class="row gx-1 align-items-center">
+                      <div class="col-md-3">
+                        <label for="addressLine1"
+                          class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Country</label>
                       </div>
-                      <div><button class="btn btn-lg bg-yellow text-white fs-15px fw-bold ms-3"><img class="paypal"
-                            src="./images/paypal.svg" alt="paypal"></button>
+                      <div class="col-md-9">
+                        <select class="form-select shadow-none custom-select" aria-label="Default select example">
+                          <option selected>United States</option>
+                          <option value="1">India</option>
+                          <option value="2">Australia</option>
+                          <option value="3">Canada</option>
+                        </select>
                       </div>
                     </div>
+                    <div class="row gx-1 align-items-center">
+                      <div class="col-md-3">
+                        <label for="addressLine1" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Address
+                          Line 1</label>
+                      </div>
+                      <div class="col-md-9">
+                        <input type="text"
+                          class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                          id="addressLine1" placeholder="Street" aria-describedby="addressLine1">
+                      </div>
+                    </div>
+                    <div class="row gx-1 align-items-center">
+                      <div class="col-md-3">
+                        <label for="addressLine2" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Address
+                          Line 2</label>
+                      </div>
+                      <div class="col-md-9">
+                        <input type="text"
+                          class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                          id="addressLine2" placeholder="Apt/Suite" aria-describedby="addressLine2">
+                      </div>
+                    </div>
+                    <div class="row gx-1 align-items-center">
+                      <div class="col-md-3">
+                        <label for="city" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">City</label>
+                      </div>
+                      <div class="col-md-9">
+                        <input type="text"
+                          class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                          id="city" placeholder="City" aria-describedby="city">
+                      </div>
+                    </div>
+                    <div class="row gx-1 align-items-center">
+                      <div class="col-md-3">
+                        <label for="state" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">State</label>
+                      </div>
+                      <div class="col-md-9">
+                        <input type="text"
+                          class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                          id="state" placeholder="state" aria-describedby="state">
+                      </div>
+                    </div>
+                    <div class="row gx-1 align-items-center">
+                      <div class="col-md-3">
+                        <label for="zipPostal"
+                          class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">ZIP/Postal</label>
+                      </div>
+                      <div class="col-md-9">
+                        <input type="text"
+                          class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                          id="zipPostal" placeholder="ZIP/Postal" aria-describedby="zipPostal">
+                      </div>
+                    </div>
+                    <div class="row gx-1 align-items-center">
+                      <div class="col-md-3">
+                        <label for="salesTaxNumber" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Sales
+                          tax number (optional)</label>
+                      </div>
+                      <div class="col-md-9">
+                        <input type="text"
+                          class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                          id="salesTaxNumber" placeholder="Sales tax number" aria-describedby="salesTaxNumber">
+                      </div>
+                    </div>
+                  </form>
+                  <div
+                    class="d-flex align-items-center justify-content-center justify-content-sm-end pt-2 pt-sm-4 pb-4 px-5">
+                    <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue">Cancel</button>
+                    </div>
+                    <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3" data-bs-toggle="modal"
+                        data-bs-target="#purchaseModal">Save</button>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="heading border-bottom border-primary mt-0 mt-md-3 mt-lg-5">
-                <h6 class="">Edit Billing Address</h6>
-              </div>
-              <form id="billing-address" class="px-4 px-md-5">
-                <div class="row gx-1 align-items-center">
-                  <div class="col-md-3">
-                    <label for="addressLine1" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Country</label>
-                  </div>
-                  <div class="col-md-9">
-                    <select class="form-select shadow-none custom-select" aria-label="Default select example">
-                      <option selected>United States</option>
-                      <option value="1">India</option>
-                      <option value="2">Australia</option>
-                      <option value="3">Canada</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row gx-1 align-items-center">
-                  <div class="col-md-3">
-                    <label for="addressLine1" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Address
-                      Line 1</label>
-                  </div>
-                  <div class="col-md-9">
-                    <input type="text"
-                      class="form-control border border-input shadow-none custom-input text-black rounded-1"
-                      id="addressLine1" placeholder="Street" aria-describedby="addressLine1">
-                  </div>
-                </div>
-                <div class="row gx-1 align-items-center">
-                  <div class="col-md-3">
-                    <label for="addressLine2" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Address
-                      Line 2</label>
-                  </div>
-                  <div class="col-md-9">
-                    <input type="text"
-                      class="form-control border border-input shadow-none custom-input text-black rounded-1"
-                      id="addressLine2" placeholder="Apt/Suite" aria-describedby="addressLine2">
-                  </div>
-                </div>
-                <div class="row gx-1 align-items-center">
-                  <div class="col-md-3">
-                    <label for="city" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">City</label>
-                  </div>
-                  <div class="col-md-9">
-                    <input type="text"
-                      class="form-control border border-input shadow-none custom-input text-black rounded-1" id="city"
-                      placeholder="City" aria-describedby="city">
-                  </div>
-                </div>
-                <div class="row gx-1 align-items-center">
-                  <div class="col-md-3">
-                    <label for="state" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">State</label>
-                  </div>
-                  <div class="col-md-9">
-                    <input type="text"
-                      class="form-control border border-input shadow-none custom-input text-black rounded-1" id="state"
-                      placeholder="state" aria-describedby="state">
-                  </div>
-                </div>
-                <div class="row gx-1 align-items-center">
-                  <div class="col-md-3">
-                    <label for="zipPostal" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">ZIP/Postal</label>
-                  </div>
-                  <div class="col-md-9">
-                    <input type="text"
-                      class="form-control border border-input shadow-none custom-input text-black rounded-1"
-                      id="zipPostal" placeholder="ZIP/Postal" aria-describedby="zipPostal">
-                  </div>
-                </div>
-                <div class="row gx-1 align-items-center">
-                  <div class="col-md-3">
-                    <label for="salesTaxNumber" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Sales
-                      tax number (optional)</label>
-                  </div>
-                  <div class="col-md-9">
-                    <input type="text"
-                      class="form-control border border-input shadow-none custom-input text-black rounded-1"
-                      id="salesTaxNumber" placeholder="Sales tax number" aria-describedby="salesTaxNumber">
-                  </div>
-                </div>
-              </form>
-              <div
-                class="d-flex align-items-center justify-content-center justify-content-sm-end pt-2 pt-sm-4 pb-4 px-5">
-                <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue">Cancel</button>
-                </div>
-                <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3" data-bs-toggle="modal"
-                    data-bs-target="#purchaseModal">Save</button>
                 </div>
               </div>
             </div>

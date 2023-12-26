@@ -13,426 +13,1179 @@
 </head>
 
 <body class="bg-white vh-100">
-  <nav class="sticky-top"
-    style="height: 5.125rem; width: 100%; box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.06); background-color: white;">
+  <nav
+    style="height: 5.125rem; width: 100%; box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.06); background-color: white; position: fixed; top: 0; z-index: 3;">
   </nav>
   <main class="sidebar-space h-100">
     <aside class="d-none d-xl-block"
       style="width: 6.25rem; background-color: #FF6600; height: 100vh; position: fixed; top: 0; left: 0;"></aside>
     <section class="h-100">
       <div class="container-fluid h-100">
-        <div class="subscription h-100">
-          <div class="custom-shadow-primary box-radius border border-primary rounded-7">
-            <div class="row justify-content-center gx-0 h-100">
-              <div class="col-12">
-                <div class="navigation border-bottom">
-                  <div class="position-relative">
-                    <ul class="d-flex justify-content-between">
-                      <li>
-                        <div class="circle cursor-pointer active prev">
-                          <span class="d-none">1</span>
-                          <img class="" src="./images/check-white.svg" alt="check">
-                        </div>
-                        <p class="text-capitalize fs-16px">Trial expired</p>
-                      </li>
-                      <li>
-                        <div class="circle cursor-pointer active">
-                          <span>2</span>
-                          <img class="d-none" src="./images/check-white.svg" alt="check">
-                        </div>
-                        <p class="text-capitalize fs-16px">Choose plan</p>
-                      </li>
-                      <li>
-                        <div class="circle cursor-pointer">
-                          <span>3</span>
-                          <img class="d-none" src="./images/check-white.svg" alt="check">
-                        </div>
-                        <p class="text-capitalize fs-16px">Select add-ons</p>
-                      </li>
-                      <li>
-                        <div class="circle cursor-pointer">
-                          <span>4</span>
-                          <img class="d-none" src="./images/check-white.svg" alt="check">
-                        </div>
-                        <p class="text-capitalize fs-16px">Add billing details</p>
-                      </li>
-                      <li>
-                        <div class="circle cursor-pointer">
-                          <span>5</span>
-                          <img class="d-none" src="./images/check-white.svg" alt="check">
-                        </div>
-                        <p class="text-capitalize fs-16px">Confirm purchase</p>
-                      </li>
-                    </ul>
-                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                      aria-valuemin="0" aria-valuemax="100">
-                      <div class="progress-bar w-50 bg-green"></div>
+        <div class="outer-space overflow-auto h-100">
+          <div class="subscription h-100">
+            <div class="custom-shadow-primary box-radius border border-primary rounded-7 overflow-auto h-100">
+              <div class="row justify-content-center gx-0 h-100">
+                <div class="col-12 d-flex flex-column overflow-auto h-100">
+                  <div class="navigation border-bottom">
+                    <div class="position-relative">
+                      <ul class="d-flex justify-content-between">
+                        <li>
+                          <div class="circle cursor-pointer active prev">
+                            <span class="d-none">1</span>
+                            <img class="" src="./images/check-white.svg" alt="check">
+                          </div>
+                          <p class="text-capitalize fs-16px d-none d-md-block">Trial expired</p>
+                        </li>
+                        <li>
+                          <div class="circle cursor-pointer active prev">
+                            <span>2</span>
+                            <img class="d-none" src="./images/check-white.svg" alt="check">
+                          </div>
+                          <p class="text-capitalize fs-16px d-none d-md-block">Choose plan</p>
+                        </li>
+                        <li>
+                          <div class="circle cursor-pointer active">
+                            <span>3</span>
+                            <img class="d-none" src="./images/check-white.svg" alt="check">
+                          </div>
+                          <p class="text-capitalize fs-16px d-md-block">Select add-ons</p>
+                        </li>
+                        <li>
+                          <div class="circle cursor-pointer">
+                            <span>4</span>
+                            <img class="d-none" src="./images/check-white.svg" alt="check">
+                          </div>
+                          <p class="text-capitalize fs-16px d-none d-md-block">Add billing details</p>
+                        </li>
+                        <li>
+                          <div class="circle cursor-pointer">
+                            <span>5</span>
+                            <img class="d-none" src="./images/check-white.svg" alt="check">
+                          </div>
+                          <p class="text-capitalize fs-16px d-none d-md-block">Confirm purchase</p>
+                        </li>
+                      </ul>
+                      <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar w-50 bg-green"></div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="d-md-flex align-items-center h-100 d-md-none d-none">
-                  <div id="trial-expired" class="flex-grow-1">
-                    <div class="row justify-content-center">
-                      <div class="col-sm-12 col-md-11 col-lg-8 col-xl-8 col-xxl-7">
-                        <div class="d-md-flex align-items-center text-center text-md-start">
-                          <div><img class="waving-hand mb-4 mb-md-0" src="./images/waving-hand.svg" alt="waving hand"></div>
-                          <div>
-                            <h4 class="fs-36px mb-2">We hope it's not goodbye, Ag!</h4>
-                            <p class="fs-18px pt-1 mb-4">Your free trial period has ended. <span class="fw-bold">Your
-                                data
-                                will be deleted soon.
-                                ©</span></p>
+                  <div class="d-md-flex align-items-center overflow-auto h-100 d-md-none d-none">
+                    <div id="trial-expired" class="flex-grow-1 h-100 overflow-auto">
+                      <div class="row justify-content-center align-items-center h-100">
+                        <div class="col-sm-12 col-md-11 col-lg-8 col-xl-8 col-xxl-7">
+                          <div class="d-md-flex align-items-center text-center text-md-start">
+                            <div><img class="waving-hand mb-4 mb-md-0" src="./images/waving-hand.svg" alt="waving hand">
+                            </div>
+                            <div>
+                              <h4 class="fs-36px mb-2">We hope it's not goodbye, Ag!</h4>
+                              <p class="fs-18px pt-1 mb-4">Your free trial period has ended. <span class="fw-bold">Your
+                                  data
+                                  will be deleted soon.
+                                  ©</span></p>
 
-                            <p class="fs-18px mb-4">Subscribe to ClientPilot and choose to be part of the 73% of
-                              customers
-                              <span class="fw-bold">who win a deal faster than before!</span>
-                            </p>
-                            <div class="d-sm-flex justify-content-center justify-content-md-start pt-1">
-                              <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue mb-3 mb-sm-0">I'm not
-                                  interested</button></div>
-                              <div></div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3">Choose
-                                plan</button>
+                              <p class="fs-18px mb-4">Subscribe to ClientPilot and choose to be part of the 73% of
+                                customers
+                                <span class="fw-bold">who win a deal faster than before!</span>
+                              </p>
+                              <div class="d-sm-flex justify-content-center justify-content-md-start pt-1">
+                                <div><button
+                                    class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue mb-3 mb-sm-0">I'm not
+                                    interested</button></div>
+                                <div></div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3">Choose
+                                  plan</button>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div id="choose-plan" class="d-none">
-                  <div class="row">
-                    <div class="col-12 pricing">
-                      <div class="row justify-content-center">
-                        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                          <ul
-                            class="nav nav-pills d-inline-flex align-items-center custom-shadow card-hover border border-thin border-gray py-3 px-3 px-sm-4 rounded-3 w-100"
-                            id="pills-tab" role="tablist">
-                            <li class="nav-item pb-2 pb-sm-0" role="presentation">
-                              <div id="pills-billed-monthly-tab" class="active" data-bs-toggle="pill"
-                                data-bs-target="#pills-billed-monthly" role="tab" aria-controls="pills-billed-monthly"
-                                aria-selected="true">
-                                <label class="d-flex align-items-center cursor-pointer"><input type="radio"
-                                    class="input-radio cursor-pointer flex-shrink-0" name="billed" checked>
-                                  <span
-                                    class="text-midnight-blue py-1 py-sm-2 ps-3 ps-md-4 border-start border-thin border-gray text-nowrap tab-name fs-18px">Billed
-                                    Monthly</span>
-                                </label>
-                              </div>
-                            </li>
-                            <li class="nav-item pt-2 pt-sm-0" role="presentation">
-                              <div id="pills-billed-annually-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-billed-annually" role="tab" aria-controls="pills-billed-annually"
-                                aria-selected="false">
-                                <label class="d-flex align-items-center cursor-pointer"><input type="radio"
-                                    class="input-radio cursor-pointer flex-shrink-0" name="billed">
-                                  <span
-                                    class="text-midnight-blue py-1 py-sm-2 ps-3 ps-md-4 border-start border-thin border-gray text-nowrap tab-name fs-18px">Billed
-                                    Annually</span><span
-                                    class="btn bg-green text-white fw-bold ms-2 ms-md-3 ms-xl-4 scale-up text-nowrap d-inline-block">Save
-                                    30%</span>
-                                </label>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="tab-content recommended-spacing" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-billed-monthly" role="tabpanel"
-                          aria-labelledby="pills-billed-monthly-tab" tabindex="0">
-                          <div class="row">
-                            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                              <div class="billed-card custom-shadow card-hover h-100">
-                                <div class="mb-3"><img class="gridImg" src="./images/essential.svg"
-                                    alt="Square circle grid icon">
+                  <div class="overflow-auto h-100 d-nonew">
+                    <div id="choose-plan" class="flex-grow-1 h-100 overflow-auto">
+                      <div class="row">
+                        <div class="col-12 pricing">
+                          <div class="row justify-content-center">
+                            <div class="col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                              <ul
+                                class="nav nav-pills d-inline-flex align-items-center custom-shadow card-hover border border-thin border-gray py-3 px-3 px-sm-4 rounded-3 w-100"
+                                id="pills-tab" role="tablist">
+                                <li class="nav-item pb-2 pb-sm-0" role="presentation">
+                                  <div id="pills-billed-monthly-tab" class="active" data-bs-toggle="pill"
+                                    data-bs-target="#pills-billed-monthly" role="tab"
+                                    aria-controls="pills-billed-monthly" aria-selected="true">
+                                    <label class="d-flex align-items-center cursor-pointer"><input type="radio"
+                                        class="input-radio cursor-pointer flex-shrink-0" name="billed" checked>
+                                      <span
+                                        class="text-midnight-blue py-1 py-sm-2 ps-3 ps-md-4 border-start border-thin border-gray text-nowrap tab-name fs-18px">Billed
+                                        Monthly</span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li class="nav-item pt-2 pt-sm-0" role="presentation">
+                                  <div id="pills-billed-annually-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-billed-annually" role="tab"
+                                    aria-controls="pills-billed-annually" aria-selected="false">
+                                    <label class="d-flex align-items-center cursor-pointer"><input type="radio"
+                                        class="input-radio cursor-pointer flex-shrink-0" name="billed">
+                                      <span
+                                        class="text-midnight-blue py-1 py-sm-2 ps-3 ps-md-4 border-start border-thin border-gray text-nowrap tab-name fs-18px">Billed
+                                        Annually</span><span
+                                        class="btn bg-green text-white fw-bold ms-2 ms-md-3 ms-xl-4 scale-up text-nowrap d-inline-block">Save
+                                        30%</span>
+                                    </label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="tab-content recommended-spacing" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-billed-monthly" role="tabpanel"
+                              aria-labelledby="pills-billed-monthly-tab" tabindex="0">
+                              <div class="row">
+                                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                                  <div class="billed-card custom-shadow card-hover h-100">
+                                    <div class="mb-3"><img class="gridImg" src="./images/essential.svg"
+                                        alt="Square circle grid icon">
+                                    </div>
+                                    <div class="key-feature-divider-up">
+                                      <h3 class="fs-24px text-black">Essential</h3>
+                                      <h4 class="fs-18px text-black">1 Location</h4>
+                                      <p class="mb-4 text-capitalize">Get organized and set up simple sales processes
+                                        quickly</p>
+                                      <p class="fs-32px text-black mb-0 fw-bold">$19.99</p>
+                                      <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
+                                      <div class="border-bottom border-divider border-thin"><a
+                                          href="./registration.html"
+                                          class="btn btn-lg d-flex align-items-center justify-content-center bg-primary text-white fs-15px fw-bold px-4 py-2 w-100 mt-1 scale-up">Choose
+                                          plan</a></div>
+                                    </div>
+                                    <div class="key-feature-divider-down">
+                                      <h4 class="fs-18px mb-4">ALL PLANS INCLUDE:</h4>
+                                      <ul>
+                                        <li class="mb-3 text-capitalize fs-16px">Lead, deal, contact, calendar and
+                                          Client
+                                          Pilot
+                                          management
+                                        </li>
+                                        <li class="mb-3 text-capitalize fs-16px">Seamless data import and 400+
+                                          integrations
+                                        </li>
+                                        <li class="mb-3 text-capitalize fs-16px">24/7, multi-language support</li>
+                                      </ul>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="key-feature-divider-up">
-                                  <h3 class="fs-24px text-black">Essential</h3>
-                                  <h4 class="fs-18px text-black">1 Location</h4>
-                                  <p class="mb-4 text-capitalize">Get organized and set up simple sales processes
-                                    quickly</p>
-                                  <p class="fs-32px text-black mb-0 fw-bold">$19.99</p>
-                                  <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
-                                  <div class="border-bottom border-divider border-thin"><a href="./registration.html"
-                                      class="btn btn-lg d-flex align-items-center justify-content-center bg-primary text-white fs-15px fw-bold px-4 py-2 w-100 mt-1 scale-up">Choose
-                                      plan</a></div>
+                                <div class="col-md-6 col-lg-3 mb-4 mt-4 pt-1 pt-md-0 mt-md-0 mb-lg-0">
+                                  <div class="billed-card custom-shadow card-hover h-100">
+                                    <div class="recommended bg-primary py-1 w-100 text-center">
+                                      <p class="text-white fw-bold fs-18px">Most Popular</p>
+                                    </div>
+                                    <div class="mb-3"><img class="gridImg" src="./images/advanced.svg"
+                                        alt="Square circle grid icon">
+                                    </div>
+                                    <div class="key-feature-divider-up">
+                                      <h3 class="fs-24px text-black">Advanced</h3>
+                                      <h4 class="fs-18px text-black">3 Locations</h4>
+                                      <p class="mb-4 text-capitalize">Never miss the next step with easy-to-use email
+                                        and
+                                        automation
+                                      </p>
+                                      <p class="fs-32px text-black mb-0 fw-bold">$17.99<span
+                                          class="ms-4 ms-lg-2 ms-xl-4 fw-normal text-dusty-gray strikethrough">$19.99</span>
+                                      </p>
+                                      <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
+                                      <div class="border-bottom border-divider border-thin"><a
+                                          href="./registration.html"
+                                          class="btn btn-lg d-flex align-items-center justify-content-center bg-primary text-white fs-15px fw-bold px-4 py-2 w-100 mt-1 scale-up">Choose
+                                          plan</a></div>
+                                    </div>
+                                    <div class="key-feature-divider-down">
+                                      <h4 class="fs-18px mb-4">KEY FEATURES:</h4>
+                                      <ul>
+                                        <li class="mb-3 text-capitalize fs-16px">Full email sync with templates, open
+                                          and
+                                          click
+                                          tracking and
+                                          group emailing
+                                        </li>
+                                        <li class="mb-3 text-capitalize fs-16px">Automations builder, including email
+                                          sequences
+                                        </li>
+                                        <li class="mb-3 text-capitalize fs-16px">Meeting, email and video call
+                                          scheduling
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="key-feature-divider-down">
-                                  <h4 class="fs-18px mb-4">ALL PLANS INCLUDE:</h4>
-                                  <ul>
-                                    <li class="mb-3 text-capitalize fs-16px">Lead, deal, contact, calendar and Client
-                                      Pilot
-                                      management
-                                    </li>
-                                    <li class="mb-3 text-capitalize fs-16px">Seamless data import and 400+ integrations
-                                    </li>
-                                    <li class="mb-3 text-capitalize fs-16px">24/7, multi-language support</li>
-                                  </ul>
+                                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                                  <div class="billed-card custom-shadow card-hover h-100">
+                                    <div class="mb-3"><img class="gridImg" src="./images/professional.svg"
+                                        alt="Square circle grid icon">
+                                    </div>
+                                    <div class="key-feature-divider-up">
+                                      <h3 class="fs-24px text-black">Professional</h3>
+                                      <h4 class="fs-18px text-black">5 Locations</h4>
+                                      <p class="mb-4 text-capitalize">Optimize performance with more customizations and
+                                        reporting</p>
+                                      <p class="fs-32px text-black mb-0 fw-bold">$16.99<span
+                                          class="ms-4 ms-lg-2 ms-xl-4 fw-normal text-dusty-gray strikethrough">$19.99</span>
+                                      </p>
+                                      <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
+                                      <div class="border-bottom border-divider border-thin"><a href="#"
+                                          class="btn btn-lg d-flex align-items-center justify-content-center bg-grey text-black fs-12px fw-bold px-4 py-2 w-100 mt-1 scale-up">Selected
+                                          Plan</a></div>
+                                    </div>
+                                    <div class="key-feature-divider-down">
+                                      <h4 class="fs-18px mb-4">KEY FEATURES:</h4>
+                                      <ul>
+                                        <li class="mb-3 text-capitalize fs-16px">Streamlined lead routing and account
+                                          access
+                                          controls for
+                                          teams</li>
+                                        <li class="mb-3 text-capitalize fs-16px">Revenue forecasts and deeper reporting
+                                          capabilities</li>
+                                        <li class="mb-3 text-capitalize fs-16px">Extra deal and field customization
+                                          options
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                                  <div class="billed-card custom-shadow card-hover h-100">
+                                    <div class="mb-3"><img class="gridImg" src="./images/enterprise.svg"
+                                        alt="Square circle grid icon">
+                                    </div>
+                                    <div class="key-feature-divider-up">
+                                      <h3 class="fs-24px text-black">Enterprise</h3>
+                                      <h4 class="fs-18px text-black">Unlimited Locations</h4>
+                                      <p class="mb-4 text-capitalize">Experience Client Pilot without limits and have
+                                        ultimate peace
+                                        of mind</p>
+                                      <p class="fs-32px text-black mb-0 fw-bold">$99.99</p>
+                                      <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
+                                      <div class="border-bottom border-divider border-thin"><a
+                                          href="./registration.html"
+                                          class="btn btn-lg d-flex align-items-center justify-content-center bg-primary text-white fs-15px fw-bold px-4 py-2 w-100 mt-1 scale-up">Choose
+                                          plan</a></div>
+                                    </div>
+                                    <div class="key-feature-divider-down">
+                                      <h4 class="fs-18px mb-4">KEY FEATURES:</h4>
+                                      <ul>
+                                        <li class="mb-3 text-capitalize fs-16px">Enhanced security preferences</li>
+                                        <li class="mb-3 text-capitalize fs-16px">Complete access to all features</li>
+                                        <li class="mb-3 text-capitalize fs-16px">Unlimited reports and customizations
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-md-6 col-lg-3 mb-4 mt-4 pt-1 pt-md-0 mt-md-0 mb-lg-0">
-                              <div class="billed-card custom-shadow card-hover h-100">
-                                <div class="recommended bg-primary py-1 w-100 text-center">
-                                  <p class="text-white fw-bold fs-18px">Most Popular</p>
+                            <div class="tab-pane fade" id="pills-billed-annually" role="tabpanel"
+                              aria-labelledby="pills-billed-annually-tab" tabindex="1">
+                              <div class="row">
+                                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                                  <div class="billed-card custom-shadow card-hover h-100">
+                                    <div class="mb-3"><img class="gridImg" src="./images/essential.svg"
+                                        alt="Square circle grid icon">
+                                    </div>
+                                    <div class="key-feature-divider-up">
+                                      <h3 class="fs-24px text-black">Essential</h3>
+                                      <h4 class="fs-18px text-black">1 Location</h4>
+                                      <p class="mb-4 text-capitalize">Get organized and set up simple sales processes
+                                        quickly</p>
+                                      <p class="fs-32px text-black mb-0 fw-bold">$19.99</p>
+                                      <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
+                                      <div class="border-bottom border-divider border-thin"><a
+                                          href="./registration.html"
+                                          class="btn btn-lg d-flex align-items-center justify-content-center bg-primary text-white fs-15px fw-bold px-4 py-2 w-100 mt-1 scale-up">Choose
+                                          plan</a></div>
+                                    </div>
+                                    <div class="key-feature-divider-down">
+                                      <h4 class="fs-18px mb-4">ALL PLANS INCLUDE:</h4>
+                                      <ul>
+                                        <li class="mb-3 text-capitalize fs-16px">Lead, deal, contact, calendar and
+                                          Client
+                                          Pilot
+                                          management
+                                        </li>
+                                        <li class="mb-3 text-capitalize fs-16px">Seamless data import and 400+
+                                          integrations
+                                        </li>
+                                        <li class="mb-3 text-capitalize fs-16px">24/7, multi-language support</li>
+                                      </ul>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="mb-3"><img class="gridImg" src="./images/advanced.svg"
-                                    alt="Square circle grid icon">
+                                <div class="col-md-6 col-lg-3 mb-4 mt-4 pt-1 pt-sm-0 mt-sm-0 mb-lg-0">
+                                  <div class="billed-card custom-shadow card-hover h-100">
+                                    <div class="recommended bg-primary py-1 w-100 text-center">
+                                      <p class="text-white fw-bold">Recommended</p>
+                                    </div>
+                                    <div class="mb-3"><img class="gridImg" src="./images/advanced.svg"
+                                        alt="Square circle grid icon">
+                                    </div>
+                                    <div class="key-feature-divider-up">
+                                      <h3 class="fs-24px text-black">Advanced</h3>
+                                      <h4 class="fs-18px text-black">3 Locations</h4>
+                                      <p class="mb-4 text-capitalize">Never miss the next step with easy-to-use email
+                                        and
+                                        automation
+                                      </p>
+                                      <p class="fs-32px text-black mb-0 fw-bold">$17.99<span
+                                          class="ms-4 ms-lg-2 ms-xl-4 fw-normal text-dusty-gray strikethrough">$19.99</span>
+                                      </p>
+                                      <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
+                                      <div class="border-bottom border-divider border-thin"><a
+                                          href="./registration.html"
+                                          class="btn btn-lg d-flex align-items-center justify-content-center bg-primary text-white fs-15px fw-bold px-4 py-2 w-100 mt-1 scale-up">Choose
+                                          plan</a></div>
+                                    </div>
+                                    <div class="key-feature-divider-down">
+                                      <h4 class="fs-18px mb-4">KEY FEATURES:</h4>
+                                      <ul>
+                                        <li class="mb-3 text-capitalize fs-16px">Full email sync with templates, open
+                                          and
+                                          click
+                                          tracking and
+                                          group emailing
+                                        </li>
+                                        <li class="mb-3 text-capitalize fs-16px">Automations builder, including email
+                                          sequences
+                                        </li>
+                                        <li class="mb-3 text-capitalize fs-16px">Meeting, email and video call
+                                          scheduling
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="key-feature-divider-up">
-                                  <h3 class="fs-24px text-black">Advanced</h3>
-                                  <h4 class="fs-18px text-black">3 Locations</h4>
-                                  <p class="mb-4 text-capitalize">Never miss the next step with easy-to-use email and
-                                    automation
-                                  </p>
-                                  <p class="fs-32px text-black mb-0 fw-bold">$17.99<span
-                                      class="ms-4 ms-lg-2 ms-xl-4 fw-normal text-dusty-gray strikethrough">$19.99</span>
-                                  </p>
-                                  <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
-                                  <div class="border-bottom border-divider border-thin"><a href="./registration.html"
-                                      class="btn btn-lg d-flex align-items-center justify-content-center bg-primary text-white fs-15px fw-bold px-4 py-2 w-100 mt-1 scale-up">Choose
-                                      plan</a></div>
+                                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                                  <div class="billed-card custom-shadow card-hover h-100">
+                                    <div class="mb-3"><img class="gridImg" src="./images/professional.svg"
+                                        alt="Square circle grid icon">
+                                    </div>
+                                    <div class="key-feature-divider-up">
+                                      <h3 class="fs-24px text-black">Professional</h3>
+                                      <h4 class="fs-18px text-black">5 Locations</h4>
+                                      <p class="mb-4 text-capitalize">Optimize performance with more customizations and
+                                        reporting</p>
+                                      <p class="fs-32px text-black mb-0 fw-bold">$16.99<span
+                                          class="ms-4 ms-lg-2 ms-xl-4 fw-normal text-dusty-gray strikethrough">$19.99</span>
+                                      </p>
+                                      <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
+                                      <div class="border-bottom border-divider border-thin"><a href="#"
+                                          class="btn btn-lg d-flex align-items-center justify-content-center bg-grey text-black fs-12px fw-bold px-4 py-2 w-100 mt-1 scale-up">Selected
+                                          Plan</a></div>
+                                    </div>
+                                    <div class="key-feature-divider-down">
+                                      <h4 class="fs-18px mb-4">KEY FEATURES:</h4>
+                                      <ul>
+                                        <li class="mb-3 text-capitalize fs-16px">Streamlined lead routing and account
+                                          access
+                                          controls for
+                                          teams</li>
+                                        <li class="mb-3 text-capitalize fs-16px">Revenue forecasts and deeper reporting
+                                          capabilities</li>
+                                        <li class="mb-3 text-capitalize fs-16px">Extra deal and field customization
+                                          options
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="key-feature-divider-down">
-                                  <h4 class="fs-18px mb-4">KEY FEATURES:</h4>
-                                  <ul>
-                                    <li class="mb-3 text-capitalize fs-16px">Full email sync with templates, open and
-                                      click
-                                      tracking and
-                                      group emailing
-                                    </li>
-                                    <li class="mb-3 text-capitalize fs-16px">Automations builder, including email
-                                      sequences
-                                    </li>
-                                    <li class="mb-3 text-capitalize fs-16px">Meeting, email and video call scheduling
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                              <div class="billed-card custom-shadow card-hover h-100">
-                                <div class="mb-3"><img class="gridImg" src="./images/professional.svg"
-                                    alt="Square circle grid icon">
-                                </div>
-                                <div class="key-feature-divider-up">
-                                  <h3 class="fs-24px text-black">Professional</h3>
-                                  <h4 class="fs-18px text-black">5 Locations</h4>
-                                  <p class="mb-4 text-capitalize">Optimize performance with more customizations and
-                                    reporting</p>
-                                  <p class="fs-32px text-black mb-0 fw-bold">$16.99<span
-                                      class="ms-4 ms-lg-2 ms-xl-4 fw-normal text-dusty-gray strikethrough">$19.99</span>
-                                  </p>
-                                  <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
-                                  <div class="border-bottom border-divider border-thin"><a href="#"
-                                      class="btn btn-lg d-flex align-items-center justify-content-center bg-grey text-black fs-12px fw-bold px-4 py-2 w-100 mt-1 scale-up">Selected
-                                      Plan</a></div>
-                                </div>
-                                <div class="key-feature-divider-down">
-                                  <h4 class="fs-18px mb-4">KEY FEATURES:</h4>
-                                  <ul>
-                                    <li class="mb-3 text-capitalize fs-16px">Streamlined lead routing and account access
-                                      controls for
-                                      teams</li>
-                                    <li class="mb-3 text-capitalize fs-16px">Revenue forecasts and deeper reporting
-                                      capabilities</li>
-                                    <li class="mb-3 text-capitalize fs-16px">Extra deal and field customization options
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                              <div class="billed-card custom-shadow card-hover h-100">
-                                <div class="mb-3"><img class="gridImg" src="./images/enterprise.svg"
-                                    alt="Square circle grid icon">
-                                </div>
-                                <div class="key-feature-divider-up">
-                                  <h3 class="fs-24px text-black">Enterprise</h3>
-                                  <h4 class="fs-18px text-black">Unlimited Locations</h4>
-                                  <p class="mb-4 text-capitalize">Experience Client Pilot without limits and have
-                                    ultimate peace
-                                    of mind</p>
-                                  <p class="fs-32px text-black mb-0 fw-bold">$99.99</p>
-                                  <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
-                                  <div class="border-bottom border-divider border-thin"><a href="./registration.html"
-                                      class="btn btn-lg d-flex align-items-center justify-content-center bg-primary text-white fs-15px fw-bold px-4 py-2 w-100 mt-1 scale-up">Choose
-                                      plan</a></div>
-                                </div>
-                                <div class="key-feature-divider-down">
-                                  <h4 class="fs-18px mb-4">KEY FEATURES:</h4>
-                                  <ul>
-                                    <li class="mb-3 text-capitalize fs-16px">Enhanced security preferences</li>
-                                    <li class="mb-3 text-capitalize fs-16px">Complete access to all features</li>
-                                    <li class="mb-3 text-capitalize fs-16px">Unlimited reports and customizations</li>
-                                  </ul>
+                                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                                  <div class="billed-card custom-shadow card-hover h-100">
+                                    <div class="mb-3"><img class="gridImg" src="./images/enterprise.svg"
+                                        alt="Square circle grid icon">
+                                    </div>
+                                    <div class="key-feature-divider-up">
+                                      <h3 class="fs-24px text-black">Enterprise</h3>
+                                      <h4 class="fs-18px text-black">Unlimited Locations</h4>
+                                      <p class="mb-4 text-capitalize">Experience Client Pilot without limits and have
+                                        ultimate peace
+                                        of mind</p>
+                                      <p class="fs-32px text-black mb-0 fw-bold">$99.99</p>
+                                      <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
+                                      <div class="border-bottom border-divider border-thin"><a
+                                          href="./registration.html"
+                                          class="btn btn-lg d-flex align-items-center justify-content-center bg-primary text-white fs-15px fw-bold px-4 py-2 w-100 mt-1 scale-up">Choose
+                                          plan</a></div>
+                                    </div>
+                                    <div class="key-feature-divider-down">
+                                      <h4 class="fs-18px mb-4">KEY FEATURES:</h4>
+                                      <ul>
+                                        <li class="mb-3 text-capitalize fs-16px">Enhanced security preferences</li>
+                                        <li class="mb-3 text-capitalize fs-16px">Complete access to all features</li>
+                                        <li class="mb-3 text-capitalize fs-16px">Unlimited reports and customizations
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="tab-pane fade" id="pills-billed-annually" role="tabpanel"
-                          aria-labelledby="pills-billed-annually-tab" tabindex="1">
-                          <div class="row">
-                            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                              <div class="billed-card custom-shadow card-hover h-100">
-                                <div class="mb-3"><img class="gridImg" src="./images/essential.svg"
-                                    alt="Square circle grid icon">
-                                </div>
-                                <div class="key-feature-divider-up">
-                                  <h3 class="fs-24px text-black">Essential</h3>
-                                  <h4 class="fs-18px text-black">1 Location</h4>
-                                  <p class="mb-4 text-capitalize">Get organized and set up simple sales processes
-                                    quickly</p>
-                                  <p class="fs-32px text-black mb-0 fw-bold">$19.99</p>
-                                  <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
-                                  <div class="border-bottom border-divider border-thin"><a href="./registration.html"
-                                      class="btn btn-lg d-flex align-items-center justify-content-center bg-primary text-white fs-15px fw-bold px-4 py-2 w-100 mt-1 scale-up">Choose
-                                      plan</a></div>
-                                </div>
-                                <div class="key-feature-divider-down">
-                                  <h4 class="fs-18px mb-4">ALL PLANS INCLUDE:</h4>
-                                  <ul>
-                                    <li class="mb-3 text-capitalize fs-16px">Lead, deal, contact, calendar and Client
-                                      Pilot
-                                      management
-                                    </li>
-                                    <li class="mb-3 text-capitalize fs-16px">Seamless data import and 400+ integrations
-                                    </li>
-                                    <li class="mb-3 text-capitalize fs-16px">24/7, multi-language support</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 mb-4 mt-4 pt-1 pt-sm-0 mt-sm-0 mb-lg-0">
-                              <div class="billed-card custom-shadow card-hover h-100">
-                                <div class="recommended bg-primary py-1 w-100 text-center">
-                                  <p class="text-white fw-bold">Recommended</p>
-                                </div>
-                                <div class="mb-3"><img class="gridImg" src="./images/advanced.svg"
-                                    alt="Square circle grid icon">
-                                </div>
-                                <div class="key-feature-divider-up">
-                                  <h3 class="fs-24px text-black">Advanced</h3>
-                                  <h4 class="fs-18px text-black">3 Locations</h4>
-                                  <p class="mb-4 text-capitalize">Never miss the next step with easy-to-use email and
-                                    automation
-                                  </p>
-                                  <p class="fs-32px text-black mb-0 fw-bold">$17.99<span
-                                      class="ms-4 ms-lg-2 ms-xl-4 fw-normal text-dusty-gray strikethrough">$19.99</span>
-                                  </p>
-                                  <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
-                                  <div class="border-bottom border-divider border-thin"><a href="./registration.html"
-                                      class="btn btn-lg d-flex align-items-center justify-content-center bg-primary text-white fs-15px fw-bold px-4 py-2 w-100 mt-1 scale-up">Choose
-                                      plan</a></div>
-                                </div>
-                                <div class="key-feature-divider-down">
-                                  <h4 class="fs-18px mb-4">KEY FEATURES:</h4>
-                                  <ul>
-                                    <li class="mb-3 text-capitalize fs-16px">Full email sync with templates, open and
-                                      click
-                                      tracking and
-                                      group emailing
-                                    </li>
-                                    <li class="mb-3 text-capitalize fs-16px">Automations builder, including email
-                                      sequences
-                                    </li>
-                                    <li class="mb-3 text-capitalize fs-16px">Meeting, email and video call scheduling
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                              <div class="billed-card custom-shadow card-hover h-100">
-                                <div class="mb-3"><img class="gridImg" src="./images/professional.svg"
-                                    alt="Square circle grid icon">
-                                </div>
-                                <div class="key-feature-divider-up">
-                                  <h3 class="fs-24px text-black">Professional</h3>
-                                  <h4 class="fs-18px text-black">5 Locations</h4>
-                                  <p class="mb-4 text-capitalize">Optimize performance with more customizations and
-                                    reporting</p>
-                                  <p class="fs-32px text-black mb-0 fw-bold">$16.99<span
-                                      class="ms-4 ms-lg-2 ms-xl-4 fw-normal text-dusty-gray strikethrough">$19.99</span>
-                                  </p>
-                                  <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
-                                  <div class="border-bottom border-divider border-thin"><a href="#"
-                                      class="btn btn-lg d-flex align-items-center justify-content-center bg-grey text-black fs-12px fw-bold px-4 py-2 w-100 mt-1 scale-up">Selected
-                                      Plan</a></div>
-                                </div>
-                                <div class="key-feature-divider-down">
-                                  <h4 class="fs-18px mb-4">KEY FEATURES:</h4>
-                                  <ul>
-                                    <li class="mb-3 text-capitalize fs-16px">Streamlined lead routing and account access
-                                      controls for
-                                      teams</li>
-                                    <li class="mb-3 text-capitalize fs-16px">Revenue forecasts and deeper reporting
-                                      capabilities</li>
-                                    <li class="mb-3 text-capitalize fs-16px">Extra deal and field customization options
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                              <div class="billed-card custom-shadow card-hover h-100">
-                                <div class="mb-3"><img class="gridImg" src="./images/enterprise.svg"
-                                    alt="Square circle grid icon">
-                                </div>
-                                <div class="key-feature-divider-up">
-                                  <h3 class="fs-24px text-black">Enterprise</h3>
-                                  <h4 class="fs-18px text-black">Unlimited Locations</h4>
-                                  <p class="mb-4 text-capitalize">Experience Client Pilot without limits and have
-                                    ultimate peace
-                                    of mind</p>
-                                  <p class="fs-32px text-black mb-0 fw-bold">$99.99</p>
-                                  <span class="text-dusty-gray pb-3 d-inline-block">Per Month</span>
-                                  <div class="border-bottom border-divider border-thin"><a href="./registration.html"
-                                      class="btn btn-lg d-flex align-items-center justify-content-center bg-primary text-white fs-15px fw-bold px-4 py-2 w-100 mt-1 scale-up">Choose
-                                      plan</a></div>
-                                </div>
-                                <div class="key-feature-divider-down">
-                                  <h4 class="fs-18px mb-4">KEY FEATURES:</h4>
-                                  <ul>
-                                    <li class="mb-3 text-capitalize fs-16px">Enhanced security preferences</li>
-                                    <li class="mb-3 text-capitalize fs-16px">Complete access to all features</li>
-                                    <li class="mb-3 text-capitalize fs-16px">Unlimited reports and customizations</li>
-                                  </ul>
-                                </div>
-                              </div>
+                          <div class="mt-3 mt-md-5 text-end">
+                            <p class="pb-1">Next Estimated Invoice after trial ends for (2 locations) $19.99 (?)</p>
+                            <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold mt-2">Continue</button>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="mt-3 mt-md-5 text-end">
-                        <p class="pb-1">Next Estimated Invoice after trial ends for (2 locations) $19.99 (?)</p>
-                        <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold mt-2">Continue</button>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div id="select-add-ons" class="d-none">
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="add-ons">
-                        <h3 class="text-center fs-36px text-black text-capitalize mb-2">Enhance your plan with add-ons
-                        </h3>
-                        <p class="text-medium-gray text-center sub-header text-capitalize fs-18px">If subscribing in the
-                          middle
-                          of
-                          the
-                          billing cycle,
-                          you’ll be
-                          charged a partial amount.</p>
-                        <div class="add-ons-card border border-light-gray bg-light-peach text-black custom-shadow">
+                  <div class="overflow-auto h-100 d-none">
+                    <div id="select-add-ons" class="flex-grow-1 h-100 overflow-auto">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="add-ons">
+                            <h3 class="text-center fs-36px text-black text-capitalize mb-2">Enhance your plan with
+                              add-ons
+                            </h3>
+                            <p class="text-medium-gray text-center sub-header text-capitalize fs-18px">If subscribing in
+                              the
+                              middle
+                              of
+                              the
+                              billing cycle,
+                              you’ll be
+                              charged a partial amount.</p>
+                            <div class="add-ons-card border border-light-gray bg-light-peach text-black custom-shadow">
+                              <div class="d-lg-flex">
+                                <div
+                                  class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
+                                  <div><img class="gridImg mb-2 mb-xl-0" src="./images/grid-1.svg" alt="gridImg"></div>
+                                  <div class="flex-fill">
+                                    <h3 class="fs-24px pb-2 mb-1 text-capitalize">Smart Docs</h3>
+                                    <p class="pb-2 mb-1 text-capitalize fs-18px"><b>Unlimited signature requests per
+                                        company/month</b>
+                                    </p>
+                                    <p class="text-capitalize fs-16px">Collaborate on sales documents with your team,
+                                      remove
+                                      Pipedrive
+                                      logo
+                                      and sign them
+                                      electronically.</p>
+                                    <div class="row row-cols-auto feature-list">
+                                      <div class="col-xl-4">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Autofill documents</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xl-8">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Set up shared templates and
+                                            storage rules
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xl-4">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Request eSignatures</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xl-8">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Track document opening</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <a href="#"
+                                      class="btn btn-lg bg-primary text-white fs-15px fw-bold watch-video-btn d-inline-flex align-items-center scale-up"><img
+                                        class="me-2 playIcon" src="./images/play-video.svg" alt="Play"><span
+                                        class="ps-1">Watch
+                                        Video</span></a>
+                                  </div>
+                                </div>
+                                <div
+                                  class="d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-center pt-4 pt-lg-0">
+                                  <div
+                                    class="free-trial-period d-sm-flex d-lg-block justify-content-between align-items-center">
+                                    <div>
+                                      <h4 class="fs-32px mb-2 text-capitalize">Free</h4>
+                                      <p class="text-capitalize fs-16px">Included with your Professional plan</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="add-ons-card border border-light-gray text-black custom-shadow">
+                              <div class="d-lg-flex">
+                                <div
+                                  class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
+                                  <div><img class="gridImg mb-2 mb-xl-0" src="./images/grid-2.svg" alt="gridImg"></div>
+                                  <div class="flex-fill">
+                                    <h3 class="fs-24px pb-2 mb-1 text-capitalize">Lead Booster</h3>
+                                    <p class="pb-2 mb-1 text-capitalize fs-18px"><b>10 Prospector lead credits/month</b>
+                                      (renews
+                                      monthly; 10
+                                      during trial) <a href="#"
+                                        class="fw-bold text-black text-decoration-underline">Change
+                                        number</a>
+                                    </p>
+                                    <p class="pb-2 mb-1 text-capitalize fs-16px">Get more leads before they drift
+                                      elsewhere.
+                                      Engage
+                                      leads with
+                                      your Chatbot and Live Chat, or let them come to you with Web Forms.</p>
+                                    <p class="text-capitalize fs-16px">Prospector finds your next new lead out of a
+                                      global
+                                      database
+                                      of
+                                      400
+                                      million profiles. Add-on includes:</p>
+                                    <div class="row row-cols-auto feature-list">
+                                      <div class="col-xxl-3">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Chatbot</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xxl-5">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Live Chat</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xxl-3">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Prospector</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xxl-3">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Web Forms</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xxl-5">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Full access to Scheduler
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div><a href="#"
+                                        class="btn btn-lg bg-primary text-white fs-15px fw-bold watch-video-btn d-inline-flex align-items-center scale-up"><img
+                                          class="me-2 playIcon" src="./images/play-video.svg" alt="Play"><span
+                                          class="ps-1">Watch
+                                          Video</span></a></div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-center pt-4 pt-lg-0">
+                                  <div
+                                    class="free-trial-period d-sm-flex d-lg-block justify-content-between align-items-center">
+                                    <div>
+                                      <h4 class="fs-32px mb-2 pb-1 text-capitalize">Free during trial period</h4>
+                                      <p class="text-capitalize fs-16px">$39 per company/month after trial</p>
+                                    </div>
+                                    <a href="#"
+                                      class="btn btn-lg bg-primary text-white fs-15px fw-bold mt-3 mt-sm-0 mt-lg-3 d-inline-flex justify-content-center align-items-center scale-up text-nowrap"><img
+                                        class="me-2 plusIcon" src="./images/plus-white.svg" alt="Plus"><span
+                                        class="ps-1">Add to Plan</span></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="add-ons-card border border-light-gray bg-light-peach text-black custom-shadow">
+                              <div class="d-lg-flex">
+                                <div
+                                  class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
+                                  <div><img class="gridImg mb-2 mb-xl-0" src="./images/grid-3.svg" alt="gridImg"></div>
+                                  <div class="flex-fill">
+                                    <h3 class="fs-24px pb-2 mb-1 text-capitalize">Campaigns</h3>
+                                    <p class="pb-2 mb-1 text-capitalize fs-18px"><b>1,000 subscriber limit</b> (500
+                                      during
+                                      trial) <a href="#" class="fw-bold text-black text-decoration-underline">Change
+                                        number</a>
+                                    </p>
+                                    <p class="text-capitalize fs-16px">Send and automate email marketing campaigns that
+                                      deliver
+                                      unbeatable
+                                      results. Choose from tons of pro, customizable email templates to nurture contacts
+                                      into
+                                      hot
+                                      leads.</p>
+                                    <div class="row row-cols-auto feature-list">
+                                      <div class="col-xxl-4">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Email campaigns</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xxl-4">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Template builder</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xxl-4">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Automations*</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xxl-4">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Engagement reports</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <a href="#"
+                                      class="btn btn-lg bg-primary text-white fs-15px fw-bold watch-video-btn d-inline-flex align-items-center scale-up"><img
+                                        class="me-2 playIcon" src="./images/play-video.svg" alt="Play"><span
+                                        class="ps-1">Watch
+                                        Video</span></a>
+                                    <p class="text-medium-gray fs-16px mt-3">*Available on the Clientpilot Advanced plan
+                                      or
+                                      higher</p>
+                                  </div>
+                                </div>
+                                <div
+                                  class="d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-center pt-4 pt-lg-0">
+                                  <div
+                                    class="free-trial-period d-sm-flex d-lg-block justify-content-between align-items-center">
+                                    <div>
+                                      <div class="fs-14px text-black bg-light-blue py-1 px-2 mb-2 d-inline-block">
+                                        ACCOUNT
+                                        REVIEW NEEDED
+                                      </div>
+                                      <h4 class="fs-32px mb-2 pb-1 pb-1 text-capitalize">Free during trial period
+                                      </h4>
+                                      <p class="text-capitalize fs-16px">$16 per company/month after trial</p>
+                                    </div>
+                                    <div><a href="#"
+                                        class="btn btn-lg border-orange text-primary fs-15px fw-bold mt-3 mt-sm-0 mt-lg-3 d-inline-flex px-5 justify-content-center align-items-center scale-up"><img
+                                          class="me-2 minusIcon" src="./images/minus-orange.svg" alt="Minus"><span
+                                          class="ps-1">Remove</span></a></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="add-ons-card border border-light-gray text-black custom-shadow">
+                              <div class="d-lg-flex">
+                                <div
+                                  class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
+                                  <div><img class="gridImg mb-2 mb-xl-0" src="./images/grid-4.svg" alt="gridImg"></div>
+                                  <div class="flex-fill">
+                                    <h3 class="fs-24px pb-2 mb-1 text-capitalize">Projects</h3>
+                                    <p class="pb-2 mb-1 text-capitalize fs-18px"><b>1 Projects seat</b><a href="#"
+                                        class="fw-bold text-black text-decoration-underline ps-2">Change number</a></p>
+                                    <p class="text-capitalize fs-16px">Plan, track and deliver on all the moving pieces
+                                      for
+                                      your
+                                      next
+                                      milestone. Combine managing projects and customers in one place where your teams
+                                      can
+                                      collaborate, hand off and reach goals seamlessly</p>
+                                    <div class="row row-cols-auto feature-list">
+                                      <div class="col-xxl-7">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-md" src="./images/check.svg" alt="Check">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Multiple customizable
+                                            kanban
+                                            boards</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xxl-5">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-md" src="./images/check.svg" alt="Check">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Automations</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <a href="#"
+                                      class="btn btn-lg bg-primary text-white fs-15px fw-bold watch-video-btn d-inline-flex align-items-center scale-up"><img
+                                        class="me-2 playIcon" src="./images/play-video.svg" alt="Play"><span
+                                        class="ps-1">Watch
+                                        Video</span></a>
+                                  </div>
+                                </div>
+                                <div
+                                  class="d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-center pt-4 pt-lg-0">
+                                  <div
+                                    class="free-trial-period d-sm-flex d-lg-block justify-content-between align-items-center">
+                                    <div>
+                                      <h4 class="fs-32px mb-2 pb-1 text-capitalize">Free during trial period</h4>
+                                      <p class="text-capitalize fs-16px">Free during trial period</p>
+                                    </div>
+                                    <div><a href="#"
+                                        class="btn btn-lg bg-primary text-white fs-15px fw-bold mt-3 mt-sm-0 mt-lg-3 d-inline-flex justify-content-center align-items-center scale-up text-nowrap"><img
+                                          class="me-2 plusIcon" src="./images/plus-white.svg" alt="Plus"><span
+                                          class="ps-1">Add to Plan</span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="add-ons-card border border-light-gray text-black custom-shadow">
+                              <div class="d-lg-flex">
+                                <div
+                                  class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
+                                  <div><img class="gridImg mb-2 mb-xl-0" src="./images/grid-1.svg" alt="gridImg"></div>
+                                  <div class="flex-fill">
+                                    <h3 class="fs-24px pb-2 mb-1 text-capitalize">Team Management Pack</h3>
+                                    <p class="text-capitalize fs-16px">Boost your team efficiency with increased usage
+                                      limits. Add
+                                      more teams,
+                                      more visibility groups, and add additional permission sets (per company).</p>
+                                    <div class="row row-cols-auto feature-list">
+                                      <div class="col-xxl-7">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-sm" src="./images/plus.svg" alt="Plus">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">Multiple customizable
+                                            kanban
+                                            boards</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xxl-5">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-sm" src="./images/plus.svg" alt="Plus">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">10 visibility groups</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xxl-7">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-sm" src="./images/plus.svg" alt="Plus">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">5 permission sets</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <a href="#"
+                                      class="btn btn-lg bg-primary text-white fs-15px fw-bold watch-video-btn d-inline-flex align-items-center scale-up"><img
+                                        class="me-2 playIcon" src="./images/play-video.svg" alt="Play"><span
+                                        class="ps-1">Watch
+                                        Video</span></a>
+                                  </div>
+                                </div>
+                                <div
+                                  class="d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-center pt-4 pt-lg-0">
+                                  <div
+                                    class="free-trial-period d-sm-flex d-lg-block justify-content-between align-items-center">
+                                    <div>
+                                      <h4 class="fs-32px mb-2 pb-1 text-capitalize">Free during trial period</h4>
+                                      <p class="text-capitalize fs-16px">$100 per company/month after trial</p>
+                                    </div>
+                                    <div><a href="#"
+                                        class="btn btn-lg bg-primary text-white fs-15px fw-bold mt-3 mt-sm-0 mt-lg-3 d-inline-flex justify-content-center align-items-center scale-up text-nowrap"><img
+                                          class="me-2 plusIcon" src="./images/plus-white.svg" alt="Plus"><span
+                                          class="ps-1">Add to Plan</span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="add-ons-card border border-light-gray bg-light-peach text-black custom-shadow">
+                              <div class="d-lg-flex">
+                                <div
+                                  class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
+                                  <div><img class="gridImg mb-2 mb-xl-0" src="./images/grid-2.svg" alt="gridImg"></div>
+                                  <div class="flex-fill">
+                                    <h3 class="fs-24px pb-2 mb-1 text-capitalize">Automations Pack</h3>
+                                    <p class="text-capitalize fs-16px">Boost your ability to add automations.</p>
+                                    <div class="row row-cols-auto feature-list">
+                                      <div class="col-xxl-12">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-sm" src="./images/plus.svg" alt="plus">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">30 additional active
+                                            automations
+                                            (per
+                                            user)</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-center pt-4 pt-lg-0">
+                                  <div
+                                    class="free-trial-period d-sm-flex d-lg-block justify-content-between align-items-center">
+                                    <div>
+                                      <h4 class="fs-32px mb-2 py-1 text-capitalize">Free during trial period</h4>
+                                      <p class="text-capitalize fs-16px">$75 per company/month after trial</p>
+                                    </div>
+                                    <div><a href="#"
+                                        class="btn btn-lg border-orange text-primary fs-15px fw-bold mt-3 mt-sm-0 mt-lg-3 d-inline-flex px-5 justify-content-center align-items-center scale-up"><img
+                                          class="me-2 minusIcon" src="./images/minus-orange.svg" alt="Minus"><span
+                                          class="ps-1">Remove</span></a></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="add-ons-card border border-light-gray text-black custom-shadow">
+                              <div class="d-lg-flex">
+                                <div
+                                  class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
+                                  <div><img class="gridImg mb-2 mb-xl-0" src="./images/grid-3.svg" alt="gridImg"></div>
+                                  <div class="flex-fill">
+                                    <h3 class="fs-24px pb-2 mb-1 text-capitalize">Reports Pack</h3>
+                                    <p class="text-capitalize fs-16px">Boost your total amount of reports</p>
+                                    <div class="row row-cols-auto feature-list">
+                                      <div class="col-xxl-7">
+                                        <div class="d-flex align-items-center feature-item">
+                                          <div class="me-1"><img class="icon-sm" src="./images/plus.svg" alt="Plus">
+                                          </div>
+                                          <p class="ps-2 text-black fs-16px text-capitalize">50 additional reports (per
+                                            user)
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-center pt-4 pt-lg-0">
+                                  <div
+                                    class="free-trial-period d-sm-flex d-lg-block justify-content-between align-items-center">
+                                    <div>
+                                      <h4 class="fs-32px mb-2 pb-1 text-capitalize">Free during trial period</h4>
+                                      <p class="text-capitalize fs-16px">$100 per company/month after trial</p>
+                                    </div>
+                                    <div><a href="#"
+                                        class="btn btn-lg bg-primary text-white fs-15px fw-bold mt-3 mt-sm-0 mt-lg-3 d-inline-flex justify-content-center align-items-center scale-up text-nowrap"><img
+                                          class="me-2 plusIcon" src="./images/plus-white.svg" alt="Plus"><span
+                                          class="ps-1">Add to Plan</span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="overflow-auto h-100 d-none">
+                    <div id="add-billing-details" class="flex-grow-1 h-100 overflow-auto">
+                      <div class="border border-primary custom-shadow-primary rounded-7">
+                        <div class="heading border-bottom border-primary">
+                          <h6 class="">Payment method</h6>
+                        </div>
+                        <div class="row justify-content-center">
+                          <div class="col-12 col-sm-10 col-md-9 col-lg-8 col-xl-7">
+                            <div id="payment-method" class="px-4 px-sm-0">
+                              <div class="px-lg-4">
+                                <div class="nav nav-pills row mx-0" id="pills-tab" role="tablist">
+                                  <div class="col-md-6 mb-3 mb-md-0 pe-md-3">
+                                    <div
+                                      class="custom-shadow card-hover border border-thin border-gray py-3 pe-2 rounded-3 h-100 d-flex align-items-center"
+                                      role="presentation">
+                                      <div id="card-payment-tab" class="w-100 active" data-bs-toggle="pill"
+                                        data-bs-target="#card-payment" role="tab" aria-controls="card-payment"
+                                        aria-selected="true">
+                                        <label class="d-flex align-items-center cursor-pointer"><input type="radio"
+                                            class="input-radio py-1 cursor-pointer flex-shrink-0" name="payment-method"
+                                            checked>
+                                          <span class="border-start border-thin border-gray"><img
+                                              class="cards img-fluid py-sm-2" src="./images/cards.png"
+                                              alt="cards"></span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6 ps-md-3">
+                                    <div
+                                      class="custom-shadow card-hover border border-thin border-gray py-3 pe-3 pe-sm-4 rounded-3 h-100 d-flex align-items-center"
+                                      role="presentation">
+                                      <div id="payPal-payment-tab" class="w-100" data-bs-toggle="pill"
+                                        data-bs-target="#payPal-payment" role="tab" aria-controls="payPal-payment"
+                                        aria-selected="false">
+                                        <label class="d-flex align-items-center cursor-pointer"><input type="radio"
+                                            class="input-radio py-1 cursor-pointer flex-shrink-0" name="payment-method">
+                                          <span class="border-start border-thin border-gray ps-3"><img
+                                              class="paypal img-fluid py-sm-2" src="./images/paypal.svg"
+                                              alt="Paypal"></span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tab-content recommended-spacing mt-5" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="card-payment" role="tabpanel"
+                                  aria-labelledby="card-payment-tab" tabindex="0">
+                                  <form>
+                                    <div class="row gx-1 align-items-center">
+                                      <div class="col-md-3">
+                                        <label for="nameOnTheCard"
+                                          class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Name
+                                          on
+                                          the card</label>
+                                      </div>
+                                      <div class="col-md-9">
+                                        <input type="text"
+                                          class="form-control border border-divider shadow-none custom-input text-black rounded-1"
+                                          id="nameOnTheCard" placeholder="Enter Name on the card"
+                                          aria-describedby="nameOnTheCard">
+                                      </div>
+                                    </div>
+                                    <div class="row gx-1 align-items-center">
+                                      <div class="col-md-3">
+                                        <label for="creditCardNumber"
+                                          class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Credit
+                                          card number</label>
+                                      </div>
+                                      <div class="col-md-9">
+                                        <input type="text"
+                                          class="form-control border border-divider shadow-none custom-input text-black rounded-1"
+                                          id="creditCardNumber" placeholder="1234 1234 1234 1234"
+                                          aria-describedby="creditCardNumber">
+                                      </div>
+                                    </div>
+                                    <div class="row gx-1 align-items-center">
+                                      <div class="col-md-3">
+                                        <label for="cardExpirationDate"
+                                          class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Card
+                                          expiration date</label>
+                                      </div>
+                                      <div class="col-md-4">
+                                        <input type="text"
+                                          class="form-control border border-divider shadow-none custom-input text-black rounded-1"
+                                          id="cardExpirationDate" placeholder="MM / YYYY"
+                                          aria-describedby="cardExpirationDate">
+                                      </div>
+                                      <div class="col-md-1 text-md-end mt-3 mt-sm-4 mt-md-0">
+                                        <label for="cvv"
+                                          class="form-label mb-0 text-black fs-14px mb-2 mb-md-0 ms-md-1 me-2 me-lg-3">CVV</label>
+                                      </div>
+                                      <div class="col-md-4">
+                                        <input type="text"
+                                          class="form-control border border-divider shadow-none custom-input text-black rounded-1"
+                                          id="cvv" placeholder="CVV" aria-describedby="cvv">
+                                      </div>
+                                    </div>
+                                  </form>
+                                </div>
+                                <div class="tab-pane fade" id="payPal-payment" role="tabpanel"
+                                  aria-labelledby="payPal-payment-tab" tabindex="1">
+                                  <p class="fw-bold fs-16px text-center mb-3">Log in to PayPal. You can review your
+                                    purchase
+                                    on
+                                    the
+                                    next step.</p>
+                                  <div class="d-flex align-items-center justify-content-center pt-4">
+                                    <div><button
+                                        class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue">Cancel</button>
+                                    </div>
+                                    <div><button class="btn btn-lg bg-yellow text-white fs-15px fw-bold ms-3"><img
+                                          class="paypal" src="./images/paypal.svg" alt="paypal"></button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="heading border-bottom border-primary mt-0 mt-md-3 mt-lg-5">
+                          <h6 class="">Billing contact</h6>
+                        </div>
+                        <div class="row justify-content-center">
+                          <div class="col-12 col-sm-10 col-md-9 col-lg-8 col-xl-7">
+                            <form id="billing-contact" class="px-4 px-sm-0">
+                              <div class="row gx-1 align-items-md-center">
+                                <div class="col-sm-3">
+                                  <label for="firstName"
+                                    class="form-label mb-0 text-black fs-14px mb-2 mb-md-0 pt-sm-3 pt-md-0">Name</label>
+                                </div>
+                                <div class="col-sm-9">
+                                  <div class="d-md-flex align-items-center">
+                                    <input type="text"
+                                      class="form-control border border-input shadow-none custom-input text-black rounded-1 me-md-3"
+                                      id="firstName" placeholder="Enter First Name" aria-describedby="firstName"
+                                      required>
+                                    <input type="text"
+                                      class="form-control border border-input shadow-none custom-input text-black rounded-1 ms-md-3 mt-3 mt-md-0"
+                                      id="lastName" placeholder="Enter Last Name" aria-describedby="lastName" required>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row gx-1 align-items-center">
+                                <div class="col-sm-3">
+                                  <label for="companyName"
+                                    class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Company
+                                    Name
+                                  </label>
+                                </div>
+                                <div class="col-sm-9">
+                                  <input type="text"
+                                    class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                                    id="companyName" placeholder="Enter company name" aria-describedby="companyName"
+                                    required>
+                                </div>
+                              </div>
+                              <div class="row gx-1 align-items-center">
+                                <div class="col-sm-3">
+                                  <label for="email" class="form-label mb-0 text-black fs-14px mb-2 mb-md-3">Email
+                                    address</label>
+                                </div>
+                                <div class="col-sm-9">
+                                  <input type="email"
+                                    class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                                    id="email" placeholder="Enter email" aria-describedby="emailHelp" required>
+                                  <div id="emailHelp" class="text-dusty-gray fs-12px mt-2">We will be sending invoices
+                                    to
+                                    this
+                                    email
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="heading border-bottom border-primary mt-0 mt-md-3 mt-lg-5">
+                          <h6 class="">Billing address</h6>
+                        </div>
+                        <div class="row justify-content-center">
+                          <div class="col-12 col-sm-10 col-md-9 col-lg-8 col-xl-7">
+                            <form id="billing-address" class="px-4 px-sm-0">
+                              <div class="row gx-1 align-items-center">
+                                <div class="col-md-3">
+                                  <label for="addressLine1"
+                                    class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Country</label>
+                                </div>
+                                <div class="col-md-9">
+                                  <select class="form-select shadow-none custom-select"
+                                    aria-label="Default select example">
+                                    <option selected>United States</option>
+                                    <option value="1">India</option>
+                                    <option value="2">Australia</option>
+                                    <option value="3">Canada</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="row gx-1 align-items-center">
+                                <div class="col-md-3">
+                                  <label for="addressLine1"
+                                    class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Address
+                                    Line 1</label>
+                                </div>
+                                <div class="col-md-9">
+                                  <input type="text"
+                                    class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                                    id="addressLine1" placeholder="Street" aria-describedby="addressLine1">
+                                </div>
+                              </div>
+                              <div class="row gx-1 align-items-center">
+                                <div class="col-md-3">
+                                  <label for="addressLine2"
+                                    class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Address
+                                    Line 2</label>
+                                </div>
+                                <div class="col-md-9">
+                                  <input type="text"
+                                    class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                                    id="addressLine2" placeholder="Apt/Suite" aria-describedby="addressLine2">
+                                </div>
+                              </div>
+                              <div class="row gx-1 align-items-center">
+                                <div class="col-md-3">
+                                  <label for="city" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">City</label>
+                                </div>
+                                <div class="col-md-9">
+                                  <input type="text"
+                                    class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                                    id="city" placeholder="City" aria-describedby="city">
+                                </div>
+                              </div>
+                              <div class="row gx-1 align-items-center">
+                                <div class="col-md-3">
+                                  <label for="state"
+                                    class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">State</label>
+                                </div>
+                                <div class="col-md-9">
+                                  <input type="text"
+                                    class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                                    id="state" placeholder="state" aria-describedby="state">
+                                </div>
+                              </div>
+                              <div class="row gx-1 align-items-center">
+                                <div class="col-md-3">
+                                  <label for="zipPostal"
+                                    class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">ZIP/Postal</label>
+                                </div>
+                                <div class="col-md-9">
+                                  <input type="text"
+                                    class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                                    id="zipPostal" placeholder="ZIP/Postal" aria-describedby="zipPostal">
+                                </div>
+                              </div>
+                              <div class="row gx-1 align-items-center">
+                                <div class="col-md-3">
+                                  <label for="salesTaxNumber"
+                                    class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Sales
+                                    tax number (optional)</label>
+                                </div>
+                                <div class="col-md-9">
+                                  <input type="text"
+                                    class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                                    id="salesTaxNumber" placeholder="Sales tax number"
+                                    aria-describedby="salesTaxNumber">
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div
+                          class="d-flex align-items-center justify-content-center justify-content-sm-end pt-2 pb-4 pt-sm-4 pb-sm-5 pe-sm-5">
+                          <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold">Continue</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="overflow-auto h-100 d-none">
+                    <div id="confirm-purchase" class="flex-grow-1 h-100 overflow-auto">
+                      <div class="border border-primary custom-shadow-primary rounded-7 p-4 p-md-5 border-custom-none">
+                        <div class="text-center">
+                          <h3 class="mb-4 mt-2 fs-36px">You're all set!</h3>
+                          <p class="my-4 fs-18px"> Your subscription has been confirmed. Thank you for subscribing to
+                            our
+                            Client
+                            pilot
+                            platform.</p>
+                          <div><img class="img-fluid success" src="./images/success.svg" alt="You're all set!"></div>
+                        </div>
+                        <p class="pb-3 pb-sm-4">Subscription details:</p>
+                        <div class="add-ons-card border border-light-gray bg-light-peach text-black custom-shadow mt-2">
                           <div class="d-lg-flex">
                             <div
                               class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
                               <div><img class="gridImg mb-2 mb-xl-0" src="./images/grid-1.svg" alt="gridImg"></div>
                               <div class="flex-fill">
                                 <h3 class="fs-24px pb-2 mb-1 text-capitalize">Smart Docs</h3>
-                                <p class="pb-2 mb-1 text-capitalize fs-18px"><b>Unlimited signature requests per
+                                <p class="pb-2 mb-1 text-capitalize"><b>Unlimited signature requests per
                                     company/month</b>
                                 </p>
                                 <p class="text-capitalize fs-16px">Collaborate on sales documents with your team, remove
@@ -468,11 +1221,6 @@
                                     </div>
                                   </div>
                                 </div>
-                                <a href="#"
-                                  class="btn btn-lg bg-primary text-white fs-15px fw-bold watch-video-btn d-inline-flex align-items-center scale-up"><img
-                                    class="me-2 playIcon" src="./images/play-video.svg" alt="Play"><span
-                                    class="ps-1">Watch
-                                    Video</span></a>
                               </div>
                             </div>
                             <div
@@ -487,681 +1235,15 @@
                             </div>
                           </div>
                         </div>
-                        <div class="add-ons-card border border-light-gray text-black custom-shadow">
-                          <div class="d-lg-flex">
-                            <div
-                              class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
-                              <div><img class="gridImg mb-2 mb-xl-0" src="./images/grid-2.svg" alt="gridImg"></div>
-                              <div class="flex-fill">
-                                <h3 class="fs-24px pb-2 mb-1 text-capitalize">Lead Booster</h3>
-                                <p class="pb-2 mb-1 text-capitalize fs-18px"><b>10 Prospector lead credits/month</b>
-                                  (renews
-                                  monthly; 10
-                                  during trial) <a href="#" class="fw-bold text-black text-decoration-underline">Change
-                                    number</a>
-                                </p>
-                                <p class="pb-2 mb-1 text-capitalize fs-16px">Get more leads before they drift elsewhere.
-                                  Engage
-                                  leads with
-                                  your Chatbot and Live Chat, or let them come to you with Web Forms.</p>
-                                <p class="text-capitalize fs-16px">Prospector finds your next new lead out of a global
-                                  database
-                                  of
-                                  400
-                                  million profiles. Add-on includes:</p>
-                                <div class="row row-cols-auto feature-list">
-                                  <div class="col-xxl-3">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">Chatbot</p>
-                                    </div>
-                                  </div>
-                                  <div class="col-xxl-5">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">Live Chat</p>
-                                    </div>
-                                  </div>
-                                  <div class="col-xxl-3">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">Prospector</p>
-                                    </div>
-                                  </div>
-                                  <div class="col-xxl-3">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">Web Forms</p>
-                                    </div>
-                                  </div>
-                                  <div class="col-xxl-5">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">Full access to Scheduler</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div><a href="#"
-                                    class="btn btn-lg bg-primary text-white fs-15px fw-bold watch-video-btn d-inline-flex align-items-center scale-up"><img
-                                      class="me-2 playIcon" src="./images/play-video.svg" alt="Play"><span
-                                      class="ps-1">Watch
-                                      Video</span></a></div>
-                              </div>
-                            </div>
-                            <div
-                              class="d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-center pt-4 pt-lg-0">
-                              <div
-                                class="free-trial-period d-sm-flex d-lg-block justify-content-between align-items-center">
-                                <div>
-                                  <h4 class="fs-32px mb-2 pb-1 text-capitalize">Free during trial period</h4>
-                                  <p class="text-capitalize fs-16px">$39 per company/month after trial</p>
-                                </div>
-                                <a href="#"
-                                  class="btn btn-lg bg-primary text-white fs-15px fw-bold mt-3 mt-sm-0 mt-lg-3 d-inline-flex justify-content-center align-items-center scale-up text-nowrap"><img
-                                    class="me-2 plusIcon" src="./images/plus-white.svg" alt="Plus"><span
-                                    class="ps-1">Add to Plan</span></a>
-                              </div>
-                            </div>
+                        <div class="text-center">
+                          <p class="fs-18px fw-bold mb-4">For any queries or assistance, please feel free to reach out
+                            to
+                            our customer support team,
+                            available 24/7.</p>
+                          <div><button
+                              class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3">Continue...</button>
                           </div>
                         </div>
-                        <div class="add-ons-card border border-light-gray bg-light-peach text-black custom-shadow">
-                          <div class="d-lg-flex">
-                            <div
-                              class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
-                              <div><img class="gridImg mb-2 mb-xl-0" src="./images/grid-3.svg" alt="gridImg"></div>
-                              <div class="flex-fill">
-                                <h3 class="fs-24px pb-2 mb-1 text-capitalize">Campaigns</h3>
-                                <p class="pb-2 mb-1 text-capitalize fs-18px"><b>1,000 subscriber limit</b> (500 during
-                                  trial) <a href="#" class="fw-bold text-black text-decoration-underline">Change
-                                    number</a>
-                                </p>
-                                <p class="text-capitalize fs-16px">Send and automate email marketing campaigns that
-                                  deliver
-                                  unbeatable
-                                  results. Choose from tons of pro, customizable email templates to nurture contacts
-                                  into
-                                  hot
-                                  leads.</p>
-                                <div class="row row-cols-auto feature-list">
-                                  <div class="col-xxl-4">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">Email campaigns</p>
-                                    </div>
-                                  </div>
-                                  <div class="col-xxl-4">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">Template builder</p>
-                                    </div>
-                                  </div>
-                                  <div class="col-xxl-4">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">Automations*</p>
-                                    </div>
-                                  </div>
-                                  <div class="col-xxl-4">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">Engagement reports</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <a href="#"
-                                  class="btn btn-lg bg-primary text-white fs-15px fw-bold watch-video-btn d-inline-flex align-items-center scale-up"><img
-                                    class="me-2 playIcon" src="./images/play-video.svg" alt="Play"><span
-                                    class="ps-1">Watch
-                                    Video</span></a>
-                                <p class="text-medium-gray fs-16px mt-3">*Available on the Clientpilot Advanced plan or
-                                  higher</p>
-                              </div>
-                            </div>
-                            <div
-                              class="d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-center pt-4 pt-lg-0">
-                              <div
-                                class="free-trial-period d-sm-flex d-lg-block justify-content-between align-items-center">
-                                <div>
-                                  <div class="fs-14px text-black bg-light-blue py-1 px-2 mb-2 d-inline-block">
-                                    ACCOUNT
-                                    REVIEW NEEDED
-                                  </div>
-                                  <h4 class="fs-32px mb-2 pb-1 pb-1 text-capitalize">Free during trial period
-                                  </h4>
-                                  <p class="text-capitalize fs-16px">$16 per company/month after trial</p>
-                                </div>
-                                <div><a href="#"
-                                    class="btn btn-lg border-orange text-primary fs-15px fw-bold mt-3 mt-sm-0 mt-lg-3 d-inline-flex px-5 justify-content-center align-items-center scale-up"><img
-                                      class="me-2 minusIcon" src="./images/minus-orange.svg" alt="Minus"><span
-                                      class="ps-1">Remove</span></a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="add-ons-card border border-light-gray text-black custom-shadow">
-                          <div class="d-lg-flex">
-                            <div
-                              class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
-                              <div><img class="gridImg mb-2 mb-xl-0" src="./images/grid-4.svg" alt="gridImg"></div>
-                              <div class="flex-fill">
-                                <h3 class="fs-24px pb-2 mb-1 text-capitalize">Projects</h3>
-                                <p class="pb-2 mb-1 text-capitalize fs-18px"><b>1 Projects seat</b><a href="#"
-                                    class="fw-bold text-black text-decoration-underline ps-2">Change number</a></p>
-                                <p class="text-capitalize fs-16px">Plan, track and deliver on all the moving pieces for
-                                  your
-                                  next
-                                  milestone. Combine managing projects and customers in one place where your teams can
-                                  collaborate, hand off and reach goals seamlessly</p>
-                                <div class="row row-cols-auto feature-list">
-                                  <div class="col-xxl-7">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-md" src="./images/check.svg" alt="Check"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">Multiple customizable kanban
-                                        boards</p>
-                                    </div>
-                                  </div>
-                                  <div class="col-xxl-5">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-md" src="./images/check.svg" alt="Check"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">Automations</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <a href="#"
-                                  class="btn btn-lg bg-primary text-white fs-15px fw-bold watch-video-btn d-inline-flex align-items-center scale-up"><img
-                                    class="me-2 playIcon" src="./images/play-video.svg" alt="Play"><span
-                                    class="ps-1">Watch
-                                    Video</span></a>
-                              </div>
-                            </div>
-                            <div
-                              class="d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-center pt-4 pt-lg-0">
-                              <div
-                                class="free-trial-period d-sm-flex d-lg-block justify-content-between align-items-center">
-                                <div>
-                                  <h4 class="fs-32px mb-2 pb-1 text-capitalize">Free during trial period</h4>
-                                  <p class="text-capitalize fs-16px">Free during trial period</p>
-                                </div>
-                                <div><a href="#"
-                                    class="btn btn-lg bg-primary text-white fs-15px fw-bold mt-3 mt-sm-0 mt-lg-3 d-inline-flex justify-content-center align-items-center scale-up text-nowrap"><img
-                                      class="me-2 plusIcon" src="./images/plus-white.svg" alt="Plus"><span
-                                      class="ps-1">Add to Plan</span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="add-ons-card border border-light-gray text-black custom-shadow">
-                          <div class="d-lg-flex">
-                            <div
-                              class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
-                              <div><img class="gridImg mb-2 mb-xl-0" src="./images/grid-1.svg" alt="gridImg"></div>
-                              <div class="flex-fill">
-                                <h3 class="fs-24px pb-2 mb-1 text-capitalize">Team Management Pack</h3>
-                                <p class="text-capitalize fs-16px">Boost your team efficiency with increased usage
-                                  limits. Add
-                                  more teams,
-                                  more visibility groups, and add additional permission sets (per company).</p>
-                                <div class="row row-cols-auto feature-list">
-                                  <div class="col-xxl-7">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-sm" src="./images/plus.svg" alt="Plus"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">Multiple customizable kanban
-                                        boards</p>
-                                    </div>
-                                  </div>
-                                  <div class="col-xxl-5">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-sm" src="./images/plus.svg" alt="Plus"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">10 visibility groups</p>
-                                    </div>
-                                  </div>
-                                  <div class="col-xxl-7">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-sm" src="./images/plus.svg" alt="Plus"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">5 permission sets</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <a href="#"
-                                  class="btn btn-lg bg-primary text-white fs-15px fw-bold watch-video-btn d-inline-flex align-items-center scale-up"><img
-                                    class="me-2 playIcon" src="./images/play-video.svg" alt="Play"><span
-                                    class="ps-1">Watch
-                                    Video</span></a>
-                              </div>
-                            </div>
-                            <div
-                              class="d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-center pt-4 pt-lg-0">
-                              <div
-                                class="free-trial-period d-sm-flex d-lg-block justify-content-between align-items-center">
-                                <div>
-                                  <h4 class="fs-32px mb-2 pb-1 text-capitalize">Free during trial period</h4>
-                                  <p class="text-capitalize fs-16px">$100 per company/month after trial</p>
-                                </div>
-                                <div><a href="#"
-                                    class="btn btn-lg bg-primary text-white fs-15px fw-bold mt-3 mt-sm-0 mt-lg-3 d-inline-flex justify-content-center align-items-center scale-up text-nowrap"><img
-                                      class="me-2 plusIcon" src="./images/plus-white.svg" alt="Plus"><span
-                                      class="ps-1">Add to Plan</span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="add-ons-card border border-light-gray bg-light-peach text-black custom-shadow">
-                          <div class="d-lg-flex">
-                            <div
-                              class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
-                              <div><img class="gridImg mb-2 mb-xl-0" src="./images/grid-2.svg" alt="gridImg"></div>
-                              <div class="flex-fill">
-                                <h3 class="fs-24px pb-2 mb-1 text-capitalize">Automations Pack</h3>
-                                <p class="text-capitalize fs-16px">Boost your ability to add automations.</p>
-                                <div class="row row-cols-auto feature-list">
-                                  <div class="col-xxl-12">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-sm" src="./images/plus.svg" alt="plus"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">30 additional active
-                                        automations
-                                        (per
-                                        user)</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              class="d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-center pt-4 pt-lg-0">
-                              <div
-                                class="free-trial-period d-sm-flex d-lg-block justify-content-between align-items-center">
-                                <div>
-                                  <h4 class="fs-32px mb-2 py-1 text-capitalize">Free during trial period</h4>
-                                  <p class="text-capitalize fs-16px">$75 per company/month after trial</p>
-                                </div>
-                                <div><a href="#"
-                                    class="btn btn-lg border-orange text-primary fs-15px fw-bold mt-3 mt-sm-0 mt-lg-3 d-inline-flex px-5 justify-content-center align-items-center scale-up"><img
-                                      class="me-2 minusIcon" src="./images/minus-orange.svg" alt="Minus"><span
-                                      class="ps-1">Remove</span></a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="add-ons-card border border-light-gray text-black custom-shadow">
-                          <div class="d-lg-flex">
-                            <div
-                              class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
-                              <div><img class="gridImg mb-2 mb-xl-0" src="./images/grid-3.svg" alt="gridImg"></div>
-                              <div class="flex-fill">
-                                <h3 class="fs-24px pb-2 mb-1 text-capitalize">Reports Pack</h3>
-                                <p class="text-capitalize fs-16px">Boost your total amount of reports</p>
-                                <div class="row row-cols-auto feature-list">
-                                  <div class="col-xxl-7">
-                                    <div class="d-flex align-items-center feature-item">
-                                      <div class="me-1"><img class="icon-sm" src="./images/plus.svg" alt="Plus"></div>
-                                      <p class="ps-2 text-black fs-16px text-capitalize">50 additional reports (per
-                                        user)
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              class="d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-center pt-4 pt-lg-0">
-                              <div
-                                class="free-trial-period d-sm-flex d-lg-block justify-content-between align-items-center">
-                                <div>
-                                  <h4 class="fs-32px mb-2 pb-1 text-capitalize">Free during trial period</h4>
-                                  <p class="text-capitalize fs-16px">$100 per company/month after trial</p>
-                                </div>
-                                <div><a href="#"
-                                    class="btn btn-lg bg-primary text-white fs-15px fw-bold mt-3 mt-sm-0 mt-lg-3 d-inline-flex justify-content-center align-items-center scale-up text-nowrap"><img
-                                      class="me-2 plusIcon" src="./images/plus-white.svg" alt="Plus"><span
-                                      class="ps-1">Add to Plan</span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div id="add-billing-details" class="d-nonew">
-                  <div class="border border-primary custom-shadow-primary rounded-7">
-                    <div class="heading border-bottom border-primary">
-                      <h6 class="">Payment method</h6>
-                    </div>
-                    <div class="row justify-content-center">
-                      <div class="col-12 col-sm-10 col-md-9 col-lg-8 col-xl-7">
-                        <div id="payment-method" class="px-4 px-sm-0">
-                          <div class="px-lg-4">
-                            <div class="nav nav-pills row mx-0" id="pills-tab" role="tablist">
-                              <div class="col-md-6 mb-3 mb-md-0 pe-md-3">
-                                <div
-                                  class="custom-shadow card-hover border border-thin border-gray py-3 pe-2 rounded-3 h-100 d-flex align-items-center"
-                                  role="presentation">
-                                  <div id="card-payment-tab" class="w-100 active" data-bs-toggle="pill"
-                                    data-bs-target="#card-payment" role="tab" aria-controls="card-payment"
-                                    aria-selected="true">
-                                    <label class="d-flex align-items-center cursor-pointer"><input type="radio"
-                                        class="input-radio py-1 cursor-pointer flex-shrink-0" name="payment-method"
-                                        checked>
-                                      <span class="border-start border-thin border-gray"><img
-                                          class="cards img-fluid py-sm-2" src="./images/cards.png" alt="cards"></span>
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-md-6 ps-md-3">
-                                <div
-                                  class="custom-shadow card-hover border border-thin border-gray py-3 pe-3 pe-sm-4 rounded-3 h-100 d-flex align-items-center"
-                                  role="presentation">
-                                  <div id="payPal-payment-tab" class="w-100" data-bs-toggle="pill"
-                                    data-bs-target="#payPal-payment" role="tab" aria-controls="payPal-payment"
-                                    aria-selected="false">
-                                    <label class="d-flex align-items-center cursor-pointer"><input type="radio"
-                                        class="input-radio py-1 cursor-pointer flex-shrink-0" name="payment-method">
-                                      <span class="border-start border-thin border-gray ps-3"><img
-                                          class="paypal img-fluid py-sm-2" src="./images/paypal.svg"
-                                          alt="Paypal"></span>
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="tab-content recommended-spacing mt-5" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="card-payment" role="tabpanel"
-                              aria-labelledby="card-payment-tab" tabindex="0">
-                              <form>
-                                <div class="row gx-1 align-items-center">
-                                  <div class="col-md-3">
-                                    <label for="nameOnTheCard"
-                                      class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Name
-                                      on
-                                      the card</label>
-                                  </div>
-                                  <div class="col-md-9">
-                                    <input type="text"
-                                      class="form-control border border-divider shadow-none custom-input text-black rounded-1"
-                                      id="nameOnTheCard" placeholder="Enter Name on the card"
-                                      aria-describedby="nameOnTheCard">
-                                  </div>
-                                </div>
-                                <div class="row gx-1 align-items-center">
-                                  <div class="col-md-3">
-                                    <label for="creditCardNumber"
-                                      class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Credit
-                                      card number</label>
-                                  </div>
-                                  <div class="col-md-9">
-                                    <input type="text"
-                                      class="form-control border border-divider shadow-none custom-input text-black rounded-1"
-                                      id="creditCardNumber" placeholder="1234 1234 1234 1234"
-                                      aria-describedby="creditCardNumber">
-                                  </div>
-                                </div>
-                                <div class="row gx-1 align-items-center">
-                                  <div class="col-md-3">
-                                    <label for="cardExpirationDate"
-                                      class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Card
-                                      expiration date</label>
-                                  </div>
-                                  <div class="col-md-4">
-                                    <input type="text"
-                                      class="form-control border border-divider shadow-none custom-input text-black rounded-1"
-                                      id="cardExpirationDate" placeholder="MM / YYYY"
-                                      aria-describedby="cardExpirationDate">
-                                  </div>
-                                  <div class="col-md-1 text-md-end mt-3 mt-sm-4 mt-md-0">
-                                    <label for="cvv"
-                                      class="form-label mb-0 text-black fs-14px mb-2 mb-md-0 ms-md-1 me-2 me-lg-3">CVV</label>
-                                  </div>
-                                  <div class="col-md-4">
-                                    <input type="text"
-                                      class="form-control border border-divider shadow-none custom-input text-black rounded-1"
-                                      id="cvv" placeholder="CVV" aria-describedby="cvv">
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
-                            <div class="tab-pane fade" id="payPal-payment" role="tabpanel"
-                              aria-labelledby="payPal-payment-tab" tabindex="1">
-                              <p class="fw-bold fs-16px text-center mb-3">Log in to PayPal. You can review your purchase
-                                on
-                                the
-                                next step.</p>
-                              <div class="d-flex align-items-center justify-content-center pt-4">
-                                <div><button
-                                    class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue">Cancel</button>
-                                </div>
-                                <div><button class="btn btn-lg bg-yellow text-white fs-15px fw-bold ms-3"><img
-                                      class="paypal" src="./images/paypal.svg" alt="paypal"></button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="heading border-bottom border-primary mt-0 mt-md-3 mt-lg-5">
-                      <h6 class="">Billing contact</h6>
-                    </div>
-                    <div class="row justify-content-center">
-                      <div class="col-12 col-sm-10 col-md-9 col-lg-8 col-xl-7">
-                        <form id="billing-contact" class="px-4 px-sm-0">
-                          <div class="row gx-1 align-items-md-center">
-                            <div class="col-sm-3">
-                              <label for="firstName"
-                                class="form-label mb-0 text-black fs-14px mb-2 mb-md-0 pt-sm-3 pt-md-0">Name</label>
-                            </div>
-                            <div class="col-sm-9">
-                              <div class="d-md-flex align-items-center">
-                                <input type="text"
-                                  class="form-control border border-input shadow-none custom-input text-black rounded-1 me-md-3"
-                                  id="firstName" placeholder="Enter First Name" aria-describedby="firstName" required>
-                                <input type="text"
-                                  class="form-control border border-input shadow-none custom-input text-black rounded-1 ms-md-3 mt-3 mt-md-0"
-                                  id="lastName" placeholder="Enter Last Name" aria-describedby="lastName" required>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row gx-1 align-items-center">
-                            <div class="col-sm-3">
-                              <label for="companyName" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Company
-                                Name
-                              </label>
-                            </div>
-                            <div class="col-sm-9">
-                              <input type="text"
-                                class="form-control border border-input shadow-none custom-input text-black rounded-1"
-                                id="companyName" placeholder="Enter company name" aria-describedby="companyName"
-                                required>
-                            </div>
-                          </div>
-                          <div class="row gx-1 align-items-center">
-                            <div class="col-sm-3">
-                              <label for="email" class="form-label mb-0 text-black fs-14px mb-2 mb-md-3">Email
-                                address</label>
-                            </div>
-                            <div class="col-sm-9">
-                              <input type="email"
-                                class="form-control border border-input shadow-none custom-input text-black rounded-1"
-                                id="email" placeholder="Enter email" aria-describedby="emailHelp" required>
-                              <div id="emailHelp" class="text-dusty-gray fs-12px mt-2">We will be sending invoices to
-                                this
-                                email
-                              </div>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                    <div class="heading border-bottom border-primary mt-0 mt-md-3 mt-lg-5">
-                      <h6 class="">Billing address</h6>
-                    </div>
-                    <div class="row justify-content-center">
-                      <div class="col-12 col-sm-10 col-md-9 col-lg-8 col-xl-7">
-                        <form id="billing-address" class="px-4 px-sm-0">
-                          <div class="row gx-1 align-items-center">
-                            <div class="col-md-3">
-                              <label for="addressLine1"
-                                class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Country</label>
-                            </div>
-                            <div class="col-md-9">
-                              <select class="form-select shadow-none custom-select" aria-label="Default select example">
-                                <option selected>United States</option>
-                                <option value="1">India</option>
-                                <option value="2">Australia</option>
-                                <option value="3">Canada</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="row gx-1 align-items-center">
-                            <div class="col-md-3">
-                              <label for="addressLine1" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Address
-                                Line 1</label>
-                            </div>
-                            <div class="col-md-9">
-                              <input type="text"
-                                class="form-control border border-input shadow-none custom-input text-black rounded-1"
-                                id="addressLine1" placeholder="Street" aria-describedby="addressLine1">
-                            </div>
-                          </div>
-                          <div class="row gx-1 align-items-center">
-                            <div class="col-md-3">
-                              <label for="addressLine2" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Address
-                                Line 2</label>
-                            </div>
-                            <div class="col-md-9">
-                              <input type="text"
-                                class="form-control border border-input shadow-none custom-input text-black rounded-1"
-                                id="addressLine2" placeholder="Apt/Suite" aria-describedby="addressLine2">
-                            </div>
-                          </div>
-                          <div class="row gx-1 align-items-center">
-                            <div class="col-md-3">
-                              <label for="city" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">City</label>
-                            </div>
-                            <div class="col-md-9">
-                              <input type="text"
-                                class="form-control border border-input shadow-none custom-input text-black rounded-1"
-                                id="city" placeholder="City" aria-describedby="city">
-                            </div>
-                          </div>
-                          <div class="row gx-1 align-items-center">
-                            <div class="col-md-3">
-                              <label for="state" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">State</label>
-                            </div>
-                            <div class="col-md-9">
-                              <input type="text"
-                                class="form-control border border-input shadow-none custom-input text-black rounded-1"
-                                id="state" placeholder="state" aria-describedby="state">
-                            </div>
-                          </div>
-                          <div class="row gx-1 align-items-center">
-                            <div class="col-md-3">
-                              <label for="zipPostal"
-                                class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">ZIP/Postal</label>
-                            </div>
-                            <div class="col-md-9">
-                              <input type="text"
-                                class="form-control border border-input shadow-none custom-input text-black rounded-1"
-                                id="zipPostal" placeholder="ZIP/Postal" aria-describedby="zipPostal">
-                            </div>
-                          </div>
-                          <div class="row gx-1 align-items-center">
-                            <div class="col-md-3">
-                              <label for="salesTaxNumber" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Sales
-                                tax number (optional)</label>
-                            </div>
-                            <div class="col-md-9">
-                              <input type="text"
-                                class="form-control border border-input shadow-none custom-input text-black rounded-1"
-                                id="salesTaxNumber" placeholder="Sales tax number" aria-describedby="salesTaxNumber">
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                    <div
-                      class="d-flex align-items-center justify-content-center justify-content-sm-end pt-2 pb-4 pt-sm-4 pb-sm-5 pe-sm-5">
-                      <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold">Continue</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div id="confirm-purchase" class="d-none">
-                  <div class="border border-primary custom-shadow-primary rounded-7 p-4 p-md-5 border-custom-none">
-                    <div class="text-center">
-                      <h3 class="mb-4 mt-2 fs-36px">You're all set!</h3>
-                      <p class="my-4 fs-18px"> Your subscription has been confirmed. Thank you for subscribing to our
-                        Client
-                        pilot
-                        platform.</p>
-                      <div><img class="img-fluid success" src="./images/success.svg" alt="You're all set!"></div>
-                    </div>
-                    <p class="pb-3 pb-sm-4">Subscription details:</p>
-                    <div class="add-ons-card border border-light-gray bg-light-peach text-black custom-shadow mt-2">
-                      <div class="d-lg-flex">
-                        <div
-                          class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
-                          <div><img class="gridImg mb-2 mb-xl-0" src="./images/grid-1.svg" alt="gridImg"></div>
-                          <div class="flex-fill">
-                            <h3 class="fs-24px pb-2 mb-1 text-capitalize">Smart Docs</h3>
-                            <p class="pb-2 mb-1 text-capitalize"><b>Unlimited signature requests per company/month</b>
-                            </p>
-                            <p class="text-capitalize fs-16px">Collaborate on sales documents with your team, remove
-                              Pipedrive
-                              logo
-                              and sign them
-                              electronically.</p>
-                            <div class="row row-cols-auto feature-list">
-                              <div class="col-xl-4">
-                                <div class="d-flex align-items-center feature-item">
-                                  <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info"></div>
-                                  <p class="ps-2 text-black fs-16px text-capitalize">Autofill documents</p>
-                                </div>
-                              </div>
-                              <div class="col-xl-8">
-                                <div class="d-flex align-items-center feature-item">
-                                  <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info"></div>
-                                  <p class="ps-2 text-black fs-16px text-capitalize">Set up shared templates and
-                                    storage rules
-                                  </p>
-                                </div>
-                              </div>
-                              <div class="col-xl-4">
-                                <div class="d-flex align-items-center feature-item">
-                                  <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info"></div>
-                                  <p class="ps-2 text-black fs-16px text-capitalize">Request eSignatures</p>
-                                </div>
-                              </div>
-                              <div class="col-xl-8">
-                                <div class="d-flex align-items-center feature-item">
-                                  <div class="me-1"><img class="icon-md" src="./images/info.svg" alt="Info"></div>
-                                  <p class="ps-2 text-black fs-16px text-capitalize">Track document opening</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-center pt-4 pt-lg-0">
-                          <div
-                            class="free-trial-period d-sm-flex d-lg-block justify-content-between align-items-center">
-                            <div>
-                              <h4 class="fs-32px mb-2 text-capitalize">Free</h4>
-                              <p class="text-capitalize fs-16px">Included with your Professional plan</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="text-center">
-                      <p class="fs-18px fw-bold mb-4">For any queries or assistance, please feel free to reach out to
-                        our customer support team,
-                        available 24/7.</p>
-                      <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3">Continue...</button>
                       </div>
                     </div>
                   </div>
