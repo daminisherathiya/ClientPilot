@@ -57,7 +57,7 @@
 
 /* Custom resets */
 html {
-  font-size: max(13px, 0.833vw);
+  font-size: max(14px, 0.833vw);
 }
 body {
   font-family: "OpenSans", sans-serif;
@@ -324,7 +324,7 @@ input[type="tel"] {
 .billing-dashboard .card-img {
   width: 7.0625rem;
 }
-.billing-dashboard .subscription {
+.billing-dashboard .your-subscription {
   padding: 1.25rem 3.4375rem;
 }
 .billing-dashboard .billing-history {
@@ -377,7 +377,12 @@ input[type="tel"] {
 }
 .billing-details .navigation,
 .subscription .navigation {
-  padding: 2.5rem 2.3125rem 1.25rem 2.3125rem;
+  padding: 2.5rem 2.3125rem 3.4rem 2.3125rem;
+}
+.billing-details .navigation li,
+.subscription .navigation li {
+  position: relative;
+  min-width: 7.5rem;
 }
 .billing-details .navigation ul,
 .subscription .navigation ul {
@@ -397,7 +402,7 @@ input[type="tel"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 0.8125rem auto;
+  margin: 0 auto;
   z-index: 1;
   position: relative;
 }
@@ -412,6 +417,11 @@ input[type="tel"] {
 .billing-details .circle ~ p,
 .subscription .circle ~ p {
   color: var(--secondary-color);
+  position: absolute;
+  white-space: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.8125rem;
 }
 .billing-details .circle.active ~ p,
 .subscription .circle.active ~ p {
@@ -426,7 +436,7 @@ input[type="tel"] {
 .subscription .progress {
   position: absolute;
   width: calc(100% - 4.6875rem);
-  top: 33%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--grey-color);
@@ -579,7 +589,7 @@ input[type="tel"] {
   .billing-dashboard .card-img {
     width: 5.0625rem;
   }
-  .billing-dashboard .subscription {
+  .billing-dashboard .your-subscription {
     padding: 1.25rem 2.4375rem;
   }
   .billing-dashboard .box-heading {
@@ -709,7 +719,7 @@ input[type="tel"] {
   .billing-dashboard .card-img {
     width: 4.4375rem;
   }
-  .billing-dashboard .subscription {
+  .billing-dashboard .your-subscription {
     padding: 1.25rem 1.75rem;
   }
   .scale-up:hover {
@@ -745,8 +755,9 @@ input[type="tel"] {
   .subscription #confirm-purchase {
     padding: 1.3rem;
   }
-  .billing-details .navigation {
-    padding: 1.3rem;
+  .billing-details .navigation,
+  .subscription .navigation {
+    padding: 1.3rem 1.3rem 2.8rem 1.3rem;
   }
   .billing-details .circle,
   .subscription .circle {
@@ -760,7 +771,6 @@ input[type="tel"] {
   }
   .billing-details .progress,
   .subscription .progress {
-    top: 25.5%;
     height: 0.4375rem;
   }
   .billing-details .circle ~ p,
@@ -806,6 +816,10 @@ input[type="tel"] {
   .subscription .waving-hand {
     width: 7.5625rem;
     margin-right: 0;
+  }
+  .billing-details .navigation li,
+  .subscription .navigation li {
+    min-width: 5.5rem;
   }
 }
 @media (max-width: 575px) {
