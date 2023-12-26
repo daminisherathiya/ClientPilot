@@ -540,6 +540,7 @@ input[type="tel"] {
 .pricing .nav.nav-pills {
   margin-top: 0.9375rem;
   margin-bottom: 3.75rem;
+  max-width: 49.625rem;
 }
 .pricing .nav.nav-pills .nav-item {
   width: 50%;
