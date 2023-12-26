@@ -12,20 +12,20 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="bg-white vh-100">
+<body class="bg-white">
   <nav
     style="height: 5.125rem; width: 100%; box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.06); background-color: white; position: fixed; top: 0; z-index: 3;">
   </nav>
-  <main class="sidebar-space h-100">
+  <main class="sidebar-space">
     <aside class="d-none d-xl-block"
       style="width: 6.25rem; background-color: #FF6600; height: 100vh; position: fixed; top: 0; left: 0;"></aside>
-    <div class="h-100">
-      <div class="container-fluid h-100">
-        <div class="outer-space overflow-auto h-100">
-          <div class="row justify-content-center h-100 gx-0">
-            <div class="col-sm-11 col-md-10 col-lg-9 col-xl-7 h-100 d-flex flex-column justify-content-center">
+    <div>
+      <div class="container-fluid">
+        <div class="outer-space">
+          <div class="row justify-content-center gx-0">
+            <div class="col-sm-11 col-md-10 col-lg-9 col-xl-7 d-flex flex-column justify-content-center">
               <div
-                class="custom-shadow-primary box-radius border border-primary billing-details overflow-auto mh-100 d-flex flex-column">
+                class="custom-shadow-primary box-radius border border-primary billing-details d-flex flex-column">
                 <div class="navigation border-bottom">
                   <div class="position-relative">
                     <ul class="d-flex justify-content-between">
@@ -57,8 +57,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="h-100 overflow-auto">
-                  <form id="billing-contact" class="h-100 overflow-auto d-none">
+                <div>
+                  <form id="billing-contact" class="d-none">
                     <div class="row gx-1 align-items-center">
                       <div class="col-md-3">
                         <label for="firstName" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Name</label>
@@ -99,12 +99,12 @@
                       </div>
                     </div>
                     <div class="d-flex align-items-cente justify-content-center justify-content-sm-end pt-2 pt-sm-4">
-                      <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue">Cancel</button>
+                      <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue scale-up">Cancel</button>
                       </div>
-                      <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3">Continue</button></div>
+                      <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3 scale-up">Continue</button></div>
                     </div>
                   </form>
-                  <form id="billing-address" class="h-100 overflow-auto d-none">
+                  <form id="billing-address" class="d-none">
                     <div class="row gx-1 align-items-center">
                       <div class="col-md-3">
                         <label for="addressLine1"
@@ -184,12 +184,12 @@
                       </div>
                     </div>
                     <div class="d-flex align-items-center justify-content-center justify-content-sm-end pt-2 pt-sm-4">
-                      <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue">Cancel</button>
+                      <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue scale-up">Cancel</button>
                       </div>
-                      <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3">Continue</button></div>
+                      <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3 scale-up">Continue</button></div>
                     </div>
                   </form>
-                  <div id="payment-method" class="h-100 overflow-auto d-nonew">
+                  <div id="payment-method" class="d-non">
                     <div class="px-lg-4">
                       <div class="nav nav-pills row mx-0" id="pills-tab" role="tablist">
                         <div class="col-md-6 mb-3 mb-md-0 pe-md-3">
@@ -277,9 +277,9 @@
                         </form>
                         <div
                           class="d-flex align-items-center justify-content-center justify-content-sm-end pt-2 pt-sm-4">
-                          <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue">Cancel</button>
+                          <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue scale-up">Cancel</button>
                           </div>
-                          <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3"
+                          <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3 scale-up"
                               data-bs-toggle="modal" data-bs-target="#purchaseModal">Save</button>
                           </div>
                         </div>
