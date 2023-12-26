@@ -797,7 +797,7 @@ input[type="tel"] {
     width: 100%;
   }
   .pricing .nav.nav-pills {
-    margin-top: 2.75rem;
+    margin-top: 0;
     margin-bottom: 1rem;
   }
   .pricing .nav.nav-pills label .tab-name {
