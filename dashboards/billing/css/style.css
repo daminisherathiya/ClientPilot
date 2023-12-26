@@ -443,25 +443,29 @@ input[type="tel"] {
   padding: 2.8125rem;
 }
 .billing-details form .row,
-.subscription form .row {
+.subscription form .row,
+.edit-card form .row {
   margin-bottom: 1.8125rem;
 }
 .billing-details .btn {
   min-width: 8.6875rem;
 }
 .billing-details .paypal,
-.subscription .paypal {
+.subscription .paypal,
+.edit-card .paypal {
   width: 5.125rem;
 }
 .billing-details .cards,
-.subscription .cards {
+.subscription .cards,
+.edit-card .cards {
   width: 18.0625rem;
 }
 .billing-details #payment-method .nav.nav-pills {
   margin-bottom: 2.875rem;
 }
 .billing-details #payment-method .card-hover,
-.subscription #add-billing-details .card-hover {
+.subscription #add-billing-details .card-hover,
+.edit-card .card-hover {
   padding-left: 2rem;
 }
 
@@ -557,16 +561,18 @@ input[type="tel"] {
   padding-left: 2.875rem;
   width: 15rem;
 }
-.subscription #add-billing-details .heading {
+.subscription #add-billing-details .heading,
+.edit-card .heading {
   padding: 2.1875rem 3.375rem 1.8125rem 3.375rem;
-}
-.subscription #add-billing-details .heading {
   margin-bottom: 2.6875rem;
 }
 .subscription #confirm-purchase .success {
   width: 19.4375rem;
   margin-bottom: 6.125rem;
   margin-top: 3.25rem;
+}
+.edit-card {
+  margin: 3.75rem 0;
 }
 /* Media queries */
 @media (max-width: 1440px) {
@@ -670,6 +676,12 @@ input[type="tel"] {
   .subscription #trial-expired h4.fs-36px {
     font-size: 1.8rem;
   }
+  .edit-card {
+    margin: 2.75rem 0;
+  }
+  .edit-card .heading {
+    padding: 2.1875rem 1.5rem 1.8125rem 1.5rem;
+  }
 }
 @media (max-width: 767px) {
   html {
@@ -756,7 +768,8 @@ input[type="tel"] {
     font-size: 0.75rem;
   }
   .billing-details #payment-method .card-hover,
-  .subscription #add-billing-details .card-hover {
+  .subscription #add-billing-details .card-hover,
+  .edit-card .card-hover {
     padding-left: 1rem;
   }
   input[type="text"],
@@ -786,7 +799,8 @@ input[type="tel"] {
   .add-ons .sub-header {
     margin-bottom: 2.0625rem;
   }
-  .subscription #add-billing-details .heading {
+  .subscription #add-billing-details .heading,
+  .edit-card .heading {
     padding: 2.1875rem 2rem 1.8125rem 2rem;
   }
   .subscription .waving-hand {
@@ -795,10 +809,9 @@ input[type="tel"] {
   }
 }
 @media (max-width: 575px) {
-  .subscription #add-billing-details .heading {
+  .subscription #add-billing-details .heading,
+  .edit-card .heading {
     padding: 2.1875rem 1.5rem 1.8125rem 1.5rem;
-  }
-  .subscription #add-billing-details .heading {
     margin-bottom: 1.6875rem;
   }
   .subscription #confirm-purchase .success {
