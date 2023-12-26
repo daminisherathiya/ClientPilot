@@ -12,7 +12,7 @@
   /* --warning-color: #ff3f3f; */
   /* --input-placeholder-color: #d1d3dd; */
   --light-peach: #fff4ec;
-  /* --lign-blue: #eaeef6; */
+  --light-blue: #eaeef6;
 
   /* --divider-line-color: #e8e8ed; */
   --border-light-gray: #f5f5f7;
@@ -98,6 +98,9 @@ h6 {
 }
 .bg-light-peach {
   background-color: var(--light-peach) !important;
+}
+.bg-light-blue {
+  background-color: var(--light-blue) !important;
 }
 
 /* Text color */
@@ -579,6 +582,9 @@ input[type="tel"] {
 .add-ons .sub-header {
   margin-bottom: 4.0625rem;
 }
+.subscription .account-review-needed {
+  border-radius: 26px;
+}
 .add-ons-card {
   border-radius: 0.75rem;
   padding: 3.125rem 1.875rem 3.125rem 1.75rem;
@@ -814,7 +820,7 @@ input[type="tel"] {
     padding-left: 1rem;
   }
   .subscription .navigation ~ div {
-    padding: 0.5rem 0;
+    padding: 1.5rem 0;
   }
   input[type="text"],
   input[type="email"],
