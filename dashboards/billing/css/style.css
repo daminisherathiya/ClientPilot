@@ -307,7 +307,7 @@ input[type="tel"] {
   border-radius: 0.4375rem;
 }
 .billing-dashboard .box-heading {
-  padding: 1.5rem 2.375rem 1.5rem 1.5rem;
+  padding: 1.5rem 2.5rem 1.5rem 1.5rem;
 }
 .billing-dashboard .card-details-list {
   padding: 0 2.5rem;
@@ -712,7 +712,7 @@ input[type="tel"] {
     padding: 1.375rem 1.1875rem;
   }
   .billing-dashboard .box-heading {
-    padding: 1.4375rem 2.375rem 1.4375rem 1.3125rem;
+    padding: 1.4375rem 1.3125rem;
   }
   .btn-lg {
     padding: 0.6rem 1.75rem;
