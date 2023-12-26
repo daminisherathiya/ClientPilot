@@ -579,6 +579,9 @@ input[type="tel"] {
   padding-left: 2.875rem;
   width: 15rem;
 }
+.add-ons-card .btn {
+  min-width: 10.5625rem;
+}
 .subscription #add-billing-details .heading,
 .edit-card .heading {
   padding: 2.1875rem 3.375rem 1.8125rem 3.375rem;
@@ -638,7 +641,7 @@ input[type="tel"] {
     padding-left: 0;
   }
   .btn-lg {
-    padding: 0.45rem 0.75rem;
+    padding: 0.45rem 0.95rem;
     min-height: 1.9375rem;
   }
   .subscription {
