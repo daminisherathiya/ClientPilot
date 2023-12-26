@@ -12,20 +12,20 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="bg-white vh-100">
+<body class="bg-white">
   <nav
     style="height: 5.125rem; width: 100%; box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.06); background-color: white; position: fixed; top: 0; z-index: 3;">
   </nav>
-  <main class="sidebar-space h-100">
+  <main class="sidebar-space">
     <aside class="d-none d-xl-block"
       style="width: 6.25rem; background-color: #FF6600; height: 100vh; position: fixed; top: 0; left: 0;"></aside>
-    <section class="h-100">
-      <div class="container-fluid h-100">
-        <div class="outer-space overflow-auto h-100">
-          <div class="subscription h-100">
-            <div class="custom-shadow-primary box-radius border border-primary rounded-7 overflow-auto h-100">
-              <div class="row justify-content-center gx-0 h-100">
-                <div class="col-12 d-flex flex-column overflow-auto h-100">
+    <section>
+      <div class="container-fluid">
+        <div class="outer-space">
+          <div class="subscription">
+            <div class="custom-shadow-primary box-radius border border-primary rounded-7">
+              <div class="row justify-content-center gx-0">
+                <div class="col-12 d-flex flex-column">
                   <div class="navigation border-bottom">
                     <div class="position-relative">
                       <ul class="d-flex justify-content-between">
@@ -71,29 +71,29 @@
                       </div>
                     </div>
                   </div>
-                  <div class="d-md-flex align-items-center overflow-auto h-100 d-md-none d-none">
-                    <div id="trial-expired" class="flex-grow-1 h-100 overflow-auto">
-                      <div class="row justify-content-center align-items-center h-100">
+                  <div class="d-nonew">
+                    <div id="trial-expired" class="flex-grow-1">
+                      <div class="row justify-content-center align-items-center">
                         <div class="col-sm-12 col-md-11 col-lg-8 col-xl-8 col-xxl-7">
                           <div class="d-md-flex align-items-center text-center text-md-start">
                             <div><img class="waving-hand mb-4 mb-md-0" src="./images/waving-hand.svg" alt="waving hand">
                             </div>
                             <div>
-                              <h4 class="fs-36px mb-2">We hope it's not goodbye, Ag!</h4>
-                              <p class="fs-18px pt-1 mb-4">Your free trial period has ended. <span class="fw-bold">Your
+                              <h4 class="fs-36px mb-2 text-capitalize">We hope it's not goodbye, Ag!</h4>
+                              <p class="fs-18px pt-1 mb-4 text-capitalize">Your free trial period has ended. <span class="fw-bold">Your
                                   data
                                   will be deleted soon.
                                   ©</span></p>
 
-                              <p class="fs-18px mb-4">Subscribe to ClientPilot and choose to be part of the 73% of
+                              <p class="fs-18px mb-4 text-capitalize">Subscribe to ClientPilot and choose to be part of the 73% of
                                 customers
                                 <span class="fw-bold">who win a deal faster than before!</span>
                               </p>
                               <div class="d-sm-flex justify-content-center justify-content-md-start pt-1">
                                 <div><button
-                                    class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue mb-3 mb-sm-0">I'm not
+                                    class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue mb-3 mb-sm-0 scale-up">I'm not
                                     interested</button></div>
-                                <div></div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3">Choose
+                                <div></div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3 scale-up">Choose
                                   plan</button>
                               </div>
                             </div>
@@ -101,9 +101,16 @@
                         </div>
                       </div>
                     </div>
+                    <div class="d-flex justify-content-center justify-content-md-end align-items-center me-md-5 px-5 pe-md-2 pb-md-3">
+                      <span class="fs-18px text-capitalize pe-3">Need help choosing the right plan?</span>
+                      <a href="#" class="position-relative">
+                        <img class="scale-up chat-container" src="./images/chat-container.svg" alt="Chat container">
+                        <img class="scale-up position-absolute chat-logo" src="./images/chat.svg" alt="Chat">
+                      </a>
+                    </div>
                   </div>
-                  <div class="overflow-auto h-100 d-none">
-                    <div id="choose-plan" class="flex-grow-1 h-100 overflow-auto">
+                  <div class="d-none">
+                    <div id="choose-plan" class="flex-grow-1">
                       <div class="row">
                         <div class="col-12 pricing">
                           <div class="row justify-content-center">
@@ -433,15 +440,15 @@
                           </div>
                           <div class="mt-3 mt-md-5 text-end">
                             <p class="pb-1">Next Estimated Invoice after trial ends for (2 locations) $19.99 (?)</p>
-                            <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold mt-2">Continue</button>
+                            <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold mt-2 scale-up">Continue</button>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="overflow-auto h-100 d-none">
-                    <div id="select-add-ons" class="flex-grow-1 h-100 overflow-auto">
+                  <div class="d-none">
+                    <div id="select-add-ons" class="flex-grow-1">
                       <div class="row">
                         <div class="col-12">
                           <div class="add-ons">
@@ -609,7 +616,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="add-ons-card border border-light-gray bg-light-peach text-black custom-shadow">
+                            <div class="add-ons-card border border-light-gray text-black custom-shadow">
                               <div class="d-lg-flex">
                                 <div
                                   class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
@@ -807,7 +814,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="add-ons-card border border-light-gray bg-light-peach text-black custom-shadow">
+                            <div class="add-ons-card border border-light-gray text-black custom-shadow">
                               <div class="d-lg-flex">
                                 <div
                                   class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
@@ -886,15 +893,15 @@
                           </div>
                           <div class="mt-3 mt-md-5 text-end">
                             <p class="pb-1">Next Estimated Invoice after trial ends for (2 locations) $19.99 (?)</p>
-                            <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold mt-2">Continue</button>
+                            <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold mt-2 scale-up">Continue</button>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="overflow-auto h-100 d-nonew">
-                    <div id="add-billing-details" class="flex-grow-1 h-100 overflow-auto">
+                  <div class="d-none">
+                    <div id="add-billing-details" class="flex-grow-1">
                       <div class="border border-primary custom-shadow-primary rounded-7">
                         <div class="heading border-bottom border-primary">
                           <h6 class="">Payment method</h6>
@@ -1165,14 +1172,14 @@
                         </div>
                         <div
                           class="d-flex align-items-center justify-content-center justify-content-sm-end pt-2 pb-4 pt-sm-4 pb-sm-5 pe-sm-5">
-                          <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold">Continue</button>
+                          <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold scale-up">Continue</button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="overflow-auto h-100 d-none">
-                    <div id="confirm-purchase" class="flex-grow-1 h-100 overflow-auto">
+                  <div class="d-none">
+                    <div id="confirm-purchase" class="flex-grow-1">
                       <div class="border border-primary custom-shadow-primary rounded-7 p-4 p-md-5 border-custom-none">
                         <div class="text-center">
                           <h3 class="mb-4 mt-2 fs-36px">You're all set!</h3>
@@ -1184,7 +1191,7 @@
                           <div><img class="img-fluid success" src="./images/success.svg" alt="You're all set!"></div>
                         </div>
                         <p class="pb-3 pb-sm-4">Subscription details:</p>
-                        <div class="add-ons-card border border-light-gray bg-light-peach text-black custom-shadow mt-2">
+                        <div class="add-ons-card border border-light-gray text-black mt-2">
                           <div class="d-lg-flex">
                             <div
                               class="d-md-flex d-lg-block d-xl-flex border-end border-primary pe-0 pe-lg-5 pb-4 pb-lg-0 flex-fill">
@@ -1242,12 +1249,12 @@
                           </div>
                         </div>
                         <div class="text-center">
-                          <p class="fs-18px fw-bold mb-4">For any queries or assistance, please feel free to reach out
+                          <p class="fs-18px fw-bold mb-4 text-capitalize">For any queries or assistance, please feel free to reach out
                             to
                             our customer support team,
                             available 24/7.</p>
                           <div><button
-                              class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3">Continue...</button>
+                              class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3 scale-up">Continue...</button>
                           </div>
                         </div>
                       </div>

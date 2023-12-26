@@ -11,7 +11,7 @@
   /* --stone-gray-color: #707070; */
   /* --warning-color: #ff3f3f; */
   /* --input-placeholder-color: #d1d3dd; */
-  /* --light-peach: #fff4ec; */
+  --light-peach: #fff4ec;
   /* --lign-blue: #eaeef6; */
 
   /* --divider-line-color: #e8e8ed; */
@@ -95,6 +95,9 @@ h6 {
 }
 .bg-yellow {
   background-color: var(--yellow-color) !important;
+}
+.bg-light-peach {
+  background-color: var(--light-peach) !important;
 }
 
 /* Text color */
@@ -383,9 +386,11 @@ input[type="tel"] {
 .subscription .navigation {
   padding: 2.5rem 2.3125rem 3.4rem 2.3125rem;
 }
-.billing-details .navigation ~ div,
-.subscription .navigation ~ div {
+.billing-details .navigation ~ div {
   padding: 2rem 0;
+}
+.subscription .navigation ~ div {
+  padding: 3rem 0;
 }
 .billing-details .navigation li,
 .subscription .navigation li {
@@ -459,6 +464,20 @@ input[type="tel"] {
 .subscription #add-billing-details,
 .subscription #confirm-purchase {
   padding: 0 2.8125rem;
+}
+.subscription .row #trial-expired {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+}
+.subscription .chat-container {
+  height: 90px;
+  width: 90px;
+}
+.subscription .chat-logo {
+  height: 45px;
+  width: 45px;
+  left: 22px;
+  top: 22px;
 }
 .billing-details form .row,
 .subscription form .row,
@@ -763,6 +782,10 @@ input[type="tel"] {
   .subscription #confirm-purchase {
     padding: 1.3rem;
   }
+  .subscription .row #trial-expired {
+    padding-top: 0rem;
+    padding-bottom: 2rem;
+  }
   .billing-details .navigation,
   .subscription .navigation {
     padding: 1.3rem 1.3rem 2.8rem 1.3rem;
@@ -789,6 +812,9 @@ input[type="tel"] {
   .subscription #add-billing-details .card-hover,
   .edit-card .card-hover {
     padding-left: 1rem;
+  }
+  .subscription .navigation ~ div {
+    padding: 0.5rem 0;
   }
   input[type="text"],
   input[type="email"],
