@@ -421,6 +421,23 @@ nav .container-fluid {
   width: 27.4375rem;
 }
 
+/* forgot password */
+.forgot-password {
+  margin: 5rem 2.625rem;
+  padding: 2.1875rem 3.5rem;
+}
+.input-with-img input,
+.input-with-img > span {
+  padding: 0.62rem 0.875rem;
+}
+.input-with-img > span span {
+  padding: 0 0.875rem;
+}
+.input-with-img .form-control:focus,
+.input-with-img .form-control:focus ~ .input-group-text {
+  border-color: var(--input-border-color) !important;
+  z-index: 0;
+}
 /* modal */
 .purchase-modal .modal-content {
   border-radius: 0.9375rem;
@@ -431,8 +448,15 @@ nav .container-fluid {
 .purchase-modal.modal-dialog.modal-lg {
   max-width: 43.75rem;
 }
-.purchase-modal .all-set {
+.purchase-modal .all-set,
+.sendLink-modal .all-set {
   width: 9.8125rem;
+}
+.sendLink-modal .modal-content {
+  border-radius: 0.9375rem;
+}
+.sendLink-modal .modal-body {
+  padding: 2.625rem 3.125rem;
 }
 /* Footer */
 footer {
@@ -637,5 +661,9 @@ footer .social-links div img {
   }
   .purchase-modal .modal-body {
     padding: 2.5625rem 2.25rem;
+  }
+  .forgot-password {
+    margin: 2rem 0rem;
+    padding: 2rem 1.5rem;
   }
 }
