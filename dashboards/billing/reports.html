@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Pilot</title>
+  <meta name="description"
+    content="Client Pilot offers tailored business solutions to streamline your operations and boost productivity. Discover our innovative services today.">
+  <link rel="icon" type="image/svg" href="./images/logo-without-name.svg">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-white">
+  <nav
+    style="height: 5.125rem; width: 100%; box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.06); background-color: white; position: fixed; top: 0; z-index: 3;">
+  </nav>
+  <main class="sidebar-space">
+    <aside class="d-none d-xl-block"
+      style="width: 6.25rem; background-color: #FF6600; height: 100vh; position: fixed; top: 0; left: 0;"></aside>
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="reports">
+              <div class="custom-shadow-primary border border-primary">
+                <div
+                  class="filter border-bottom border-primary d-flex flex-wrap align-items-center justify-content-between">
+                  <div class="d-flex flex-wrap align-items-center">
+                    <h6 class="me-3 my-2">REPORTS</h6>
+                    <div class="d-flex flex-wrap align-items-center">
+                      <select class="form-select shadow-none custom-select w-auto me-md-3 my-2"
+                        aria-label="Default select example">
+                        <option selected>Ibrahim Weissnat</option>
+                        <option value="1">Ibrahim Weissnat</option>
+                        <option value="2">Ibrahim Weissnat</option>
+                        <option value="3">Others</option>
+                      </select>
+                      <select class="form-select shadow-none custom-select w-auto me-md-3 my-2"
+                        aria-label="Default select example">
+                        <option selected>This Month</option>
+                        <option value="1">This Week</option>
+                        <option value="2">This Year</option>
+                        <option value="3">Others</option>
+                      </select>
+                      <div class="d-flex align-items-center filter-date">
+                        <div class="me-md-3 pe-2 pe-md-0 my-2">
+                          <input type="text"
+                            class="form-control border border-divider shadow-none custom-input text-black rounded-1 date-input"
+                            id="startDate" placeholder="Start date" aria-describedby="startDate">
+                        </div>
+                        <div class="me-md-3 ps-2 ps-md-0 my-2">
+                          <input type="text"
+                            class="form-control border border-divider shadow-none custom-input text-black rounded-1 date-input"
+                            id="endDate" placeholder="End date" aria-describedby="endDate">
+                        </div>
+                      </div>
+                      <div class="my-2 d-grid d-md-block col-12 col-md-auto">
+                        <button
+                          class="btn btn-lg bg-primary text-white fs-15px fw-bold scale-up me-lg-3 text-nowrap">Search
+                          Report
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex flex-wrap align-items-center justify-content-between justify-content-md-start flex-grow-0 flex-md-shrink-0">
+                    <div class="d-flex align-items-center">
+                      <div class="me-sm-3 me-3 cursor-pointer my-2"><img src="./images/file-excel-light.svg"
+                          alt="file-excel-light">
+                      </div>
+                      <div class="mx-sm-3 me-3 cursor-pointer my-2"><img src="./images/file-csv-light.svg"
+                          alt="file-csv-light">
+                      </div>
+                      <div class="mx-sm-3 me-3 cursor-pointer my-2"><img src="./images/file-pdf-light.svg"
+                          alt="file-pdf-light">
+                      </div>
+                    </div>
+                    <div class="my-3 visit-and-clicks-btn ms-sm-3">
+                      <a href="#"
+                        class="btn btn-lg bg-primary text-white fs-15px fw-bold d-inline-flex align-items-center justify-content-center scale-up w-100"><img
+                          class="me-2 chartIcon" src="./images/chart-simple-light.svg" alt="chart"><span
+                          class="ps-1 text-nowrap">Visit and
+                          clicks</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="reports-details">
+                  <div class="row gx-xxl-5">
+                    <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                      <div class="reports-card overflow-hidden border border-primary h-100">
+                        <div class="card-title bg-light-grey">
+                          <h6 class="fs-16px">Leads</h6>
+                        </div>
+                        <div class="card-body">
+                          <div class="row justify-content-between mb-4">
+                            <div class="col-9"><button
+                                class="btn btn-sm bg-green text-white fs-15px fw-bold scale-up">Active
+                              </button></div>
+                            <div class="col-3">
+                              <p class="fs-16px">23</p>
+                            </div>
+                          </div>
+                          <div class="row justify-content-between">
+                            <div class="col-9"><button
+                                class="btn btn-sm bg-warning text-white fs-15px fw-bold scale-up">Closed
+                              </button></div>
+                            <div class="col-3">
+                              <p class="fs-16px">2</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                      <div class="reports-card overflow-hidden border border-primary h-100">
+                        <div class="card-title bg-light-grey">
+                          <h6 class="fs-16px">SMS</h6>
+                        </div>
+                        <div class="card-body">
+                          <div class="row justify-content-between mb-4">
+                            <div class="col-9"><button
+                                class="btn btn-sm bg-muted-blue-gray text-white fs-15px fw-bold scale-up">Total
+                              </button></div>
+                            <div class="col-3">
+                              <p class="fs-16px">23</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0">
+                      <div class="reports-card overflow-hidden border border-primary h-100">
+                        <div class="card-title bg-light-grey">
+                          <h6 class="fs-16px">Email</h6>
+                        </div>
+                        <div class="card-body">
+                          <div class="row justify-content-between mb-4">
+                            <div class="col-9"><button
+                                class="btn btn-sm bg-muted-blue-gray text-white fs-15px fw-bold scale-up">Total
+                              </button></div>
+                            <div class="col-3">
+                              <p class="fs-16px">23</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                      <div class="reports-card overflow-hidden border border-primary h-100">
+                        <div class="card-title bg-light-grey">
+                          <h6 class="fs-16px">Calls</h6>
+                        </div>
+                        <div class="card-body">
+                          <div class="row justify-content-between mb-4">
+                            <div class="col-9"><button
+                                class="btn btn-sm bg-muted-blue-gray text-white fs-15px fw-bold scale-up">Total
+                              </button></div>
+                            <div class="col-3">
+                              <p class="fs-16px">23</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reports-chart border border-primary mt-5 overflow-hidden">
+                    <div class="overflow-auto">
+                      <div class="chart-width">
+                        <div id="chart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-responsive mt-5">
+                    <table class="table table-borderless custom-table">
+                      <thead>
+                        <tr>
+                          <th>Date</th>
+                          <th class="text-md-center">Leads</th>
+                          <th class="text-center">SMS</th>
+                          <th class="text-center">Calls</th>
+                          <th class="text-center">Emails</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>10/05/2023</td>
+                          <td
+                            class="text-center d-flex align-items-center justify-content-between d-md-table-cell expand-collapse active">
+                            23 <img class="d-md-none cursor-pointer" src="./images/table-arrow.svg" alt="arrow-down">
+                          </td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">23</td>
+                        </tr>
+                        <tr class="toggle-dropdown d-md-none">
+                          <td class="pt-0" colspan="5">
+                            <div class="row mb-4 align-items-center">
+                              <div class="col-7">
+                                <p class="fw-bold">SMS</p>
+                              </div>
+                              <div class="col-5">
+                                <p class="ps-2">23</p>
+                              </div>
+                            </div>
+                            <div class="row mb-4 align-items-center">
+                              <div class="col-7">
+                                <p class="fw-bold">Calls</p>
+                              </div>
+                              <div class="col-5">
+                                <p class="ps-2">23</p>
+                              </div>
+                            </div>
+                            <div class="row align-items-center">
+                              <div class="col-7">
+                                <p class="fw-bold">Emails</p>
+                              </div>
+                              <div class="col-5">
+                                <p class="ps-2">23</p>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>10/05/2023</td>
+                          <td
+                            class="text-center d-flex align-items-center justify-content-between d-md-table-cell expand-collapse">
+                            23 <img class="d-md-none cursor-pointer" src="./images/table-arrow.svg" alt="arrow-down">
+                          </td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">23</td>
+                        </tr>
+                        <tr class="toggle-dropdown d-none d-md-none">
+                          <td class="pt-0" colspan="5">
+                            <div class="row mb-4 align-items-center">
+                              <div class="col-7">
+                                <p class="fw-bold">SMS</p>
+                              </div>
+                              <div class="col-5">
+                                <p class="ps-2">23</p>
+                              </div>
+                            </div>
+                            <div class="row mb-4 align-items-center">
+                              <div class="col-7">
+                                <p class="fw-bold">Calls</p>
+                              </div>
+                              <div class="col-5">
+                                <p class="ps-2">23</p>
+                              </div>
+                            </div>
+                            <div class="row align-items-center">
+                              <div class="col-7">
+                                <p class="fw-bold">Emails</p>
+                              </div>
+                              <div class="col-5">
+                                <p class="ps-2">23</p>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>10/05/2023</td>
+                          <td
+                            class="text-center d-flex align-items-center justify-content-between d-md-table-cell expand-collapse">
+                            23 <img class="d-md-none cursor-pointer" src="./images/table-arrow.svg" alt="arrow-down">
+                          </td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">23</td>
+                        </tr>
+                        <tr class="toggle-dropdown d-none d-md-none">
+                          <td class="pt-0" colspan="5">
+                            <div class="row mb-4 align-items-center">
+                              <div class="col-7">
+                                <p class="fw-bold">SMS</p>
+                              </div>
+                              <div class="col-5">
+                                <p class="ps-2">23</p>
+                              </div>
+                            </div>
+                            <div class="row mb-4 align-items-center">
+                              <div class="col-7">
+                                <p class="fw-bold">Calls</p>
+                              </div>
+                              <div class="col-5">
+                                <p class="ps-2">23</p>
+                              </div>
+                            </div>
+                            <div class="row align-items-center">
+                              <div class="col-7">
+                                <p class="fw-bold">Emails</p>
+                              </div>
+                              <div class="col-5">
+                                <p class="ps-2">23</p>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>10/05/2023</td>
+                          <td
+                            class="text-center d-flex align-items-center justify-content-between d-md-table-cell expand-collapse">
+                            23 <img class="d-md-none cursor-pointer" src="./images/table-arrow.svg" alt="arrow-down">
+                          </td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">23</td>
+                        </tr>
+                        <tr class="toggle-dropdown d-none d-md-none">
+                          <td class="pt-0" colspan="5">
+                            <div class="row mb-4 align-items-center">
+                              <div class="col-7">
+                                <p class="fw-bold">SMS</p>
+                              </div>
+                              <div class="col-5">
+                                <p class="ps-2">23</p>
+                              </div>
+                            </div>
+                            <div class="row mb-4 align-items-center">
+                              <div class="col-7">
+                                <p class="fw-bold">Calls</p>
+                              </div>
+                              <div class="col-5">
+                                <p class="ps-2">23</p>
+                              </div>
+                            </div>
+                            <div class="row align-items-center">
+                              <div class="col-7">
+                                <p class="fw-bold">Emails</p>
+                              </div>
+                              <div class="col-5">
+                                <p class="ps-2">23</p>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>10/05/2023</td>
+                          <td
+                            class="text-center d-flex align-items-center justify-content-between d-md-table-cell expand-collapse">
+                            23 <img class="d-md-none cursor-pointer" src="./images/table-arrow.svg" alt="arrow-down">
+                          </td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">23</td>
+                        </tr>
+                        <tr class="toggle-dropdown d-none d-md-none">
+                          <td class="pt-0" colspan="5">
+                            <div class="row mb-4 align-items-center">
+                              <div class="col-7">
+                                <p class="fw-bold">SMS</p>
+                              </div>
+                              <div class="col-5">
+                                <p class="ps-2">23</p>
+                              </div>
+                            </div>
+                            <div class="row mb-4 align-items-center">
+                              <div class="col-7">
+                                <p class="fw-bold">Calls</p>
+                              </div>
+                              <div class="col-5">
+                                <p class="ps-2">23</p>
+                              </div>
+                            </div>
+                            <div class="row align-items-center">
+                              <div class="col-7">
+                                <p class="fw-bold">Emails</p>
+                              </div>
+                              <div class="col-5">
+                                <p class="ps-2">23</p>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/apexcharts-bundle/dist/apexcharts.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var dateInputs = document.querySelectorAll('.date-input');
+
+      dateInputs.forEach(function (input) {
+        // Switch to 'date' type on focus
+        input.addEventListener('focus', function () {
+          this.type = 'date';
+        });
+
+        // Switch back to 'text' type on blur, if empty
+        input.addEventListener('blur', function () {
+          if (this.value === '') {
+            this.type = 'text';
+          }
+        });
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const expandCollapse = document.querySelectorAll('.expand-collapse');
+      expandCollapse.forEach((item) => {
+        item.addEventListener('click', function () {
+          this.classList.toggle('active');
+          this.closest('tr').nextElementSibling.classList.toggle('d-none');
+        });
+      });
+    });
+  </script>
+  <script>
+    var options = {
+      series: [{
+        name: 'Trend',
+        type: 'column',
+        data: [23, 25, 21, 34, 12, 21, 10, 18, 38, 18, 14, 8]
+      }, {
+        name: 'Leads',
+        type: 'line',
+        data: [10, 22, 15, 9, 23, 10, 5, 15, 12, 13, 8, 9]
+      }],
+      chart: {
+        type: 'line',
+        // width: 190,
+        height: 560,
+        offsetY: 0,
+        stacked: false,
+        toolbar: {
+          show: true,
+          offsetX: -30,
+          offsetY: -35,
+          tools: {
+            download: '<img src="./images/more.svg" width="20">',
+            selection: false,
+            zoom: false,
+            zoomin: false,
+            zoomout: false,
+            pan: false,
+            reset: false,
+            customIcons: []
+          },
+        },
+      },
+      legend: {
+        show: false,
+      },
+      colors: ['#FFB07B', '#FF6600'],
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: '70%',
+          borderRadius: 0,
+          // rangeBarGroupRows: true,
+        },
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        show: [false, true],
+        width: [0, 6.6],
+        colors: ['#FF6600'],
+        curve: 'smooth',
+      },
+      xaxis: {
+        categories: ['29 April', '30 April', '1 May', '2 May', '3 May', '4 May', '5 May', '6 May', '7 May', '8 May', '9 May', '10 May'],
+        axisTicks: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+        labels: {
+          style: {
+            colors: '#9495AB',
+            fontSize: '1.2375rem',
+            fontWeight: 400,
+          },
+          // offsetX: -30,
+          format: 'dd MMM',
+        }
+      },
+      yaxis: {
+        min: 0,
+        max: 40,
+        tickAmount: 4,
+        labels: {
+          style: {
+            colors: '#9495AB',
+            fontSize: '1.03125rem',
+            fontWeight: 400,
+          },
+        },
+      },
+      fill: {
+        opacity: 1
+      },
+      tooltip: {
+        theme: 'light',
+        x: {
+          format: 'dd/MMM/yyyy',
+        },
+        style: {
+          fontSize: '1.2375rem',
+        }
+      },
+      grid: {
+        show: true,
+        borderColor: '#DADAE3',
+        strokeDashArray: 10,
+        padding: {
+          top: 0,
+          right: 0,
+          bottom: 0,
+        },
+      },
+      responsive: [{
+        breakpoint: 767,
+        options: {
+          stroke: {
+            width: [0, 4.4],
+          },
+        },
+        plotOptions: {
+          bar: {
+            columnWidth: '80%',
+          },
+        },
+        options: {
+          chart: {
+            height: 400,
+          }
+        },
+      }],
+    };
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+  </script>
+</body>
+
+</html>

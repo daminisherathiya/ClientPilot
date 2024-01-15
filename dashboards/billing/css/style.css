@@ -9,10 +9,11 @@
   --midnight-blue-color: #3c3f66;
   --yellow-color: #fad75b;
   /* --stone-gray-color: #707070; */
-  /* --warning-color: #ff3f3f; */
+  --warning-color: #ff3f3f;
   /* --input-placeholder-color: #d1d3dd; */
   --light-peach: #fff4ec;
   --light-blue: #eaeef6;
+  --muted-blue-gray: #9495ab;
 
   /* --divider-line-color: #e8e8ed; */
   --border-light-gray: #f5f5f7;
@@ -102,6 +103,12 @@ h6 {
 .bg-light-blue {
   background-color: var(--light-blue) !important;
 }
+.bg-warning {
+  background-color: var(--warning-color) !important;
+}
+.bg-muted-blue-gray {
+  background-color: var(--muted-blue-gray) !important;
+}
 
 /* Text color */
 .text-midnight-blue {
@@ -146,10 +153,48 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="url"],
-input[type="tel"] {
+input[type="tel"],
+input[type="date"] {
   font-size: 0.875rem;
 }
 
+/* input type date */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  left: 1rem;
+  width: 100%;
+}
+.date-input {
+  position: relative;
+}
+/* search input */
+
+.search-input {
+  width: 21.0625rem;
+}
+.search-input input {
+  padding: 0.71875rem 1.0625rem;
+}
+.search-input > span {
+  padding: 0.46875rem 0;
+}
+.search-input > span span {
+  padding: 0.25rem 1.625rem 0.25rem 0.71875rem;
+}
+.search-input img {
+  width: 1rem;
+}
+.search-input .input-group-text,
+.search-input .form-control {
+  border-radius: 0.25rem;
+}
+.search-input .form-control:focus,
+.search-input .form-control:focus ~ .input-group-text {
+  border-color: var(--primary-color) !important;
+  z-index: 0;
+}
 /* Radio button */
 .input-radio:checked {
   box-shadow: 0px 0px 0px 0.0625rem var(--primary-color);
@@ -289,6 +334,9 @@ input[type="tel"] {
 .rounded-7 {
   border-radius: 0.4375rem;
 }
+.roted-180deg {
+  transform: rotate(180deg);
+}
 
 /* modal */
 .purchase-modal .modal-content {
@@ -337,44 +385,58 @@ input[type="tel"] {
 .billing-dashboard .billing-history {
   margin-top: 2.5625rem;
 }
-.billing-dashboard .billing-history .billing-history-table {
+.billing-dashboard .billing-history .billing-history-table,
+.custom-table {
   border-collapse: separate;
   border-spacing: 0;
   margin-bottom: 0.875rem;
 }
-.billing-dashboard .billing-history .billing-history-table img {
+.billing-dashboard .billing-history .billing-history-table img,
+.custom-table img {
   width: 1.75rem;
 }
 .billing-dashboard .billing-history .billing-history-table tr th,
-.billing-dashboard .billing-history .billing-history-table tr:not(.toggle-dropdown) td {
+.billing-dashboard .billing-history .billing-history-table tr:not(.toggle-dropdown) td,
+.custom-table tr th,
+.custom-table tr:not(.toggle-dropdown) td {
   border-top: 0.0625rem solid var(--border-primary-color);
 }
-.billing-dashboard .billing-history .billing-history-table tr td:not(.active) img {
+.billing-dashboard .billing-history .billing-history-table tr td:not(.active) img,
+.custom-table tr td:not(.active) img {
   transform: rotate(180deg);
 }
-.billing-dashboard .billing-history .billing-history-table tr:nth-last-child(2) td {
+.billing-dashboard .billing-history .billing-history-table tr:nth-last-child(2) td,
+.custom-table tr:nth-last-child(2) td {
   border-bottom: 0.0625rem solid var(--border-primary-color);
 }
-.billing-dashboard .billing-history .billing-history-table tr:first-child th:first-child {
+.billing-dashboard .billing-history .billing-history-table tr:first-child th:first-child,
+.custom-table tr:first-child th:first-child {
   border-top-left-radius: 0.4375rem;
 }
-.billing-dashboard .billing-history .billing-history-table tr:first-child th:last-child {
+.billing-dashboard .billing-history .billing-history-table tr:first-child th:last-child,
+.custom-table tr:first-child th:last-child {
   border-top-right-radius: 0.4375rem;
 }
 .billing-dashboard .billing-history .billing-history-table tr td:first-child,
-.billing-dashboard .billing-history .billing-history-table tr th:first-child {
+.billing-dashboard .billing-history .billing-history-table tr th:first-child,
+.custom-table tr td:first-child,
+.custom-table tr th:first-child {
   border-left: 0.0625rem solid var(--border-primary-color);
 }
 .billing-dashboard .billing-history .billing-history-table tr td:last-child,
-.billing-dashboard .billing-history .billing-history-table tr th:last-child {
+.billing-dashboard .billing-history .billing-history-table tr th:last-child,
+.custom-table tr td:last-child,
+.custom-table tr th:last-child {
   border-right: 0.0625rem solid var(--border-primary-color);
 }
-.billing-dashboard .billing-history .billing-history-table tr th {
+.billing-dashboard .billing-history .billing-history-table tr th,
+.custom-table tr th {
   padding: 1.3125rem 1.625rem;
   background-color: var(--light-grey-color);
   vertical-align: middle;
 }
-.billing-dashboard .billing-history .billing-history-table tr td {
+.billing-dashboard .billing-history .billing-history-table tr td,
+.custom-table tr td {
   padding: 1.5625rem 1.625rem;
   vertical-align: middle;
 }
@@ -620,6 +682,91 @@ input[type="tel"] {
   margin-bottom: 6.125rem;
   margin-top: 3.25rem;
 }
+
+/* reports */
+.reports {
+  padding: 5.0625rem 1.5625rem;
+}
+.reports > div {
+  border-radius: 0.4375rem;
+}
+.reports .filter,
+.visit-and-clicks .filter {
+  padding: 0.9375rem 2.1875rem;
+}
+.reports .custom-select.form-select {
+  min-width: 11.4375rem;
+}
+.reports input[type="date"].date-input,
+.reports input[type="text"].date-input {
+  width: 8.125rem;
+}
+.reports input.date-input::placeholder {
+  text-align: center;
+}
+.reports .reports-details {
+  padding: 3.125rem 2.1875rem;
+}
+.reports .reports-card {
+  border-radius: 0.4375rem 0.4375rem 0 0;
+}
+.reports .reports-card .card-title {
+  padding: 1.25rem 1.875rem;
+}
+.reports .reports-card .card-body {
+  padding: 1.875rem;
+}
+.reports .reports-chart {
+  border-radius: 1.03125rem;
+}
+.reports .reports-chart > div {
+  padding: 4rem 0.5rem 2.5rem 3.375rem;
+}
+.reports .chartIcon {
+  width: 1.1875rem;
+}
+
+/* visit-and-clicks */
+.visit-and-clicks {
+  padding: 5.0625rem 1.5625rem;
+}
+.visit-and-clicks .visit-and-clicks-table {
+  padding: 3.125rem 2.1875rem;
+}
+.visit-and-clicks .visit-and-clicks-table table th:last-child {
+  width: 45%;
+}
+.visit-and-clicks .chartIcon {
+  width: 1.3125rem;
+}
+.visit-and-clicks .visit-and-clicks-table select {
+  min-width: 5.3125rem;
+}
+.pagination .page-item .page-link.active,
+.pagination .page-item .page-link:hover {
+  color: white;
+  background-color: var(--primary-color);
+}
+.pagination .page-item .page-link {
+  width: 2.6875rem;
+  height: 2.9375rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination .page-item .page-link img {
+  width: 0.5625rem;
+}
+.pagination .page-item .page-link.disabled-btn img {
+  filter: brightness(0) saturate(100%) invert(91%) sepia(12%) saturate(137%) hue-rotate(193deg) brightness(92%)
+    contrast(92%);
+}
+.pagination .page-item .page-link:hover img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+}
+
 /* Media queries */
 @media (max-width: 1440px) {
   .billing-dashboard .card-img {
@@ -642,10 +789,12 @@ input[type="tel"] {
   .billing-dashboard .card-img {
     width: 4.0625rem;
   }
-  .billing-dashboard .billing-history .billing-history-table tr td {
+  .billing-dashboard .billing-history .billing-history-table tr td,
+  .custom-table tr td {
     padding: 1.5625rem 1.325rem;
   }
-  .billing-dashboard .billing-history .billing-history-table tr th {
+  .billing-dashboard .billing-history .billing-history-table tr th,
+  .custom-table tr th {
     padding: 1.3125rem 1.325rem;
   }
   .billing-dashboard {
@@ -688,10 +837,12 @@ input[type="tel"] {
   .billing-dashboard {
     padding-top: 3.0625rem;
   }
-  .billing-dashboard .billing-history .billing-history-table tr td {
+  .billing-dashboard .billing-history .billing-history-table tr td,
+  .custom-table tr td {
     padding: 1.5625rem 0.66rem;
   }
-  .billing-dashboard .billing-history .billing-history-table tr th {
+  .billing-dashboard .billing-history .billing-history-table tr th,
+  .custom-table tr th {
     padding: 1.3125rem 0.66rem;
   }
   .add-ons-card .border-end {
@@ -725,6 +876,22 @@ input[type="tel"] {
   .subscription .strikethrough {
     font-size: 2rem;
   }
+  .reports .filter,
+  .visit-and-clicks .filter {
+    padding: 0.9375rem 1.5875rem;
+  }
+  .reports .reports-details {
+    padding: 3.125rem 1.5875rem;
+  }
+  .reports .reports-chart > div {
+    padding: 2.5rem 0.5rem 0.5rem 1.375rem;
+  }
+  .reports .reports-chart .chart-width {
+    min-width: 1050px;
+  }
+  .visit-and-clicks .visit-and-clicks-table {
+    padding: 2.125rem 1.5875rem;
+  }
 }
 @media (max-width: 767px) {
   html {
@@ -740,7 +907,7 @@ input[type="tel"] {
     padding: 1.4375rem 1.3125rem;
   }
   .btn-lg {
-    padding: 0.6rem 1.75rem;
+    padding: 0.6rem 1.55rem;
     min-height: 2.9375rem;
   }
   .billing-dashboard .card-details {
@@ -759,23 +926,31 @@ input[type="tel"] {
     transform: scale(1.025);
   }
   .billing-dashboard .billing-history .billing-history-table tr th:not(:nth-child(1)):not(:nth-child(2)),
-  .billing-dashboard .billing-history .billing-history-table tr td:not(:nth-child(1)):not(:nth-child(2)) {
+  .billing-dashboard .billing-history .billing-history-table tr td:not(:nth-child(1)):not(:nth-child(2)),
+  .custom-table tr th:not(:nth-child(1)):not(:nth-child(2)),
+  .custom-table tr td:not(:nth-child(1)):not(:nth-child(2)) {
     display: none;
   }
-  .billing-dashboard .billing-history .billing-history-table tr:first-child th:nth-child(2) {
+  .billing-dashboard .billing-history .billing-history-table tr:first-child th:nth-child(2),
+  .custom-table tr:first-child th:nth-child(2) {
     border-top-right-radius: 0.4375rem;
   }
   .billing-dashboard .billing-history .billing-history-table tr td:nth-child(2),
-  .billing-dashboard .billing-history .billing-history-table tr th:nth-child(2) {
+  .billing-dashboard .billing-history .billing-history-table tr th:nth-child(2),
+  .custom-table tr td:nth-child(2),
+  .custom-table tr th:nth-child(2) {
     border-right: 0.0625rem solid var(--border-primary-color);
   }
-  .billing-dashboard .billing-history .billing-history-table tr td {
+  .billing-dashboard .billing-history .billing-history-table tr td,
+  .custom-table tr td {
     padding: 1.1875rem 1.325rem;
   }
-  .billing-dashboard .billing-history .billing-history-table tr:last-child td {
+  .billing-dashboard .billing-history .billing-history-table tr:last-child td,
+  .custom-table tr:last-child td {
     border-bottom: 0.0625rem solid var(--border-primary-color);
   }
-  .billing-dashboard .billing-history .billing-history-table tr:nth-last-child(2) td {
+  .billing-dashboard .billing-history .billing-history-table tr:nth-last-child(2) td,
+  .custom-table tr:nth-last-child(2) td {
     border-bottom: none;
   }
   .billing-details #billing-contact,
@@ -826,7 +1001,8 @@ input[type="tel"] {
   input[type="email"],
   input[type="password"],
   input[type="url"],
-  input[type="tel"] {
+  input[type="tel"],
+  input[type="date"] {
     font-size: 1.02rem;
   }
   .pricing .nav.nav-pills .nav-item {
@@ -866,6 +1042,24 @@ input[type="tel"] {
   .subscription .navigation li {
     min-width: auto;
   }
+  .reports,
+  .visit-and-clicks {
+    padding: 2rem 0.5625rem;
+  }
+  .reports .reports-details {
+    padding: 3.125rem 1.375rem;
+  }
+  .reports .filter select,
+  .reports .filter input,
+  .reports .filter-date,
+  .reports .filter-date > div,
+  .visit-and-clicks .filter > div,
+  .visit-and-clicks-table > div:nth-child(2) {
+    width: 100% !important;
+  }
+  .search-input {
+    width: 100%;
+  }
 }
 @media (max-width: 575px) {
   .subscription #add-billing-details .heading,
@@ -883,10 +1077,20 @@ input[type="tel"] {
     box-shadow: none !important;
     padding: 0 !important;
   }
+  .pagination .page-item .page-link {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.3rem;
+  }
 }
 @media (max-width: 430px) {
   html {
     font-size: max(13.5px, 3.721vw);
+  }
+}
+@media (max-width: 429px) {
+  .visit-and-clicks-btn {
+    width: 100%;
   }
 }
 @media (max-width: 375px) {
