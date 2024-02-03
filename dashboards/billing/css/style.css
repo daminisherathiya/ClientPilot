@@ -965,8 +965,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .custom-table tr:last-child td {
     border-bottom: 0.0625rem solid var(--border-primary-color);
   }
-  .billing-dashboard .billing-history .billing-history-table tr:nth-last-child(2) td,
-  .custom-table tr:nth-last-child(2) td {
+  .billing-dashboard .billing-history .billing-history-table tr:nth-last-child(2).active td,
+  .custom-table tr:nth-last-child(2).active td {
     border-bottom: none;
   }
   .billing-details #billing-contact,

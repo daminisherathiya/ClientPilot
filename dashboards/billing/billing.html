@@ -582,6 +582,7 @@
       expandCollapse.forEach((item) => {
         item.addEventListener('click', function () {
           this.classList.toggle('active');
+          this.closest('tr').classList.toggle('active');
           this.closest('tr').nextElementSibling.classList.toggle('d-none');
         });
       });
