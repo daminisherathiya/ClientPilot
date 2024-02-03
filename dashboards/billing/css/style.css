@@ -253,10 +253,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* Animations */
-.scale-up {
+.scale-up,
+.apexcharts-menu-icon {
   transition: transform 0.2s ease;
 }
-.scale-up:hover {
+.scale-up:hover,
+.apexcharts-menu-icon:hover {
   transform: scale(1.075);
 }
 
@@ -319,7 +321,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: black;
   font-size: 0.875rem;
   border-radius: 0.25rem;
-  padding: 0.90625rem 2.25rem 0.90625rem 1.0625rem;
+  padding: 0.76875rem 2.25rem 0.76875rem 1.0625rem;
   background-image: url(../images/arrow-down.svg);
   background-position: right 1.1875rem center;
   min-width: 7.6875rem;
@@ -700,6 +702,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .reports input[type="date"].date-input,
 .reports input[type="text"].date-input {
   width: 8.125rem;
+  max-height: 2.9375rem;
+}
+.reports .filter .btn,
+.reports .filter .custom-select {
+  max-height: 2.9375rem;
+}
+.reports .filter .files img {
+  height: 1.875rem;
 }
 .reports input.date-input::placeholder {
   text-align: center;
@@ -742,8 +752,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .visit-and-clicks .visit-and-clicks-table select {
   min-width: 5.3125rem;
 }
+.visit-and-clicks .visit-and-clicks-table .left-gap {
+  padding-left: 1.325rem;
+}
 .pagination .page-item .page-link.active,
-.pagination .page-item .page-link:hover {
+.pagination .page-item .page-link:hover,
+.pagination .page-item .page-link:focus {
   color: white;
   background-color: var(--primary-color);
 }
@@ -762,7 +776,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   filter: brightness(0) saturate(100%) invert(91%) sepia(12%) saturate(137%) hue-rotate(193deg) brightness(92%)
     contrast(92%);
 }
-.pagination .page-item .page-link:hover img {
+.pagination .page-item .page-link:hover img,
+.pagination .page-item .page-link:focus img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
     contrast(103%);
 }
@@ -922,7 +937,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .billing-dashboard .your-subscription {
     padding: 1.25rem 1.75rem;
   }
-  .scale-up:hover {
+  .scale-up:hover,
+  .apexcharts-menu-icon:hover {
     transform: scale(1.025);
   }
   .billing-dashboard .billing-history .billing-history-table tr th:not(:nth-child(1)):not(:nth-child(2)),
@@ -1058,6 +1074,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100% !important;
   }
   .search-input {
+    width: 100%;
+  }
+  .width-100 {
     width: 100%;
   }
 }

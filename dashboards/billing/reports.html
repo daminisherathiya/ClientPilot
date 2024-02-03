@@ -14,7 +14,7 @@
 
 <body class="bg-white">
   <nav
-    style="height: 5.125rem; width: 100%; box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.06); background-color: white; position: fixed; top: 0; z-index: 3;">
+    style="height: 5.125rem; width: 100%; box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.06); background-color: white; position: fixed; top: 0; z-index: 12;">
   </nav>
   <main class="sidebar-space">
     <aside class="d-none d-xl-block"
@@ -25,10 +25,9 @@
           <div class="col-12">
             <div class="reports">
               <div class="custom-shadow-primary border border-primary">
-                <div
-                  class="filter border-bottom border-primary d-flex flex-wrap align-items-center justify-content-between">
-                  <div class="d-flex flex-wrap align-items-center">
-                    <h6 class="me-3 my-2">REPORTS</h6>
+                <div class="filter border-bottom border-primary d-flex flex-wrap align-items-center">
+                  <h6 class="me-3 my-2">REPORTS</h6>
+                  <div class="d-flex flex-wrap align-items-center justify-content-between flex-fill">
                     <div class="d-flex flex-wrap align-items-center">
                       <select class="form-select shadow-none custom-select w-auto me-md-3 my-2"
                         aria-label="Default select example">
@@ -63,26 +62,26 @@
                         </button>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="d-flex flex-wrap align-items-center justify-content-between justify-content-md-start flex-grow-0 flex-md-shrink-0">
-                    <div class="d-flex align-items-center">
-                      <div class="me-sm-3 me-3 cursor-pointer my-2"><img src="./images/file-excel-light.svg"
-                          alt="file-excel-light">
+                    <div
+                      class="d-flex flex-wrap align-items-center justify-content-center justify-content-sm-between justify-content-md-start flex-grow-0 flex-md-shrink-0 width-100">
+                      <div class="d-flex align-items-center files">
+                        <div class="me-sm-3 me-3 cursor-pointer my-2 scale-up"><img src="./images/file-excel-light.svg"
+                            alt="file-excel-light">
+                        </div>
+                        <div class="mx-sm-3 me-3 cursor-pointer my-2 scale-up"><img src="./images/file-csv-light.svg"
+                            alt="file-csv-light">
+                        </div>
+                        <div class="mx-sm-3 me-3 cursor-pointer my-2 scale-up"><img src="./images/file-pdf-light.svg"
+                            alt="file-pdf-light">
+                        </div>
                       </div>
-                      <div class="mx-sm-3 me-3 cursor-pointer my-2"><img src="./images/file-csv-light.svg"
-                          alt="file-csv-light">
+                      <div class="my-3 visit-and-clicks-btn ms-sm-3 flex-md-grow-0 flex-fill">
+                        <a href="./visit-and-clicks.html"
+                          class="btn btn-lg bg-primary text-white fs-15px fw-bold d-inline-flex align-items-center justify-content-center scale-up w-100"><img
+                            class="me-2 chartIcon" src="./images/chart-simple-light.svg" alt="chart"><span
+                            class="ps-1 text-nowrap">Visit and
+                            clicks</span></a>
                       </div>
-                      <div class="mx-sm-3 me-3 cursor-pointer my-2"><img src="./images/file-pdf-light.svg"
-                          alt="file-pdf-light">
-                      </div>
-                    </div>
-                    <div class="my-3 visit-and-clicks-btn ms-sm-3">
-                      <a href="#"
-                        class="btn btn-lg bg-primary text-white fs-15px fw-bold d-inline-flex align-items-center justify-content-center scale-up w-100"><img
-                          class="me-2 chartIcon" src="./images/chart-simple-light.svg" alt="chart"><span
-                          class="ps-1 text-nowrap">Visit and
-                          clicks</span></a>
                     </div>
                   </div>
                 </div>
@@ -439,7 +438,7 @@
           offsetX: -30,
           offsetY: -35,
           tools: {
-            download: '<img src="./images/more.svg" width="20">',
+            download: '<img src="./images/more.svg" width="20" alt="more">',
             selection: false,
             zoom: false,
             zoomin: false,
@@ -457,7 +456,7 @@
       plotOptions: {
         bar: {
           horizontal: false,
-          columnWidth: '70%',
+          columnWidth: '66%',
           borderRadius: 0,
           // rangeBarGroupRows: true,
         },
@@ -524,21 +523,40 @@
         },
       },
       responsive: [{
-        breakpoint: 767,
-        options: {
-          stroke: {
-            width: [0, 4.4],
-          },
-        },
+        breakpoint: 992,
         plotOptions: {
           bar: {
             columnWidth: '80%',
           },
         },
         options: {
+          stroke: {
+            width: [0, 4.4],
+          },
           chart: {
             height: 400,
-          }
+          },
+          xaxis: {
+            labels: {
+              style: {
+                fontSize: '0.838125rem',
+              },
+            }
+          },
+          yaxis: {
+            labels: {
+              style: {
+                colors: '#9495AB',
+                fontSize: '0.838125rem',
+              },
+            }
+          },
+          chart: {
+            toolbar: {
+              offsetX: -20,
+              offsetY: -25,
+            },
+          },
         },
       }],
     };
