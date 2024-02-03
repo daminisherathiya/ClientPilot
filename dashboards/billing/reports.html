@@ -46,12 +46,12 @@
                       <div class="d-flex align-items-center filter-date">
                         <div class="me-md-3 pe-2 pe-md-0 my-2">
                           <input type="text"
-                            class="form-control border border-divider shadow-none custom-input text-black rounded-1 date-input"
+                            class="form-control border border-divider shadow-none custom-input text-black rounded-1"
                             id="startDate" placeholder="Start date" aria-describedby="startDate">
                         </div>
                         <div class="me-md-3 ps-2 ps-md-0 my-2">
                           <input type="text"
-                            class="form-control border border-divider shadow-none custom-input text-black rounded-1 date-input"
+                            class="form-control border border-divider shadow-none custom-input text-black rounded-1"
                             id="endDate" placeholder="End date" aria-describedby="endDate">
                         </div>
                       </div>
@@ -93,7 +93,7 @@
                           <h6 class="fs-16px">Leads</h6>
                         </div>
                         <div class="card-body">
-                          <div class="row justify-content-between mb-4">
+                          <div class="row justify-content-between align-items-center mb-4">
                             <div class="col-9"><button
                                 class="btn btn-sm bg-green text-white fs-15px fw-bold scale-up">Active
                               </button></div>
@@ -101,7 +101,7 @@
                               <p class="fs-16px">23</p>
                             </div>
                           </div>
-                          <div class="row justify-content-between">
+                          <div class="row justify-content-between align-items-center">
                             <div class="col-9"><button
                                 class="btn btn-sm bg-warning text-white fs-15px fw-bold scale-up">Closed
                               </button></div>
@@ -118,7 +118,7 @@
                           <h6 class="fs-16px">SMS</h6>
                         </div>
                         <div class="card-body">
-                          <div class="row justify-content-between mb-4">
+                          <div class="row justify-content-between align-items-center">
                             <div class="col-9"><button
                                 class="btn btn-sm bg-muted-blue-gray text-white fs-15px fw-bold scale-up">Total
                               </button></div>
@@ -135,7 +135,7 @@
                           <h6 class="fs-16px">Email</h6>
                         </div>
                         <div class="card-body">
-                          <div class="row justify-content-between mb-4">
+                          <div class="row justify-content-between align-items-center">
                             <div class="col-9"><button
                                 class="btn btn-sm bg-muted-blue-gray text-white fs-15px fw-bold scale-up">Total
                               </button></div>
@@ -152,7 +152,7 @@
                           <h6 class="fs-16px">Calls</h6>
                         </div>
                         <div class="card-body">
-                          <div class="row justify-content-between mb-4">
+                          <div class="row justify-content-between align-items-center">
                             <div class="col-9"><button
                                 class="btn btn-sm bg-muted-blue-gray text-white fs-15px fw-bold scale-up">Total
                               </button></div>
@@ -386,25 +386,6 @@
   </main>
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="./js/apexcharts-bundle/dist/apexcharts.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var dateInputs = document.querySelectorAll('.date-input');
-
-      dateInputs.forEach(function (input) {
-        // Switch to 'date' type on focus
-        input.addEventListener('focus', function () {
-          this.type = 'date';
-        });
-
-        // Switch back to 'text' type on blur, if empty
-        input.addEventListener('blur', function () {
-          if (this.value === '') {
-            this.type = 'text';
-          }
-        });
-      });
-    });
-  </script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const expandCollapse = document.querySelectorAll('.expand-collapse');

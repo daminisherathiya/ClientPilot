@@ -158,17 +158,6 @@ input[type="date"] {
   font-size: 0.875rem;
 }
 
-/* input type date */
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  position: absolute;
-  left: 1rem;
-  width: 100%;
-}
-.date-input {
-  position: relative;
-}
 /* search input */
 
 .search-input {
@@ -752,9 +741,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .visit-and-clicks .visit-and-clicks-table select {
   min-width: 5.3125rem;
 }
-.visit-and-clicks .visit-and-clicks-table .left-gap {
-  padding-left: 1.325rem;
-}
 .pagination .page-item .page-link.active,
 .pagination .page-item .page-link:hover,
 .pagination .page-item .page-link:focus {
@@ -1019,7 +1005,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   input[type="url"],
   input[type="tel"],
   input[type="date"] {
-    font-size: 1.02rem;
+    font-size: 1.143rem;
   }
   .pricing .nav.nav-pills .nav-item {
     width: 100%;
@@ -1078,6 +1064,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
   .width-100 {
     width: 100%;
+  }
+  .visit-and-clicks-table .w-60 {
+    width: 60%;
+  }
+  .visit-and-clicks-table .w-40 {
+    width: 40%;
+  }
+  .visit-and-clicks .expandable-content-padding {
+    padding: 0 1.325rem;
   }
 }
 @media (max-width: 575px) {
