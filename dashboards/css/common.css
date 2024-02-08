@@ -142,11 +142,11 @@ h6 {
 input.custom-input {
   padding: 0.78125rem 1.0625rem !important;
 }
-input.custom-input::placeholder {
+input.custom-input::placeholder, textarea::placeholder {
   color: var(--dusty-gray-color) !important;
 }
 input.custom-input:focus,
-input.custom-input:focus ~ .input-group-text {
+input.custom-input:focus ~ .input-group-text, textarea.form-control:focus {
   border-color: var(--primary-color) !important;
 }
 input[type="text"],
@@ -156,6 +156,10 @@ input[type="url"],
 input[type="tel"],
 input[type="date"] {
   font-size: 0.875rem;
+}
+textarea.form-control  {
+  resize: none;
+  border-radius: 0.25rem;
 }
 
 /* search input */
@@ -264,7 +268,7 @@ input[type="date"] {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #e8e8ed;
+  background: var(--border-primary-color);
   border-radius: 0.9375rem;
 }
 /* common */

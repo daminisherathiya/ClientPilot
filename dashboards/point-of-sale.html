@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Pilot</title>
+  <meta name="description"
+    content="Client Pilot offers tailored business solutions to streamline your operations and boost productivity. Discover our innovative services today.">
+  <link rel="icon" type="image/svg" href="./images/logo-without-name.svg">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/point-of-sale.css">
+</head>
+
+<body class="bg-white">
+  <nav
+    style="height: 5.125rem; width: 100%; box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.06); background-color: white; position: fixed; top: 0; z-index: 3;">
+  </nav>
+  <main class="sidebar-space">
+    <aside class="d-none d-xl-block"
+      style="width: 6.25rem; background-color: #FF6600; height: 100vh; position: fixed; top: 0; left: 0;"></aside>
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3 scale-up" data-bs-toggle="modal"
+                data-bs-target="#pointOfSale">Create Sale</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Point Of Sale Modal -->
+  <div class="modal fade" id="pointOfSale" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered pointOfSale-modal">
+      <div class="modal-content custom-shadow-primary border-primary">
+        <div class="modal-header border-0">
+          <h5 class="modal-title fs-18px">Point of Sale</h5>
+        </div>
+        <div class="modal-body text-black p-0">
+          <nav>
+            <div class="nav nav-tabs border-primary" id="nav-tab" role="tablist">
+              <button class="nav-link border-0 active" id="customer-info-tab" data-bs-toggle="tab"
+                data-bs-target="#customer-info" type="button" role="tab" aria-controls="customer-info"
+                aria-selected="true">Customer Info</button>
+              <button class="nav-link border-0" id="services-tab" data-bs-toggle="tab" data-bs-target="#services"
+                type="button" role="tab" aria-controls="services" aria-selected="false">Services</button>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="customer-info" role="tabpanel"
+              aria-labelledby="customer-info-tab" tabindex="0">
+              <form class="pb-0">
+                <div class="row gx-0 align-items-center">
+                  <div class="col-md-3">
+                    <label for="status" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Status:</label>
+                  </div>
+                  <div class="col-md-9 flex-fill">
+                    <div class="row">
+                      <div class="col-3">
+                        <div class="d-flex align-items-center">
+                          <input type="radio" class="input-radio py-1 cursor-pointer flex-shrink-0" name="status"
+                            id="walk-in" checked>
+                          <label class="form-check-label" for="walk-in">
+                            Walk-in
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="d-flex align-items-center">
+                          <input type="radio" class="input-radio py-1 cursor-pointer flex-shrink-0" id="online"
+                            name="status">
+                          <label class="form-check-label" for="online">
+                            Online
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row gx-1 align-items-center">
+                  <div class="col-md-3">
+                    <label for="service" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Service:</label>
+                  </div>
+                  <div class="col-md-9 flex-fill">
+                    <select class="form-select shadow-none custom-select" aria-label="Default select example">
+                      <option selected>United States</option>
+                      <option value="1">India</option>
+                      <option value="2">Australia</option>
+                      <option value="3">Canada</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row gx-1 align-items-center">
+                  <div class="col-md-3">
+                    <label for="customer" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Customer:</label>
+                  </div>
+                  <div class="col-md-9 flex-fill">
+                    <input type="text"
+                      class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                      id="customer" placeholder="Enter name" aria-describedby="customer">
+                  </div>
+                </div>
+                <div class="row gx-1 align-items-center">
+                  <div class="col-md-3">
+                    <label for="phone" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Phone:</label>
+                  </div>
+                  <div class="col-md-9 flex-fill">
+                    <input type="tel"
+                      class="form-control border border-input shadow-none custom-input text-black rounded-1" id="phone"
+                      placeholder="Enter phone number" aria-describedby="phone">
+                  </div>
+                </div>
+                <div class="row gx-1 align-items-center">
+                  <div class="col-md-3">
+                    <label for="email" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Email:</label>
+                  </div>
+                  <div class="col-md-9 flex-fill">
+                    <input type="email"
+                      class="form-control border border-input shadow-none custom-input text-black rounded-1" id="email"
+                      placeholder="Enter email" aria-describedby="email">
+                  </div>
+                </div>
+              </form>
+              <div class="d-flex align-items-center justify-content-between pt-2 pt-sm-4">
+                <ul class="mb-0">
+                  <li class="text-dusty-gray fw-bold fs-15px">
+                    Signature is Required on iPad when visit the store
+                  </li>
+                </ul>
+                <div class="d-flex align-items-center justify-content-center justify-content-sm-end">
+                  <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue scale-up"
+                      data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                  </div>
+                  <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-4 scale-up">Continue</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="services" role="tabpanel" aria-labelledby="services-tab" tabindex="0">
+              <form>
+                <div class="row gx-0 align-items-center">
+                  <div class="col-md-3">
+                    <label for="selected-device" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Selected
+                      Device:</label>
+                  </div>
+                  <div class="col-md-9 flex-fill">
+                    <div class="d-flex align-items-center">
+                      <div><img class="phone" src="./images/point-of-sale/mobile.png" alt="mobile"></div>
+                      <p class="ms-4">Samsung Galaxy S21 Ultra</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row gx-1 align-items-center">
+                  <div class="col-md-3">
+                    <label for="location" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Location:</label>
+                  </div>
+                  <div class="col-md-9 flex-fill">
+                    <select class="form-select shadow-none custom-select" aria-label="Default select example">
+                      <option selected>Select Location</option>
+                      <option value="1">India</option>
+                      <option value="2">Australia</option>
+                      <option value="3">Canada</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row gx-1 align-items-center">
+                  <div class="col-md-3">
+                    <label for="amount" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Amount:</label>
+                  </div>
+                  <div class="col-md-9 flex-fill">
+                    <input type="number"
+                      class="form-control border border-input shadow-none custom-input text-black rounded-1" id="amount"
+                      placeholder="Enter Amount" aria-describedby="amount">
+                  </div>
+                </div>
+                <div class="row gx-1 align-items-center">
+                  <div class="col-md-3">
+                    <label for="sales-tax" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Sales Tax:</label>
+                  </div>
+                  <div class="col-md-9 flex-fill">
+                    <input type="number"
+                      class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                      id="sales-tax" placeholder="Enter Tax Amount in %" aria-describedby="sales-tax">
+                  </div>
+                </div>
+                <div class="row gx-1 align-items-center mb-0">
+                  <div class="col-md-3">
+                    <label for="discount" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Discount:</label>
+                  </div>
+                  <div class="col-md-9 flex-fill">
+                    <input type="number"
+                      class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                      id="discount" placeholder="Enter Discount Amount in %" aria-describedby="discount">
+                  </div>
+                </div>
+              </form>
+              <div class="border-top border-primary">
+                <div class="row">
+                  <div class="col-7 d-flex flex-column">
+                    <p class="mb-4">Internal Notes:</p>
+                    <textarea class="form-control shadow-none border-input flex-fill" placeholder="Enter  note"
+                      id="floatingTextarea"></textarea>
+                  </div>
+                  <div class="col-5">
+                    <p class="mb-4">Total</p>
+                    <div class="border border-input total">
+                      <div class="border-bottom border-input">
+                        <div class="d-flex justify-content-between mb-2">
+                          <p class="fw-semibold">Sub Total</p>
+                          <p class="fw-semibold">$73000</p>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                          <p>Discount</p>
+                          <p>$0.00</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <p>Service Tax</p>
+                          <p>$0.00</p>
+                        </div>
+                      </div>
+                      <div class="border-bottom border-input">
+                        <div class="d-flex justify-content-between mb-2">
+                          <p class="fw-semibold">Total</p>
+                          <p class="fw-semibold">$73000</p>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                          <p>Total Paid</p>
+                          <p>$0.00</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <p>Change Due</p>
+                          <p>$0.00</p>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="d-flex justify-content-between mb-2">
+                          <p class="fw-semibold">Amount Due</p>
+                          <p class="fw-semibold">$73000</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row gx-0 align-items-center pt-0">
+                <div class="col-md-3">
+                  <label for="payment" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Payment:</label>
+                </div>
+                <div class="col-md-9 flex-fill">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="d-flex align-items-center">
+                        <input type="radio" class="input-radio py-1 cursor-pointer flex-shrink-0" name="payment"
+                          id="credit-debit" checked>
+                        <label class="form-check-label" for="credit-debit">
+                          Credit/Debit Card
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="d-flex align-items-center">
+                        <input type="radio" class="input-radio py-1 cursor-pointer flex-shrink-0" id="cash"
+                          name="payment">
+                        <label class="form-check-label" for="cash">
+                          Cash
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-between pt-0">
+                <div><button id="add-more" class="btn btn-lg bg-primary text-white fs-15px fw-bold scale-up">Add
+                    More</button>
+                </div>
+                <div class="d-flex align-items-center justify-content-center justify-content-sm-end">
+                  <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue scale-up"
+                      data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                  </div>
+                  <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-4 scale-up"
+                      data-bs-toggle="modal" data-bs-target="#invoiceOptions">Checkout</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Custom Services Modal -->
+  <div class="modal fade" id="addCustomServices" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered addCustomServices-modal">
+      <div class="modal-content custom-shadow-primary border-primary">
+        <div class="modal-header border-primary">
+          <h5 class="modal-title fs-18px">Add New Customer</h5>
+        </div>
+        <div class="modal-body text-black p-0">
+          <form class="pb-0">
+            <div class="row gx-1 align-items-center">
+              <div class="col-md-3">
+                <label for="name" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Name:</label>
+              </div>
+              <div class="col-md-9 flex-fill">
+                <input type="text"
+                  class="form-control border border-input shadow-none custom-input text-black rounded-1" id="name"
+                  placeholder="Enter Name" aria-describedby="name">
+              </div>
+            </div>
+            <div class="row gx-1 align-items-center">
+              <div class="col-md-3">
+                <label for="phone" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Phone:</label>
+              </div>
+              <div class="col-md-9 flex-fill">
+                <input type="tel" class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                  id="phone" placeholder="Enter phone number" aria-describedby="phone">
+              </div>
+            </div>
+            <div class="row gx-1 align-items-center">
+              <div class="col-md-3">
+                <label for="email" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Email:</label>
+              </div>
+              <div class="col-md-9 flex-fill">
+                <input type="email"
+                  class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                  id="newCustomerEmail" placeholder="Enter email" aria-describedby="newCustomerEmail">
+              </div>
+            </div>
+          </form>
+          <div class="d-flex align-items-center justify-content-center justify-content-sm-end pt-0">
+            <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue scale-up" data-bs-dismiss="modal"
+                aria-label="Close">Cancel</button>
+            </div>
+            <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-4 scale-up">Create</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Invoice Options Modal -->
+  <div class="modal fade" id="invoiceOptions" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered invoiceOptions-modal">
+      <div class="modal-content custom-shadow-primary border-primary">
+        <div class="modal-header border-primary">
+          <h5 class="modal-title fs-18px">Invoice Options</h5>
+        </div>
+        <div class="modal-body text-black p-0">
+          <div class="row">
+            <div class="col-4">
+              <a href="#" class="invoice-card d-block border border-primary custom-shadow-primary text-center">
+                <div><img src="./images/point-of-sale/print-invoice.svg" alt="Print Invoice"></div>
+                <p class="fs-16px mt-4 text-black">Print Invoice</p>
+              </a>
+            </div>
+            <div class="col-4">
+              <a href="#" class="invoice-card d-block border border-primary custom-shadow-primary text-center">
+                <div><img src="./images/point-of-sale/print-invoice.svg" alt="Email Invoice"></div>
+                <p class="fs-16px mt-4 text-black">Email Invoice</p>
+              </a>
+            </div>
+            <div class="col-4">
+              <a href="#" class="invoice-card d-block border border-primary custom-shadow-primary text-center">
+                <div><img src="./images/point-of-sale/print-invoice.svg" alt="Print Thermal Receipt"></div>
+                <p class="fs-16px mt-4 text-black">Print Thermal Receipt</p>
+              </a>
+            </div>
+          </div>
+          <div class="d-flex align-items-center justify-content-center justify-content-sm-end pt-0">
+            <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue scale-up" data-bs-dismiss="modal"
+                aria-label="Close">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+  <!-- stacked models -->
+  <script>
+    const pointOfSale = document.getElementById('pointOfSale');
+    const addCustomServices = document.getElementById('addCustomServices');
+
+    document.getElementById('add-more').addEventListener('click', function () {
+      var myModal = new bootstrap.Modal(document.getElementById('addCustomServices'), {});
+      myModal.show();
+      pointOfSale.classList.add('custom-class');
+      var backdrops = document.querySelectorAll('.modal-backdrop');
+      backdrops[1].classList.add('d-none');
+    });
+    addCustomServices.addEventListener('hidden.bs.modal', () => {
+      pointOfSale.classList.remove('custom-class');
+    })
+  </script>
+</body>
+
+</html>
