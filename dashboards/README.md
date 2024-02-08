@@ -6,5 +6,5 @@ Figma:
 - https://www.figma.com/file/EvzHwYRcjMh3mBcphfzqGB/Client-Pilot-V2?type=design&node-id=414-1003&mode=design&t=eHoxiOPwYIZ0IcXZ-0
 
 Live link : 
-- https://daminisherathiya.github.io/ClientPilot/dashboards/billing/billing.html
-- https://daminisherathiya.github.io/ClientPilot/dashboards/billing/reports.html
+- https://daminisherathiya.github.io/ClientPilot/dashboards/billing.html
+- https://daminisherathiya.github.io/ClientPilot/dashboards/reports.html
