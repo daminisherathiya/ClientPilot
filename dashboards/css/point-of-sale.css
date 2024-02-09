@@ -157,3 +157,23 @@
 .modal.custom-class {
   z-index: 102;
 }
+
+/* customer-search */
+.pointOfSale-modal .customer-search ul {
+  list-style: none;
+  max-height: 21.625rem;
+  overflow: auto;
+}
+.pointOfSale-modal .customer-search ul li {
+  padding: 0.9375rem 1.825rem;
+}
+.pointOfSale-modal .customer-search ul li:hover, .pointOfSale-modal .customer-search ul li.active {
+  background-color: #ff660017;
+}
+.pointOfSale-modal .customer-search .search-input {
+  padding: 0 1.825rem;
+}
+.pointOfSale-modal .select-menu .customer-search.options {
+  padding: 1.3rem 0;
+  background-color: #fff;
+}
