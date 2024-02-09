@@ -72,6 +72,88 @@
   border-radius: 0.5rem;
 }
 
+/* custom select */
+.select-menu .select-btn {
+  display: flex;
+  padding: 0.5625rem 1.0625rem;
+  border-radius: 0.25rem;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+}
+.select-menu .custom-dropdown {
+  padding: 0.83125rem 1.0625rem;
+}
+.select-menu .options {
+  padding: 1.3rem 1.0625rem;
+  border-radius: 0.5rem;
+  animation-duration: 0.35s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.35s;
+  -webkit-animation-fill-mode: both;
+}
+.select-menu .options .option {
+  display: flex;
+  cursor: pointer;
+  padding: 0 1rem;
+  align-items: center;
+}
+.select-btn .arrow-down {
+  font-size: 1.5625rem;
+  transition: 0.3s;
+}
+
+.select-menu.active .select-btn .arrow-down {
+  transform: rotate(-180deg);
+}
+.select-menu.active .options {
+  display: block;
+  z-index: 10;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+}
+.left-border-design li .select-btn {
+  position: relative;
+}
+.left-border-design li .select-btn::before {
+  content: "";
+  border-top: 0.0625rem solid var(--input-border-color);
+  display: block;
+  width: 1.25rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.left-border-design li .center_border_left {
+  position: absolute;
+  border-left: 0.0625rem solid var(--input-border-color);
+  top: 0;
+  height: 100%;
+}
+.left-border-design li:nth-of-type(1) .center_border_left {
+  top: 2.40625rem;
+}
+.left-border-design li:nth-last-of-type(1) .center_border_left {
+  top: 0;
+  height: 50%;
+}
+.left-border-design .option .select-menu .arrow-down {
+  transform: rotate(-90deg);
+}
+.left-border-design .option .select-menu.active .arrow-down.roated-180deg {
+  transform: rotate(-180deg);
+}
+.left-border-design li:last-child .center_border_left {
+  height: 2.35625rem;
+}
+.pointOfSale-modal .phone-name {
+  padding: 0.5625rem 1.0625rem;
+}
+.pointOfSale-modal .modal-content .modal-body .left-border-design .phone {
+  margin-left: 1.25rem;
+}
 .modal.custom-class {
   z-index: 102;
 }
