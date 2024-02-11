@@ -142,11 +142,14 @@ h6 {
 input.custom-input {
   padding: 0.78125rem 1.0625rem !important;
 }
-input.custom-input::placeholder, textarea::placeholder, .search-input input::placeholder {
+input.custom-input::placeholder,
+textarea::placeholder,
+.search-input input::placeholder {
   color: var(--dusty-gray-color) !important;
 }
 input.custom-input:focus,
-input.custom-input:focus ~ .input-group-text, textarea.form-control:focus {
+input.custom-input:focus ~ .input-group-text,
+textarea.form-control:focus {
   border-color: var(--primary-color) !important;
 }
 input[type="text"],
@@ -154,10 +157,11 @@ input[type="email"],
 input[type="password"],
 input[type="url"],
 input[type="tel"],
-input[type="date"] {
+input[type="date"],
+input[type="number"] {
   font-size: 0.875rem;
 }
-textarea.form-control  {
+textarea.form-control {
   resize: none;
   border-radius: 0.25rem;
 }
@@ -391,7 +395,9 @@ textarea.form-control  {
   input[type="password"],
   input[type="url"],
   input[type="tel"],
-  input[type="date"] {
+  input[type="date"],
+  input[type="number"],
+  textarea.form-control {
     font-size: 1.143rem;
   }
   .search-input {

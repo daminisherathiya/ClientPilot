@@ -34,8 +34,8 @@
   </main>
   <!-- Point Of Sale Modal -->
   <div class="modal fade" id="pointOfSale" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered pointOfSale-modal">
-      <div class="modal-content custom-shadow-primary border-primary">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered pointOfSale-modal mx-auto">
+      <div class="modal-content custom-shadow-primary border-primary mx-2">
         <div class="modal-header border-0">
           <h5 class="modal-title fs-18px">Point of Sale</h5>
         </div>
@@ -1380,8 +1380,8 @@
                 </div>
               </form>
               <div class="d-flex flex-wrap align-items-center justify-content-between pt-0">
-                <ul class="mb-0 pt-md-4">
-                  <li class="text-dusty-gray fw-bold fs-15px text-capitalize">
+                <ul class="mb-0 pt-0 pt-sm-4 ps-3">
+                  <li class="text-dusty-gray fw-bold fs-15px text-capitalize pe-4">
                     Signature is Required on iPad when visit the store
                   </li>
                 </ul>
@@ -1552,40 +1552,30 @@
 
   <!-- Add Custom Services Modal -->
   <div class="modal fade" id="addCustomServices" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered addCustomServices-modal">
-      <div class="modal-content custom-shadow-primary border-primary">
+    <div class="modal-dialog modal-lg modal-dialog-centered addCustomServices-modal mx-auto">
+      <div class="modal-content custom-shadow-primary border-primary mx-2">
         <div class="modal-header border-primary">
-          <h5 class="modal-title fs-18px">Add New Customer</h5>
+          <h5 class="modal-title fs-18px">Add Custom Services</h5>
         </div>
         <div class="modal-body text-black p-0">
           <form class="pb-0">
             <div class="row gx-1 align-items-center">
               <div class="col-md-3">
-                <label for="name" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Name:</label>
+                <label for="item" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Item:</label>
               </div>
               <div class="col-md-9 flex-fill">
                 <input type="text"
-                  class="form-control border border-input shadow-none custom-input text-black rounded-1" id="name"
-                  placeholder="Enter Name" aria-describedby="name">
+                  class="form-control border border-input shadow-none custom-input text-black rounded-1" id="item"
+                  placeholder="Enter Item" aria-describedby="item">
               </div>
             </div>
             <div class="row gx-1 align-items-center">
               <div class="col-md-3">
-                <label for="new-customer-phone" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Phone:</label>
+                <label for="price" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Price:</label>
               </div>
               <div class="col-md-9 flex-fill">
-                <input type="tel" class="form-control border border-input shadow-none custom-input text-black rounded-1"
-                  id="new-customer-phone" placeholder="Enter phone number" aria-describedby="new-customer-phone">
-              </div>
-            </div>
-            <div class="row gx-1 align-items-center">
-              <div class="col-md-3">
-                <label for="email" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Email:</label>
-              </div>
-              <div class="col-md-9 flex-fill">
-                <input type="email"
-                  class="form-control border border-input shadow-none custom-input text-black rounded-1"
-                  id="newCustomerEmail" placeholder="Enter email" aria-describedby="newCustomerEmail">
+                <input type="number" class="form-control border border-input shadow-none custom-input text-black rounded-1"
+                  id="price" placeholder="Enter Price" aria-describedby="price">
               </div>
             </div>
           </form>
@@ -1604,8 +1594,8 @@
 
   <!-- Invoice Options Modal -->
   <div class="modal fade" id="invoiceOptions" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered invoiceOptions-modal">
-      <div class="modal-content custom-shadow-primary border-primary">
+    <div class="modal-dialog modal-lg modal-dialog-centered invoiceOptions-modal mx-auto">
+      <div class="modal-content custom-shadow-primary border-primary mx-2">
         <div class="modal-header border-primary">
           <h5 class="modal-title fs-18px">Invoice Options</h5>
         </div>
@@ -1735,7 +1725,7 @@
     // Set phone breadcrumb
     document.querySelectorAll('#phones-list .phone-name').forEach(phoneName => {
       phoneName.addEventListener('click', () => {
-        document.getElementById('selected-phone').innerText = phoneName.innerText;
+        document.getElementById('selected-phone').innerText = phoneName.innerText.trim();
         const menu = document.querySelector('#phone-list.select-menu');
         menu.classList.toggle('active');
         menu.querySelector('.options').classList.toggle('d-none');
