@@ -42,11 +42,12 @@
         <div class="modal-body text-black p-0">
           <nav>
             <div class="nav nav-tabs border-primary" id="nav-tab" role="tablist">
-              <button class="nav-link border-0 active" id="customer-info-tab" data-bs-toggle="tab"
+              <button class="nav-link border-0 active scale-up" id="customer-info-tab" data-bs-toggle="tab"
                 data-bs-target="#customer-info" type="button" role="tab" aria-controls="customer-info"
                 aria-selected="true">Customer Info</button>
-              <button class="nav-link border-0" id="services-tab" data-bs-toggle="tab" data-bs-target="#services"
-                type="button" role="tab" aria-controls="services" aria-selected="false">Services</button>
+              <button class="nav-link border-0 scale-up" id="services-tab" data-bs-toggle="tab"
+                data-bs-target="#services" type="button" role="tab" aria-controls="services"
+                aria-selected="false">Services</button>
             </div>
           </nav>
           <div class="tab-content" id="nav-tabContent">
@@ -86,21 +87,17 @@
                   </div>
                   <div class="col-md-9 flex-fill">
                     <div class="select-menu position-relative">
-                      <div class="select-btn custom-dropdown border border-input">
+                      <div class="select-btn root-select-btn custom-dropdown border border-input">
                         <span class="fs-14px">Phone</span>
                         <img class="arrow-down roted-0deg" src="./images/arrow-down.svg" alt="dropdown">
                       </div>
                       <div class="options w-100 d-none border border-input custom-shadow-primary">
                         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                          <ol class="breadcrumb">
+                          <ol id="service-breadcrumb" class="breadcrumb">
                             <li class="breadcrumb-item ps-2">Category</li>
-                            <li class="breadcrumb-item ps-2 text-black active">Android Phone
-                            </li>
-                            <li class="breadcrumb-item ps-2 text-black active" aria-current="page">Samsung
-                            </li>
                           </ol>
                         </nav>
-                        <ul class="p-0 ps-sm-1 mb-0 left-border-design">
+                        <ul id="phones-list" class="p-0 ps-sm-1 mb-0 left-border-design">
                           <li class="option p-0 position-relative">
                             <div class="center_border_left"></div>
                             <div class="select-menu position-relative w-100">
@@ -1330,7 +1327,7 @@
                   <div class="col-md-9 flex-fill">
                     <div class="select-menu position-relative w-100">
                       <div class="select-btn custom-dropdown border border-input">
-                        Corey Kenter
+                        <span id="selected-customer">Corey Kenter</span>
                         <img class="arrow-down" src="./images/arrow-down.svg" alt="dropdown">
                       </div>
                       <div class="options w-100 d-none border border-input custom-shadow-primary customer-search">
@@ -1341,7 +1338,7 @@
                               class="border-start d-flex align-items-center"><img src="./images/magnifying-glass.svg"
                                 alt="search"></span></span>
                         </div>
-                        <ul class="p-0 mb-0">
+                        <ul id="customers-list" class="p-0 mb-0">
                           <li>Corey Vaccaro</li>
                           <li class="active">Corey Kenter</li>
                           <li>Lincoln George</li>
@@ -1384,7 +1381,7 @@
               </form>
               <div class="d-flex flex-wrap align-items-center justify-content-between pt-0">
                 <ul class="mb-0 pt-md-4">
-                  <li class="text-dusty-gray fw-bold fs-15px">
+                  <li class="text-dusty-gray fw-bold fs-15px text-capitalize">
                     Signature is Required on iPad when visit the store
                   </li>
                 </ul>
@@ -1393,7 +1390,8 @@
                   <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue scale-up"
                       data-bs-dismiss="modal" aria-label="Close">Cancel</button>
                   </div>
-                  <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-4 scale-up">Continue</button>
+                  <div><button id="continue-btn"
+                      class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-4 scale-up">Continue</button>
                   </div>
                 </div>
               </div>
@@ -1595,7 +1593,8 @@
             <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue scale-up" data-bs-dismiss="modal"
                 aria-label="Close">Cancel</button>
             </div>
-            <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-4 scale-up">Create</button>
+            <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-4 scale-up"
+                data-bs-dismiss="modal">Create</button>
             </div>
           </div>
         </div>
@@ -1612,19 +1611,19 @@
         </div>
         <div class="modal-body text-black p-0">
           <div class="row">
-            <div class="col-sm-4 mb-3 mb-sm-0">
+            <div class="col-sm-4 mb-3 mb-sm-0 scale-up">
               <a href="#" class="invoice-card d-block border border-primary custom-shadow-primary text-center h-100">
                 <div><img src="./images/point-of-sale/print-invoice.svg" alt="Print Invoice"></div>
                 <p class="fs-16px mt-4 text-black">Print Invoice</p>
               </a>
             </div>
-            <div class="col-sm-4 mb-3 mb-sm-0">
+            <div class="col-sm-4 mb-3 mb-sm-0 scale-up">
               <a href="#" class="invoice-card d-block border border-primary custom-shadow-primary text-center h-100">
                 <div><img src="./images/point-of-sale/email-invoice.svg" alt="Email Invoice"></div>
                 <p class="fs-16px mt-4 text-black">Email Invoice</p>
               </a>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 scale-up">
               <a href="./payment-invoice.html"
                 class="invoice-card d-block border border-primary custom-shadow-primary text-center h-100">
                 <div><img src="./images/point-of-sale/print-thermal-receipt.svg" alt="Print Thermal Receipt"></div>
@@ -1642,9 +1641,25 @@
     </div>
   </div>
   <script src="./js/bootstrap.bundle.min.js"></script>
-
-  <!-- stacked models -->
   <script>
+    // Upon selecting any customer name, set its value and close the dropdown list
+    document.querySelectorAll('#customers-list li').forEach(item => {
+      item.addEventListener("click", function (event) {
+        document.getElementById('selected-customer').innerText = event.target.textContent;
+        const menu = item.closest('.select-menu');
+        menu.classList.toggle('active');
+        menu.querySelector('.options').classList.toggle('d-none');
+        menu.querySelector('.arrow-down').classList.toggle('roated-180deg');
+      });
+    });
+
+    // Clicking on the "Continue" button should take to the next step
+    document.getElementById('continue-btn').addEventListener('click', function () {
+      document.getElementById('services-tab').click();
+    });
+  </script>
+  <script>
+    // Allow showing stacked models
     const pointOfSale = document.getElementById('pointOfSale');
     const addCustomServices = document.getElementById('addCustomServices');
 
@@ -1660,13 +1675,67 @@
     })
   </script>
   <script>
-    const optionMenus = document.querySelectorAll(".select-menu");
+    // Toggle the dropdown list upon clicking on the dropdown
+    const optionMenus = document.querySelectorAll('.select-menu');
     optionMenus.forEach(menu => {
-      const selectBtn = menu.querySelector(".select-btn");
-      selectBtn.addEventListener("click", () => {
-        menu.classList.toggle("active");
-        menu.querySelector(".options").classList.toggle("d-none");
-        menu.querySelector(".arrow-down").classList.toggle("roated-180deg");
+      const selectBtn = menu.querySelector('.select-btn');
+      selectBtn.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        menu.querySelector('.options').classList.toggle('d-none');
+        menu.querySelector('.arrow-down').classList.toggle('roated-180deg');
+      });
+    });
+
+    const setPhoneBreadcrumb = (item) => {
+      const breadcrumbItems = [];
+      while (1) {
+        breadcrumbItems.push(item.querySelector('div span').innerText);
+        const options = item.closest('.options');
+        if (options) {
+          item = options.previousElementSibling;
+        }
+        if (item.classList.contains('root-select-btn')) {
+          break;
+        }
+      }
+      breadcrumbItems.push('Category');
+
+      console.log(breadcrumbItems);
+      document.getElementById('service-breadcrumb');
+      document.getElementById('service-breadcrumb').innerHTML = '';
+      for (breadcrumbItem of breadcrumbItems.reverse()) {
+        let li = document.createElement('li');
+        li.className = 'breadcrumb-item ps-2';
+        li.textContent = breadcrumbItem;
+        document.getElementById('service-breadcrumb').appendChild(li);
+      }
+    };
+
+    // In the phone list dropdowns, allow keeping only one chain of dropdowns open at a time and set phone breadcrumb
+    document.querySelectorAll('#phones-list .select-btn').forEach(btn1 => {
+      btn1.addEventListener('click', () => {
+        document.querySelectorAll('#phones-list .select-btn').forEach(btn2 => {
+          if (btn1 === btn2) {
+            return;
+          }
+
+          const optionsDiv = btn2.nextElementSibling;
+          if (optionsDiv.classList.contains('options') && optionsDiv.contains(btn1)) {
+            return;
+          }
+          const menu = btn2.closest('.select-menu');
+          menu.classList.remove("active");
+          menu.querySelector('.options').classList.add('d-none');
+          menu.querySelector(".arrow-down").classList.remove("roated-180deg");
+        });
+        setPhoneBreadcrumb(btn1);
+      });
+    });
+
+    // Set phone breadcrumb
+    document.querySelectorAll('#phones-list .phone-name').forEach(phoneName => {
+      phoneName.addEventListener('click', () => {
+        setPhoneBreadcrumb(phoneName);
       });
     });
   </script>
