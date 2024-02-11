@@ -20,17 +20,17 @@
   <main class="sidebar-space">
     <aside class="d-none d-xl-block"
       style="width: 6.25rem; background-color: #FF6600; height: 100vh; position: fixed; top: 0; left: 0;"></aside>
-    <section>
+    <div>
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <div><button class="btn btn-lg bg-primary text-white fs-15px fw-bold ms-3 scale-up" data-bs-toggle="modal"
-                data-bs-target="#pointOfSale">Create Sale</button>
+            <div class="text-center"><button class="btn btn-lg bg-primary text-white fs-15px fw-bold scale-up my-3"
+                data-bs-toggle="modal" data-bs-target="#pointOfSale">Create Sale</button>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </main>
   <!-- Point Of Sale Modal -->
   <div class="modal fade" id="pointOfSale" tabindex="-1" aria-hidden="true">
@@ -54,12 +54,12 @@
               aria-labelledby="customer-info-tab" tabindex="0">
               <form class="pb-0">
                 <div class="row gx-0 align-items-center">
-                  <div class="col-md-3">
-                    <label for="status" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Status:</label>
+                  <div class="col-sm-3 col-md-3">
+                    <div class="mb-0 text-black fs-14px mb-2 mb-md-0">Status:</div>
                   </div>
-                  <div class="col-md-9 flex-fill">
+                  <div class="col-sm-9 flex-fill">
                     <div class="row">
-                      <div class="col-3">
+                      <div class="col-6 col-lg-3">
                         <div class="d-flex align-items-center">
                           <input type="radio" class="input-radio py-1 cursor-pointer flex-shrink-0" name="status"
                             id="walk-in" checked>
@@ -68,7 +68,7 @@
                           </label>
                         </div>
                       </div>
-                      <div class="col-3">
+                      <div class="col-6 col-lg-3">
                         <div class="d-flex align-items-center">
                           <input type="radio" class="input-radio py-1 cursor-pointer flex-shrink-0" id="online"
                             name="status">
@@ -82,8 +82,7 @@
                 </div>
                 <div class="row gx-1 align-items-start">
                   <div class="col-md-3">
-                    <label for="service"
-                      class="form-label mb-0 text-black fs-14px mb-2 mb-md-0 pt-0 pt-md-3">Service:</label>
+                    <div class="mb-0 text-black fs-14px mb-2 mb-md-0 pt-0 pt-md-3">Service:</div>
                   </div>
                   <div class="col-md-9 flex-fill">
                     <div class="select-menu position-relative">
@@ -101,7 +100,7 @@
                             </li>
                           </ol>
                         </nav>
-                        <ul class="p-0 ps-1 mb-0 left-border-design">
+                        <ul class="p-0 ps-sm-1 mb-0 left-border-design">
                           <li class="option p-0 position-relative">
                             <div class="center_border_left"></div>
                             <div class="select-menu position-relative w-100">
@@ -114,7 +113,7 @@
                                 </div>
                                 <img class="arrow-down roted-0deg" src="./images/arrow-down.svg" alt="dropdown">
                               </div>
-                              <div class="options w-100 d-none p-0 ps-5">
+                              <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                 <ul class="p-0 mb-0 left-border-design">
                                   <li class="option p-0 position-relative">
                                     <div class="center_border_left"></div>
@@ -128,7 +127,7 @@
                                         </div>
                                         <img class="arrow-down roted-0deg" src="./images/arrow-down.svg" alt="dropdown">
                                       </div>
-                                      <div class="options w-100 d-none p-0 ps-5">
+                                      <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                         <ul class="p-0 mb-0">
                                           <li class="option p-0 position-relative">
                                             <div class="center_border_left"></div>
@@ -144,7 +143,7 @@
                                                 <img class="arrow-down roted-0deg" src="./images/arrow-down.svg"
                                                   alt="dropdown">
                                               </div>
-                                              <div class="options w-100 d-none p-0 ps-5">
+                                              <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                                 <ul class="p-0 mb-0">
                                                   <li class="option p-0 position-relative">
                                                     <div class="position-relative w-100">
@@ -204,7 +203,7 @@
                                                 <img class="arrow-down roted-0deg" src="./images/arrow-down.svg"
                                                   alt="dropdown">
                                               </div>
-                                              <div class="options w-100 d-none p-0 ps-5">
+                                              <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                                 <ul class="p-0 mb-0">
                                                   <li class="option p-0 position-relative">
                                                     <div class="position-relative w-100">
@@ -262,7 +261,7 @@
                                                 <img class="arrow-down roted-0deg" src="./images/arrow-down.svg"
                                                   alt="dropdown">
                                               </div>
-                                              <div class="options w-100 d-none p-0 ps-5">
+                                              <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                                 <ul class="p-0 mb-0">
                                                   <li class="option p-0 position-relative">
                                                     <div class="position-relative w-100">
@@ -321,7 +320,7 @@
                                                 <img class="arrow-down roted-0deg" src="./images/arrow-down.svg"
                                                   alt="dropdown">
                                               </div>
-                                              <div class="options w-100 d-none p-0 ps-5">
+                                              <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                                 <ul class="p-0 mb-0">
                                                   <li class="option p-0 position-relative">
                                                     <div class="position-relative w-100">
@@ -341,7 +340,7 @@
                                                       <div class="phone-name px-0">
                                                         <div class="d-flex align-items-center">
                                                           <img class="phone me-4"
-                                                            src="./images/point-of-sale/samsung -galaxy-s21-plus.png"
+                                                            src="./images/point-of-sale/samsung-galaxy-s21-plus.png"
                                                             alt="Samsung Galaxy S21 Plus">
                                                           <span class="fs-14px">Samsung Galaxy S21 Plus
                                                           </span>
@@ -654,7 +653,7 @@
                                         </div>
                                         <img class="arrow-down" src="./images/arrow-down.svg" alt="dropdown">
                                       </div>
-                                      <div class="options w-100 d-none p-0 ps-5">
+                                      <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                         <ul class="p-0 mb-0">
                                           <li class="option p-0 position-relative">
                                             <div class="position-relative w-100">
@@ -711,7 +710,7 @@
                                         </div>
                                         <img class="arrow-down" src="./images/arrow-down.svg" alt="dropdown">
                                       </div>
-                                      <div class="options w-100 d-none p-0 ps-5">
+                                      <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                         <ul class="p-0 mb-0">
                                           <li class="option p-0 position-relative">
                                             <div class="position-relative w-100">
@@ -768,7 +767,7 @@
                                         </div>
                                         <img class="arrow-down" src="./images/arrow-down.svg" alt="dropdown">
                                       </div>
-                                      <div class="options w-100 d-none p-0 ps-5">
+                                      <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                         <ul class="p-0 mb-0">
                                           <li class="option p-0 position-relative">
                                             <div class="position-relative w-100">
@@ -825,7 +824,7 @@
                                         </div>
                                         <img class="arrow-down" src="./images/arrow-down.svg" alt="dropdown">
                                       </div>
-                                      <div class="options w-100 d-none p-0 ps-5">
+                                      <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                         <ul class="p-0 mb-0">
                                           <li class="option p-0 position-relative">
                                             <div class="position-relative w-100">
@@ -881,7 +880,7 @@
                                         </div>
                                         <img class="arrow-down" src="./images/arrow-down.svg" alt="dropdown">
                                       </div>
-                                      <div class="options w-100 d-none p-0 ps-5">
+                                      <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                         <ul class="p-0 mb-0">
                                           <li class="option p-0 position-relative">
                                             <div class="position-relative w-100">
@@ -937,7 +936,7 @@
                                         </div>
                                         <img class="arrow-down" src="./images/arrow-down.svg" alt="dropdown">
                                       </div>
-                                      <div class="options w-100 d-none p-0 ps-5">
+                                      <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                         <ul class="p-0 mb-0">
                                           <li class="option p-0 position-relative">
                                             <div class="position-relative w-100">
@@ -993,7 +992,7 @@
                                         </div>
                                         <img class="arrow-down" src="./images/arrow-down.svg" alt="dropdown">
                                       </div>
-                                      <div class="options w-100 d-none p-0 ps-5">
+                                      <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                         <ul class="p-0 mb-0">
                                           <li class="option p-0 position-relative">
                                             <div class="position-relative w-100">
@@ -1053,7 +1052,7 @@
                                 </div>
                                 <img class="arrow-down" src="./images/arrow-down.svg" alt="dropdown">
                               </div>
-                              <div class="options w-100 d-none p-0 ps-5">
+                              <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                 <ul class="p-0 mb-0">
 
                                   <li class="option p-0 position-relative">
@@ -1108,7 +1107,7 @@
                                 </div>
                                 <img class="arrow-down" src="./images/arrow-down.svg" alt="dropdown">
                               </div>
-                              <div class="options w-100 d-none p-0 ps-5">
+                              <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                 <ul class="p-0 mb-0">
 
                                   <li class="option p-0 position-relative">
@@ -1163,7 +1162,7 @@
                                 </div>
                                 <img class="arrow-down" src="./images/arrow-down.svg" alt="dropdown">
                               </div>
-                              <div class="options w-100 d-none p-0 ps-5">
+                              <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                 <ul class="p-0 mb-0">
 
                                   <li class="option p-0 position-relative">
@@ -1219,7 +1218,7 @@
                                 </div>
                                 <img class="arrow-down" src="./images/arrow-down.svg" alt="dropdown">
                               </div>
-                              <div class="options w-100 d-none p-0 ps-5">
+                              <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                 <ul class="p-0 mb-0">
 
                                   <li class="option p-0 position-relative">
@@ -1275,7 +1274,7 @@
                                 </div>
                                 <img class="arrow-down" src="./images/arrow-down.svg" alt="dropdown">
                               </div>
-                              <div class="options w-100 d-none p-0 ps-5">
+                              <div class="options w-100 d-none p-0 ps-3 ps-lg-5">
                                 <ul class="p-0 mb-0">
 
                                   <li class="option p-0 position-relative">
@@ -1326,8 +1325,7 @@
                 </div>
                 <div class="row gx-1 align-items-start">
                   <div class="col-md-3">
-                    <label for="customer"
-                      class="form-label mb-0 text-black fs-14px mb-2 mb-md-0 pt-0 pt-md-3">Customer:</label>
+                    <div class="mb-0 text-black fs-14px mb-2 mb-md-0 pt-0 pt-md-3">Customer:</div>
                   </div>
                   <div class="col-md-9 flex-fill">
                     <div class="select-menu position-relative w-100">
@@ -1335,8 +1333,7 @@
                         Corey Kenter
                         <img class="arrow-down" src="./images/arrow-down.svg" alt="dropdown">
                       </div>
-                      <div
-                        class="options w-100 d-none border border-input custom-shadow-primary customer-search">
+                      <div class="options w-100 d-none border border-input custom-shadow-primary customer-search">
                         <div class="input-group mt-2 search-input w-100 mb-3">
                           <input type="text" class="form-control shadow-none border-end-0 position-static "
                             placeholder="Search..." aria-label="Search..." aria-describedby="basic-addon2">
@@ -1385,13 +1382,14 @@
                   </div>
                 </div>
               </form>
-              <div class="d-flex align-items-center justify-content-between pt-2 pt-sm-4">
-                <ul class="mb-0">
+              <div class="d-flex flex-wrap align-items-center justify-content-between pt-0">
+                <ul class="mb-0 pt-md-4">
                   <li class="text-dusty-gray fw-bold fs-15px">
                     Signature is Required on iPad when visit the store
                   </li>
                 </ul>
-                <div class="d-flex align-items-center justify-content-center justify-content-sm-end">
+                <div
+                  class="d-flex align-items-center justify-content-center justify-content-sm-end pt-3 pt-sm-4 w-100align-items-center d-flex justify-content-end">
                   <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue scale-up"
                       data-bs-dismiss="modal" aria-label="Close">Cancel</button>
                   </div>
@@ -1404,8 +1402,8 @@
               <form>
                 <div class="row gx-0 align-items-center">
                   <div class="col-md-3">
-                    <label for="selected-device" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Selected
-                      Device:</label>
+                    <div class="mb-0 text-black fs-14px mb-2 mb-md-0">Selected
+                      Device:</div>
                   </div>
                   <div class="col-md-9 flex-fill">
                     <div class="d-flex align-items-center">
@@ -1416,7 +1414,7 @@
                 </div>
                 <div class="row gx-1 align-items-center">
                   <div class="col-md-3">
-                    <label for="location" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Location:</label>
+                    <div class="mb-0 text-black fs-14px mb-2 mb-md-0">Location:</div>
                   </div>
                   <div class="col-md-9 flex-fill">
                     <select class="form-select shadow-none custom-select" aria-label="Default select example">
@@ -1460,13 +1458,13 @@
               </form>
               <div class="border-top border-primary">
                 <div class="row">
-                  <div class="col-7 d-flex flex-column">
-                    <p class="mb-4">Internal Notes:</p>
+                  <div class="col-md-7 d-flex flex-column">
+                    <p class="mb-3 mb-sm-4">Internal Notes:</p>
                     <textarea class="form-control shadow-none border-input flex-fill" placeholder="Enter  note"
                       id="floatingTextarea"></textarea>
                   </div>
-                  <div class="col-5">
-                    <p class="mb-4">Total</p>
+                  <div class="col-md-5">
+                    <p class="mb-3 mb-sm-4 mt-3 mt-md-0">Total</p>
                     <div class="border border-input total">
                       <div class="border-bottom border-input">
                         <div class="d-flex justify-content-between mb-2">
@@ -1507,12 +1505,12 @@
                 </div>
               </div>
               <div class="row gx-0 align-items-center pt-0">
-                <div class="col-md-3">
-                  <label for="payment" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Payment:</label>
+                <div class="col-sm-3 col-md-3">
+                  <div class="mb-0 text-black fs-14px mb-2 mb-md-0">Payment:</div>
                 </div>
-                <div class="col-md-9 flex-fill">
+                <div class="col-sm-9 flex-fill">
                   <div class="row">
-                    <div class="col-4">
+                    <div class="col-sm-6 col-md-4 pt-2 pt-sm-0">
                       <div class="d-flex align-items-center">
                         <input type="radio" class="input-radio py-1 cursor-pointer flex-shrink-0" name="payment"
                           id="credit-debit" checked>
@@ -1521,7 +1519,7 @@
                         </label>
                       </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm-6 col-md-4 pt-3 pt-sm-0">
                       <div class="d-flex align-items-center">
                         <input type="radio" class="input-radio py-1 cursor-pointer flex-shrink-0" id="cash"
                           name="payment">
@@ -1533,11 +1531,12 @@
                   </div>
                 </div>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-0">
-                <div><button id="add-more" class="btn btn-lg bg-primary text-white fs-15px fw-bold scale-up">Add
+              <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between pt-0">
+                <div class="width-100"><button id="add-more"
+                    class="btn btn-lg bg-primary text-white fs-15px fw-bold scale-up width-100">Add
                     More</button>
                 </div>
-                <div class="d-flex align-items-center justify-content-center justify-content-sm-end">
+                <div class="d-flex align-items-center justify-content-end width-100">
                   <div><button class="btn btn-lg bg-grey fs-15px fw-bold text-midnight-blue scale-up"
                       data-bs-dismiss="modal" aria-label="Close">Cancel</button>
                   </div>
@@ -1574,11 +1573,11 @@
             </div>
             <div class="row gx-1 align-items-center">
               <div class="col-md-3">
-                <label for="phone" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Phone:</label>
+                <label for="new-customer-phone" class="form-label mb-0 text-black fs-14px mb-2 mb-md-0">Phone:</label>
               </div>
               <div class="col-md-9 flex-fill">
                 <input type="tel" class="form-control border border-input shadow-none custom-input text-black rounded-1"
-                  id="phone" placeholder="Enter phone number" aria-describedby="phone">
+                  id="new-customer-phone" placeholder="Enter phone number" aria-describedby="new-customer-phone">
               </div>
             </div>
             <div class="row gx-1 align-items-center">
@@ -1613,21 +1612,22 @@
         </div>
         <div class="modal-body text-black p-0">
           <div class="row">
-            <div class="col-4">
-              <a href="#" class="invoice-card d-block border border-primary custom-shadow-primary text-center">
+            <div class="col-sm-4 mb-3 mb-sm-0">
+              <a href="#" class="invoice-card d-block border border-primary custom-shadow-primary text-center h-100">
                 <div><img src="./images/point-of-sale/print-invoice.svg" alt="Print Invoice"></div>
                 <p class="fs-16px mt-4 text-black">Print Invoice</p>
               </a>
             </div>
-            <div class="col-4">
-              <a href="#" class="invoice-card d-block border border-primary custom-shadow-primary text-center">
-                <div><img src="./images/point-of-sale/print-invoice.svg" alt="Email Invoice"></div>
+            <div class="col-sm-4 mb-3 mb-sm-0">
+              <a href="#" class="invoice-card d-block border border-primary custom-shadow-primary text-center h-100">
+                <div><img src="./images/point-of-sale/email-invoice.svg" alt="Email Invoice"></div>
                 <p class="fs-16px mt-4 text-black">Email Invoice</p>
               </a>
             </div>
-            <div class="col-4">
-              <a href="#" class="invoice-card d-block border border-primary custom-shadow-primary text-center">
-                <div><img src="./images/point-of-sale/print-invoice.svg" alt="Print Thermal Receipt"></div>
+            <div class="col-sm-4">
+              <a href="./payment-invoice.html"
+                class="invoice-card d-block border border-primary custom-shadow-primary text-center h-100">
+                <div><img src="./images/point-of-sale/print-thermal-receipt.svg" alt="Print Thermal Receipt"></div>
                 <p class="fs-16px mt-4 text-black">Print Thermal Receipt</p>
               </a>
             </div>
@@ -1660,37 +1660,15 @@
     })
   </script>
   <script>
-    var myModal = new bootstrap.Modal(document.getElementById('pointOfSale'), {});
-    myModal.show();
-  </script>
-  <script>
-    // const optionMenu = document.querySelector(".select-menu"),
-    //   selectBtn = optionMenu.querySelector(".select-btn");
-
-    // selectBtn.addEventListener("click", () =>
-    //   optionMenu.classList.toggle("active")
-    // );
-
-
-    // Select all .select-menu elements
     const optionMenus = document.querySelectorAll(".select-menu");
-
-    // Iterate over each .select-menu element
     optionMenus.forEach(menu => {
-      // Find the .select-btn within this .select-menu
       const selectBtn = menu.querySelector(".select-btn");
-      // console.log(selectBtn)
-
-      // Attach a click event listener to the .select-btn
       selectBtn.addEventListener("click", () => {
-        // Toggle the "active" class on the .select-menu
-        // console.log(menu)
         menu.classList.toggle("active");
         menu.querySelector(".options").classList.toggle("d-none");
         menu.querySelector(".arrow-down").classList.toggle("roated-180deg");
       });
     });
-
   </script>
 </body>
 

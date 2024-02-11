@@ -71,6 +71,9 @@
   padding: 1.5rem 0.625rem;
   border-radius: 0.5rem;
 }
+.invoiceOptions-modal .modal-body .invoice-card img {
+  width: 3.25rem;
+}
 
 /* custom select */
 .select-menu .select-btn {
@@ -101,6 +104,7 @@
 .select-btn .arrow-down {
   font-size: 1.5625rem;
   transition: 0.3s;
+  width: 0.75rem;
 }
 
 .select-menu.active .select-btn .arrow-down {
@@ -167,7 +171,8 @@
 .pointOfSale-modal .customer-search ul li {
   padding: 0.9375rem 1.825rem;
 }
-.pointOfSale-modal .customer-search ul li:hover, .pointOfSale-modal .customer-search ul li.active {
+.pointOfSale-modal .customer-search ul li:hover,
+.pointOfSale-modal .customer-search ul li.active {
   background-color: #ff660017;
 }
 .pointOfSale-modal .customer-search .search-input {
@@ -176,4 +181,68 @@
 .pointOfSale-modal .select-menu .customer-search.options {
   padding: 1.3rem 0;
   background-color: #fff;
+}
+
+@media (max-width: 1440px) {
+}
+@media (max-width: 1350px) {
+}
+@media (max-width: 1199px) {
+  .sidebar-space {
+    padding-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  .pointOfSale-modal .modal-content .modal-body .tab-pane > * {
+    padding: 2.125rem 2.3125rem;
+  }
+}
+@media (max-width: 767px) {
+  .pointOfSale-modal textarea {
+    min-height: 10rem;
+  }
+  .addCustomServices-modal .modal-body > *,
+  .invoiceOptions-modal .modal-body > * {
+    padding: 2rem 2.7rem;
+  }
+}
+@media (max-width: 575px) {
+}
+@media (max-width: 430px) {
+  .pointOfSale-modal .modal-content .modal-body .nav-tabs,
+  .pointOfSale-modal .modal-content .modal-header,
+  .addCustomServices-modal .modal-header,
+  .invoiceOptions-modal .modal-header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .pointOfSale-modal .modal-content .modal-body .tab-pane > * {
+    padding: 2rem 2rem 2rem 2.7rem;
+  }
+  .pointOfSale-modal .modal-content .modal-body form > .row,
+  .addCustomServices-modal .modal-content .modal-body form > .row {
+    margin-bottom: 1.4125rem;
+  }
+  .pointOfSale-modal #add-more {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 429px) {
+  .pointOfSale-modal .modal-content .modal-body .tab-pane > *,
+  .addCustomServices-modal .modal-body > * {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .select-menu .options {
+    padding: 1rem;
+  }
+  .pointOfSale-modal .modal-content .modal-body .phone {
+    width: 2.625rem;
+  }
+  .left-border-design li:nth-of-type(1) .center_border_left {
+    top: 1.88rem;
+  }
+}
+@media (max-width: 375px) {
 }
