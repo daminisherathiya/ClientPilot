@@ -86,9 +86,9 @@
                     <div class="mb-0 text-black fs-14px mb-2 mb-md-0 pt-0 pt-md-3">Service:</div>
                   </div>
                   <div class="col-md-9 flex-fill">
-                    <div class="select-menu position-relative">
+                    <div id="phone-list" class="select-menu position-relative">
                       <div class="select-btn root-select-btn custom-dropdown border border-input">
-                        <span class="fs-14px">Phone</span>
+                        <span id="selected-phone" class="fs-14px">Phone</span>
                         <img class="arrow-down roted-0deg" src="./images/arrow-down.svg" alt="dropdown">
                       </div>
                       <div class="options w-100 d-none border border-input custom-shadow-primary">
@@ -1735,7 +1735,11 @@
     // Set phone breadcrumb
     document.querySelectorAll('#phones-list .phone-name').forEach(phoneName => {
       phoneName.addEventListener('click', () => {
-        setPhoneBreadcrumb(phoneName);
+        document.getElementById('selected-phone').innerText = phoneName.innerText;
+        const menu = document.querySelector('#phone-list.select-menu');
+        menu.classList.toggle('active');
+        menu.querySelector('.options').classList.toggle('d-none');
+        menu.querySelector('.arrow-down').classList.toggle('roated-180deg');
       });
     });
   </script>
