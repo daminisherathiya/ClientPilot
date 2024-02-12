@@ -85,7 +85,7 @@
   justify-content: space-between;
 }
 .select-menu .custom-dropdown {
-  padding: 0.83125rem 1.0625rem;
+  padding: 0.78125rem 1.0625rem;
 }
 .select-menu .options {
   padding: 1.3rem 1.0625rem;
@@ -204,6 +204,10 @@
   .addCustomServices-modal .modal-body > *,
   .invoiceOptions-modal .modal-body > * {
     padding: 2rem 2.7rem;
+  }
+  #selected-customer,
+  #selected-phone {
+    font-size: 1.143rem;
   }
 }
 @media (max-width: 575px) {

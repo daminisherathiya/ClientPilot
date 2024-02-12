@@ -318,7 +318,7 @@ textarea.form-control {
   color: black;
   font-size: 0.875rem;
   border-radius: 0.25rem;
-  padding: 0.76875rem 2.25rem 0.76875rem 1.0625rem;
+  padding: 0.78125rem 2.25rem 0.78125rem 1.0625rem;
   background-image: url(../images/arrow-down.svg);
   background-position: right 1.1875rem center;
   min-width: 7.6875rem;
@@ -397,7 +397,8 @@ textarea.form-control {
   input[type="tel"],
   input[type="date"],
   input[type="number"],
-  textarea.form-control {
+  textarea.form-control,
+  .custom-select.form-select {
     font-size: 1.143rem;
   }
   .search-input {
