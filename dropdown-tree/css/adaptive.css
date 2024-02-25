@@ -1,0 +1,22 @@
+@media (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+  .selected-item {
+    font-size: 1.143rem;
+  }
+}
+@media (max-width: 429px) {
+  html {
+    font-size: max(13.5px, 3.721vw);
+  }
+  .dropdown-tree .select-menu .options {
+    padding: 1rem;
+  }
+  .dropdown-tree .item {
+    width: 2.625rem;
+  }
+  .dropdown-tree .left-border-design li:nth-of-type(1) .center_border_left {
+    top: 1.88rem;
+  }
+}
