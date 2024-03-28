@@ -188,9 +188,6 @@
 @media (max-width: 1350px) {
 }
 @media (max-width: 1199px) {
-  .sidebar-space {
-    padding-left: 0;
-  }
 }
 @media (max-width: 991px) {
   .pointOfSale-modal .modal-content .modal-body .tab-pane > * {

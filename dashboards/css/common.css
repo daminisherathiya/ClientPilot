@@ -356,27 +356,102 @@ textarea.form-control {
   width: 0.5625rem;
 }
 .pagination .page-item .page-link.disabled-btn img {
-  filter: brightness(0) saturate(100%) invert(91%) sepia(12%) saturate(137%) hue-rotate(193deg) brightness(92%)
-    contrast(92%);
+  filter: brightness(0) saturate(100%) invert(91%) sepia(12%) saturate(137%) hue-rotate(193deg) brightness(92%) contrast(92%);
 }
 .pagination .page-item .page-link:hover img,
 .pagination .page-item .page-link:focus img {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
-    contrast(103%);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+/* custom table */
+
+.billing-dashboard .billing-history .billing-history-table,
+.custom-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 0.875rem;
+}
+.billing-dashboard .billing-history .billing-history-table img,
+.custom-table img {
+  width: 1.75rem;
+}
+.billing-dashboard .billing-history .billing-history-table tr th,
+.billing-dashboard .billing-history .billing-history-table tr:not(.toggle-dropdown) td,
+.custom-table tr th,
+.custom-table tr:not(.toggle-dropdown) td {
+  border-top: 0.0625rem solid var(--border-primary-color);
+}
+.billing-dashboard .billing-history .billing-history-table tr td:not(.active) img,
+.custom-table tr td:not(.active) .expand-collapse img {
+  transform: rotate(180deg);
+}
+.billing-dashboard .billing-history .billing-history-table tr:nth-last-child(2) td,
+.custom-table tr:nth-last-child(2) td {
+  border-bottom: 0.0625rem solid var(--border-primary-color);
+}
+.billing-dashboard .billing-history .billing-history-table tr:first-child th:first-child,
+.custom-table tr:first-child th:first-child {
+  border-top-left-radius: 0.4375rem;
+}
+.billing-dashboard .billing-history .billing-history-table tr:first-child th:last-child,
+.custom-table tr:first-child th:last-child {
+  border-top-right-radius: 0.4375rem;
+}
+.billing-dashboard .billing-history .billing-history-table tr td:first-child,
+.billing-dashboard .billing-history .billing-history-table tr th:first-child,
+.custom-table tr td:first-child,
+.custom-table tr th:first-child {
+  border-left: 0.0625rem solid var(--border-primary-color);
+}
+.billing-dashboard .billing-history .billing-history-table tr td:last-child,
+.billing-dashboard .billing-history .billing-history-table tr th:last-child,
+.custom-table tr td:last-child,
+.custom-table tr th:last-child {
+  border-right: 0.0625rem solid var(--border-primary-color);
+}
+.billing-dashboard .billing-history .billing-history-table tr th,
+.custom-table tr th {
+  padding: 1.3125rem 1.625rem;
+  background-color: var(--light-grey-color);
+  vertical-align: middle;
+}
+.billing-dashboard .billing-history .billing-history-table tr td,
+.custom-table tr td {
+  padding: 1.5625rem 1.625rem;
+  vertical-align: middle;
 }
 
 /* Media queries */
 @media (max-width: 1440px) {
 }
 @media (max-width: 1350px) {
+  .billing-dashboard .billing-history .billing-history-table tr td,
+  .custom-table tr td {
+    padding: 1.5625rem 1.325rem;
+  }
+  .billing-dashboard .billing-history .billing-history-table tr th,
+  .custom-table tr th {
+    padding: 1.3125rem 1.325rem;
+  }
 }
 @media (max-width: 1199px) {
   .btn-lg {
     padding: 0.45rem 0.95rem;
     min-height: 1.9375rem;
   }
+  .sidebar-space {
+    padding-left: 0;
+  }
 }
 @media (max-width: 991px) {
+  .billing-dashboard .billing-history .billing-history-table tr td,
+  .custom-table tr td {
+    padding: 1.5625rem 0.66rem;
+  }
+  .billing-dashboard .billing-history .billing-history-table tr th,
+  .custom-table tr th {
+    padding: 1.3125rem 0.66rem;
+  }
 }
 @media (max-width: 767px) {
   html {
@@ -406,6 +481,34 @@ textarea.form-control {
   }
   .width-100 {
     width: 100%;
+  }
+  .billing-dashboard .billing-history .billing-history-table tr th:not(:nth-child(1)):not(:nth-child(2)),
+  .billing-dashboard .billing-history .billing-history-table tr td:not(:nth-child(1)):not(:nth-child(2)),
+  .custom-table tr th:not(:nth-child(1)):not(:nth-child(2)),
+  .custom-table tr td:not(:nth-child(1)):not(:nth-child(2)) {
+    display: none;
+  }
+  .billing-dashboard .billing-history .billing-history-table tr:first-child th:nth-child(2),
+  .custom-table tr:first-child th:nth-child(2) {
+    border-top-right-radius: 0.4375rem;
+  }
+  .billing-dashboard .billing-history .billing-history-table tr td:nth-child(2),
+  .billing-dashboard .billing-history .billing-history-table tr th:nth-child(2),
+  .custom-table tr td:nth-child(2),
+  .custom-table tr th:nth-child(2) {
+    border-right: 0.0625rem solid var(--border-primary-color);
+  }
+  .billing-dashboard .billing-history .billing-history-table tr td,
+  .custom-table tr td {
+    padding: 1.1875rem 1.325rem;
+  }
+  .billing-dashboard .billing-history .billing-history-table tr:last-child td,
+  .custom-table tr:last-child td {
+    border-bottom: 0.0625rem solid var(--border-primary-color);
+  }
+  .billing-dashboard .billing-history .billing-history-table tr:nth-last-child(2).active td,
+  .custom-table tr:nth-last-child(2).active td {
+    border-bottom: none;
   }
 }
 @media (max-width: 575px) {
