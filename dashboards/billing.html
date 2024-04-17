@@ -577,18 +577,8 @@
     </section>
   </main>
   <script src="./js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const expandCollapse = document.querySelectorAll('.expand-collapse');
-      expandCollapse.forEach((item) => {
-        item.addEventListener('click', function () {
-          this.classList.toggle('active');
-          this.closest('tr').classList.toggle('active');
-          this.closest('tr').nextElementSibling.classList.toggle('d-none');
-        });
-      });
-    });
-  </script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/table.js"></script>
 </body>
 
 </html>

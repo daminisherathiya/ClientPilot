@@ -326,37 +326,8 @@
     </div>
   </div>
   <script src="./js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const circle = document.querySelectorAll('.navigation .circle');
-      circle.forEach((item, index) => {
-        item.addEventListener('click', function () {
-          const navigatioSteps = document.querySelectorAll(".navigation ul li div");
-          for (var i = 0; i < navigatioSteps.length; i++) {
-            navigatioSteps[i].classList.remove("active", "prev");
-            navigatioSteps[i].querySelector("div span").classList.remove("d-none");
-            navigatioSteps[i].querySelector("div img").classList.add("d-none");
-          }
-          for (var i = 0; i < index; i++) {
-            navigatioSteps[i].classList.add("prev");
-            navigatioSteps[i].querySelector("div span").classList.add("d-none");
-            navigatioSteps[i].querySelector("div img").classList.remove("d-none");
-          }
-          for (var i = 0; i <= index; i++) {
-            navigatioSteps[i].classList.add("active");
-          }
-
-          document.querySelector(".progress div").style.width = (index / (navigatioSteps.length - 1) * 100).toString() + "%";
-
-          const contentContainerChildren = document.getElementById("steps-content-container").children;
-          for (var i = 0; i < contentContainerChildren.length; i++) {
-            contentContainerChildren[i].classList.add("d-none");
-          }
-          contentContainerChildren[index].classList.remove("d-none");
-        });
-      });
-    });
-  </script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/progress-steps.js"></script>
 </body>
 
 </html>
