@@ -1,0 +1,520 @@
+{
+  "phones": [
+    {
+      "id": 1,
+      "image": "./images/android-phone.png",
+      "text": "Android Phone"
+    },
+    {
+      "id": 2,
+      "image": "./images/android-phone.png",
+      "text": "Samsung",
+      "parentId": 1
+    },
+    {
+      "id": 3,
+      "image": "./images/galaxy-a-series.png",
+      "text": "Galaxy A Series",
+      "parentId": 2
+    },
+    {
+      "id": 4,
+      "image": "./images/samsung-galaxy-s9-plus.png",
+      "text": "Samsung Galaxy S9 Plus",
+      "parentId": 3
+    },
+    {
+      "id": 5,
+      "image": "./images/samsung-galaxy-s9.png",
+      "text": "Samsung Galaxy S9",
+      "parentId": 3
+    },
+    {
+      "id": 6,
+      "image": "./images/samsung-galaxy-s8-plus.png",
+      "text": "Samsung Galaxy S8 Plus",
+      "parentId": 3
+    },
+    {
+      "id": 7,
+      "image": "./images/galaxy-j-series.png",
+      "text": "Galaxy J Series",
+      "parentId": 2
+    },
+    {
+      "id": 8,
+      "image": "./images/samsung-galaxy-s9-plus.png",
+      "text": "Samsung Galaxy S9 Plus",
+      "parentId": 7
+    },
+    {
+      "id": 9,
+      "image": "./images/samsung-galaxy-s9.png",
+      "text": "Samsung Galaxy S9",
+      "parentId": 7
+    },
+    {
+      "id": 10,
+      "image": "./images/samsung-galaxy-s8-plus.png",
+      "text": "Samsung Galaxy S8 Plus",
+      "parentId": 7
+    },
+    {
+      "id": 11,
+      "image": "./images/android-phone.png",
+      "text": "Galaxy Note",
+      "parentId": 2
+    },
+    {
+      "id": 12,
+      "image": "./images/samsung-galaxy-s9-plus.png",
+      "text": "Samsung Galaxy S9 Plus",
+      "parentId": 11
+    },
+    {
+      "id": 13,
+      "image": "./images/samsung-galaxy-s9.png",
+      "text": "Samsung Galaxy S9",
+      "parentId": 11
+    },
+    {
+      "id": 14,
+      "image": "./images/samsung-galaxy-s8-plus.png",
+      "text": "Samsung Galaxy S8 Plus",
+      "parentId": 11
+    },
+    {
+      "id": 15,
+      "image": "./images/galaxy-s-series.png",
+      "text": "Galaxy S Series",
+      "parentId": 2
+    },
+    {
+      "id": 16,
+      "image": "./images/samsung-galaxy-s21-ultra.png",
+      "text": "Samsung Galaxy S21 Ultra",
+      "parentId": 15
+    },
+    {
+      "id": 17,
+      "image": "./images/samsung-galaxy-s21-plus.png",
+      "text": "Samsung Galaxy S21 Plus",
+      "parentId": 15
+    },
+    {
+      "id": 18,
+      "image": "./images/samsung-galaxy-S21.png",
+      "text": "Samsung Galaxy S21",
+      "parentId": 15
+    },
+    {
+      "id": 19,
+      "image": "./images/samsung-galaxy-s20-ultra.png",
+      "text": "Samsung Galaxy S20 Ultra",
+      "parentId": 15
+    },
+    {
+      "id": 20,
+      "image": "./images/samsung-galaxy-s20plus.png",
+      "text": "Samsung Galaxy S20 Plus",
+      "parentId": 15
+    },
+    {
+      "id": 21,
+      "image": "./images/samsung-galaxy-s20.png",
+      "text": "Samsung Galaxy S20",
+      "parentId": 15
+    },
+    {
+      "id": 22,
+      "image": "./images/samsung-galaxy-s10-plus.png",
+      "text": "Samsung Galaxy S10 Plus",
+      "parentId": 15
+    },
+    {
+      "id": 23,
+      "image": "./images/samsung-galaxy-s10e.png",
+      "text": "Samsung Galaxy S10e",
+      "parentId": 15
+    },
+    {
+      "id": 24,
+      "image": "./images/samsung-galaxy-s10.png",
+      "text": "Samsung Galaxy S10",
+      "parentId": 15
+    },
+    {
+      "id": 25,
+      "image": "./images/samsung-galaxy-s9-plus.png",
+      "text": "Samsung Galaxy S9 Plus",
+      "parentId": 15
+    },
+    {
+      "id": 26,
+      "image": "./images/samsung-galaxy-s9.png",
+      "text": "Samsung Galaxy S9",
+      "parentId": 15
+    },
+    {
+      "id": 27,
+      "image": "./images/samsung-galaxy-s8-plus.png",
+      "text": "Samsung Galaxy S8 Plus",
+      "parentId": 15
+    },
+    {
+      "id": 28,
+      "image": "./images/samsung-galaxy-s8.png",
+      "text": "Samsung Galaxy S8",
+      "parentId": 15
+    },
+    {
+      "id": 29,
+      "image": "./images/samsung-galaxy-s7-edge.png",
+      "text": "Samsung Galaxy S7 Edge",
+      "parentId": 15
+    },
+    {
+      "id": 30,
+      "image": "./images/samsung-galaxy-s7.png",
+      "text": "Samsung Galaxy S7",
+      "parentId": 15
+    },
+    {
+      "id": 31,
+      "image": "./images/samsung-galaxy-s6-edge-plus.png",
+      "text": "Samsung Galaxy S6 Edge Plus",
+      "parentId": 15
+    },
+    {
+      "id": 32,
+      "image": "./images/samsung-galaxy-s6-edge.png",
+      "text": "Samsung Galaxy S6 Edge",
+      "parentId": 15
+    },
+    {
+      "id": 33,
+      "image": "./images/samsung-galaxy-s6.png",
+      "text": "Samsung Galaxy S6",
+      "parentId": 15
+    },
+    {
+      "id": 34,
+      "image": "./images/samsung-galaxy-s5-neo.png",
+      "text": "Samsung Galaxy S5 Neo",
+      "parentId": 15
+    },
+    {
+      "id": 35,
+      "image": "./images/samsung-galaxy-s5-active.png",
+      "text": "Samsung Galaxy S5 Active",
+      "parentId": 15
+    },
+    {
+      "id": 36,
+      "image": "./images/samsung-galaxy-s5.png",
+      "text": "Samsung Galaxy S5",
+      "parentId": 15
+    },
+    {
+      "id": 37,
+      "image": "./images/samsung-galaxy-s4-mini.png",
+      "text": "Samsung Galaxy S4 Mini",
+      "parentId": 15
+    },
+    {
+      "id": 38,
+      "image": "./images/samsung-galaxy-s4.png",
+      "text": "Samsung Galaxy S4",
+      "parentId": 15
+    },
+    {
+      "id": 39,
+      "image": "./images/samsung-galaxy-s3.png",
+      "text": "Samsung Galaxy S3",
+      "parentId": 15
+    },
+    {
+      "id": 40,
+      "image": "./images/lg.png",
+      "text": "LG",
+      "parentId": 1
+    },
+    {
+      "id": 41,
+      "image": "./images/samsung-galaxy-s5-neo.png",
+      "text": "Samsung Galaxy S5 Neo",
+      "parentId": 40
+    },
+    {
+      "id": 42,
+      "image": "./images/samsung-galaxy-s5-active.png",
+      "text": "Samsung Galaxy S5 Active",
+      "parentId": 40
+    },
+    {
+      "id": 43,
+      "image": "./images/samsung-galaxy-s5.png",
+      "text": "Samsung Galaxy S5",
+      "parentId": 40
+    },
+    {
+      "id": 44,
+      "image": "./images/google-pixle.png",
+      "text": "Google Pixel",
+      "parentId": 1
+    },
+    {
+      "id": 45,
+      "image": "./images/samsung-galaxy-s5-neo.png",
+      "text": "Samsung Galaxy S5 Neo",
+      "parentId": 44
+    },
+    {
+      "id": 46,
+      "image": "./images/samsung-galaxy-s5-active.png",
+      "text": "Samsung Galaxy S5 Active",
+      "parentId": 44
+    },
+    {
+      "id": 47,
+      "image": "./images/samsung-galaxy-s5.png",
+      "text": "Samsung Galaxy S5",
+      "parentId": 44
+    },
+    {
+      "id": 48,
+      "image": "./images/motorola.png",
+      "text": "Motorola",
+      "parentId": 1
+    },
+    {
+      "id": 49,
+      "image": "./images/samsung-galaxy-s5-neo.png",
+      "text": "Samsung Galaxy S5 Neo",
+      "parentId": 48
+    },
+    {
+      "id": 50,
+      "image": "./images/samsung-galaxy-s5-active.png",
+      "text": "Samsung Galaxy S5 Active",
+      "parentId": 48
+    },
+    {
+      "id": 51,
+      "image": "./images/samsung-galaxy-s5.png",
+      "text": "Samsung Galaxy S5",
+      "parentId": 48
+    },
+    {
+      "id": 52,
+      "image": "./images/oneplus.png",
+      "text": "OnePlus",
+      "parentId": 1
+    },
+    {
+      "id": 53,
+      "image": "./images/samsung-galaxy-s5-neo.png",
+      "text": "Samsung Galaxy S5 Neo",
+      "parentId": 52
+    },
+    {
+      "id": 54,
+      "image": "./images/samsung-galaxy-s5-active.png",
+      "text": "Samsung Galaxy S5 Active",
+      "parentId": 52
+    },
+    {
+      "id": 55,
+      "image": "./images/samsung-galaxy-s5.png",
+      "text": "Samsung Galaxy S5",
+      "parentId": 52
+    },
+    {
+      "id": 56,
+      "image": "./images/htc.png",
+      "text": "HTC",
+      "parentId": 1
+    },
+    {
+      "id": 57,
+      "image": "./images/samsung-galaxy-s5-neo.png",
+      "text": "Samsung Galaxy S5 Neo",
+      "parentId": 56
+    },
+    {
+      "id": 58,
+      "image": "./images/samsung-galaxy-s5-active.png",
+      "text": "Samsung Galaxy S5 Active",
+      "parentId": 56
+    },
+    {
+      "id": 59,
+      "image": "./images/samsung-galaxy-s5.png",
+      "text": "Samsung Galaxy S5",
+      "parentId": 56
+    },
+    {
+      "id": 60,
+      "image": "./images/huawei.png",
+      "text": "Huawei",
+      "parentId": 1
+    },
+    {
+      "id": 61,
+      "image": "./images/samsung-galaxy-s5-neo.png",
+      "text": "Samsung Galaxy S5 Neo",
+      "parentId": 60
+    },
+    {
+      "id": 62,
+      "image": "./images/samsung-galaxy-s5-active.png",
+      "text": "Samsung Galaxy S5 Active",
+      "parentId": 60
+    },
+    {
+      "id": 63,
+      "image": "./images/samsung-galaxy-s5.png",
+      "text": "Samsung Galaxy S5",
+      "parentId": 60
+    },
+    {
+      "id": 64,
+      "image": "./images/other.png",
+      "text": "...Other",
+      "parentId": 1
+    },
+    {
+      "id": 65,
+      "image": "./images/samsung-galaxy-s5-neo.png",
+      "text": "Samsung Galaxy S5 Neo",
+      "parentId": 64
+    },
+    {
+      "id": 66,
+      "image": "./images/samsung-galaxy-s5-active.png",
+      "text": "Samsung Galaxy S5 Active",
+      "parentId": 64
+    },
+    {
+      "id": 67,
+      "image": "./images/samsung-galaxy-s5.png",
+      "text": "Samsung Galaxy S5",
+      "parentId": 64
+    },
+    {
+      "id": 68,
+      "image": "./images/iPhone.png",
+      "text": "iPhone"
+    },
+    {
+      "id": 69,
+      "image": "./images/samsung-galaxy-s5-neo.png",
+      "text": "Samsung Galaxy S5 Neo",
+      "parentId": 68
+    },
+    {
+      "id": 70,
+      "image": "./images/samsung-galaxy-s5-active.png",
+      "text": "Samsung Galaxy S5 Active",
+      "parentId": 68
+    },
+    {
+      "id": 71,
+      "image": "./images/samsung-galaxy-s5.png",
+      "text": "Samsung Galaxy S5",
+      "parentId": 68
+    },
+    {
+      "id": 72,
+      "image": "./images/tablet.png",
+      "text": "Tablet"
+    },
+    {
+      "id": 73,
+      "image": "./images/samsung-galaxy-s5-neo.png",
+      "text": "Samsung Galaxy S5 Neo",
+      "parentId": 72
+    },
+    {
+      "id": 74,
+      "image": "./images/samsung-galaxy-s5-active.png",
+      "text": "Samsung Galaxy S5 Active",
+      "parentId": 72
+    },
+    {
+      "id": 75,
+      "image": "./images/samsung-galaxy-s5.png",
+      "text": "Samsung Galaxy S5",
+      "parentId": 72
+    },
+    {
+      "id": 76,
+      "image": "./images/computer.png",
+      "text": "Computer"
+    },
+    {
+      "id": 77,
+      "image": "./images/samsung-galaxy-s5-neo.png",
+      "text": "Samsung Galaxy S5 Neo",
+      "parentId": 76
+    },
+    {
+      "id": 78,
+      "image": "./images/samsung-galaxy-s5-active.png",
+      "text": "Samsung Galaxy S5 Active",
+      "parentId": 76
+    },
+    {
+      "id": 79,
+      "image": "./images/samsung-galaxy-s5.png",
+      "text": "Samsung Galaxy S5",
+      "parentId": 76
+    },
+    {
+      "id": 80,
+      "image": "./images/game-console.png",
+      "text": "Game Console"
+    },
+    {
+      "id": 81,
+      "image": "./images/samsung-galaxy-s5-neo.png",
+      "text": "Samsung Galaxy S5 Neo",
+      "parentId": 80
+    },
+    {
+      "id": 82,
+      "image": "./images/samsung-galaxy-s5-active.png",
+      "text": "Samsung Galaxy S5 Active",
+      "parentId": 80
+    },
+    {
+      "id": 83,
+      "image": "./images/samsung-galaxy-s5.png",
+      "text": "Samsung Galaxy S5",
+      "parentId": 80
+    },
+    {
+      "id": 84,
+      "image": "./images/apple-watch.png",
+      "text": "Apple Watch"
+    },
+    {
+      "id": 85,
+      "image": "./images/samsung-galaxy-s5-neo.png",
+      "text": "Samsung Galaxy S5 Neo",
+      "parentId": 84
+    },
+    {
+      "id": 86,
+      "image": "./images/samsung-galaxy-s5-active.png",
+      "text": "Samsung Galaxy S5 Active",
+      "parentId": 84
+    },
+    {
+      "id": 87,
+      "image": "./images/samsung-galaxy-s5.png",
+      "text": "Samsung Galaxy S5",
+      "parentId": 84
+    }
+  ]
+}
