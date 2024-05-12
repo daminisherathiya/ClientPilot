@@ -50,10 +50,13 @@ function filterEntries(searchTerm, data, itemsMap) {
 
   return data.filter((item) => ancestorSet.has(item.id));
 }
-
+let dataCache = {};
 $(".dropdown-tree-select2")
   .select2({
+    placeholder: "Enter a device",
     closeOnSelect: false,
+    selectionCssClass: 'dropdown-tree-select2-selection border-input',
+    dropdownCssClass: 'dropdown-tree-select2-dropdown dropdown-tree-select2-devices-dropdown',
     ajax: {
       url: "https://client-pilot-default-rtdb.firebaseio.com/phones.json",
       dataType: "json",
@@ -86,6 +89,25 @@ $(".dropdown-tree-select2")
 
         return { results: filteredData };
       },
+      transport: function (params, success, failure) {
+        var $request;
+        var term = params.data.q || "";
+        if (term in dataCache) {
+          // If the data is cached, return the cached data
+          success(dataCache[term]);
+          return;
+        }
+
+        // If the data is not cached, make the AJAX request
+        $request = $.ajax(params);
+        $request.then(function (data) {
+          // Store the data in cache
+          dataCache[term] = data;
+          success(data);
+        });
+        $request.fail(failure);
+        return $request;
+      },
       cache: true,
     },
     templateResult: formatItem,
@@ -98,14 +120,14 @@ $(".dropdown-tree-select2")
     const ancestorText = [];
     const ancestorSet = new Set();
     let $ancestor = $dropdownContainer.find(
-      "span[data-id='" + selectedData.id + "']"
+      "div[data-id='" + selectedData.id + "']"
     );
     while ($ancestor) {
       ancestorText.push($ancestor.text());
       ancestorSet.add($ancestor.attr("data-id"));
       if ($ancestor.attr("data-parent-id")) {
         $ancestor = $dropdownContainer.find(
-          "span[data-id='" + $ancestor.attr("data-parent-id") + "']"
+          "div[data-id='" + $ancestor.attr("data-parent-id") + "']"
         );
       } else {
         $ancestor = null;
@@ -113,37 +135,37 @@ $(".dropdown-tree-select2")
     }
     console.log(ancestorText);
 
-    $dropdownContainer.find("span[data-id]").each(function () {
+    $dropdownContainer.find("div[data-id]").each(function () {
       const id = $(this).attr("data-id");
       const parentId = $(this).attr("data-parent-id");
-      $(this).find("img").removeClass("rotate-180deg");
+      $(this).find("img.arrow-down").removeClass("rotate-180deg");
 
       if (parentId && !ancestorSet.has(id) && !ancestorSet.has(parentId)) {
         $(this).addClass("d-none");
       }
       if (ancestorSet.has(id)) {
-        $(this).find("img").addClass("rotate-180deg");
+        $(this).find("img.arrow-down").addClass("rotate-180deg");
       }
     });
 
     if (selectedData.numberOfChildren) {
       const numberOfHiddenChildren = $dropdownContainer.find(
-        "span[data-parent-id='" + selectedData.id + "'].d-none"
+        "div[data-parent-id='" + selectedData.id + "'].d-none"
       ).length;
       if (numberOfHiddenChildren) {
         $dropdownContainer
-          .find("span[data-parent-id='" + selectedData.id + "']")
+          .find("div[data-parent-id='" + selectedData.id + "']")
           .removeClass("d-none");
-          $dropdownContainer.find(
-            "span[data-id='" + selectedData.id + "'] img"
-          ).addClass("rotate-180deg");
+        $dropdownContainer.find(
+          "div[data-id='" + selectedData.id + "'] img.arrow-down"
+        ).addClass("rotate-180deg");
       } else {
         $dropdownContainer
-          .find("span[data-parent-id='" + selectedData.id + "']")
+          .find("div[data-parent-id='" + selectedData.id + "']")
           .addClass("d-none");
-          $dropdownContainer.find(
-            "span[data-id='" + selectedData.id + "'] img"
-          ).removeClass("rotate-180deg");
+        $dropdownContainer.find(
+          "div[data-id='" + selectedData.id + "'] img.arrow-down"
+        ).removeClass("rotate-180deg");
       }
       e.preventDefault();
     }
@@ -157,7 +179,7 @@ $(".dropdown-tree-select2")
       .map(function (text) {
         return "<span>" + text + "</span>";
       })
-      .join(" <span>&gt;</span> ");
+      .join(" <span class='px-2'>&gt;</span> ");
     $breadcrumb.html(breadcrumbHtml);
   });
 
@@ -168,18 +190,25 @@ function formatItem(item) {
   }
 
   const img = $("<img>", {
-    class: "item-image",
+    class: "item-image me-4",
     src: item.image,
   });
-  const $item = $("<span>")
+  const $item1 = $("<div>", {
+    class: "py-2"
+  })
     .append(img)
-    .append(item.text)
+    .append(item.text);
+  const $item = $("<div>", {
+    class: "d-flex justify-content-between"
+  })
+    .append($item1)
     .addClass("indent-" + item.numberOfAncestors)
     .attr("data-id", item.id)
     .attr("data-parent-id", item.parentId);
 
   if (item.numberOfChildren) {
     const arrow = $("<img>", {
+      class: "arrow-down roted-0deg",
       src: "./images/arrow-down.svg",
     });
     $item.append(arrow);
