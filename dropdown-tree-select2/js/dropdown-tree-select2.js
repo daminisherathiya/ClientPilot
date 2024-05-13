@@ -1,4 +1,4 @@
-function getBorderItem(numberOfAncestors, type="first"){
+function getBorderItem(numberOfAncestors, type = "first") {
   let $item = null;
 
   if (type === "first") {
@@ -9,7 +9,7 @@ function getBorderItem(numberOfAncestors, type="first"){
     $item = $("<div>", {
       class: "vertical-line end-horizontal-line horizontal-line ps-0"
     }).append($item);
-  } else if (type === "middle"){
+  } else if (type === "middle") {
     $item = $("<div>", {
       class: "vertical-line horizontal-line ps-0"
     }).append($item);
@@ -46,12 +46,14 @@ function addNumberOfAncestorsAndNumberOfChildren(items, itemsMap) {
     item.lastChildId = null;
     item.isFirstChild = false;
     item.isLastChild = false;
+    item.parentIsFirstChild = false;
     item.parentIsLastChild = false;
   });
   itemsMap[rootId] = {
     firstChildId: null,
     lastChildId: null,
-    parentIsLastChild: null,
+    parentIsFirstChild: false,
+    parentIsLastChild: false,
   };
 
   const countAncestors = (item) => {
@@ -86,6 +88,9 @@ function addNumberOfAncestorsAndNumberOfChildren(items, itemsMap) {
     }
   });
   items.forEach((item) => {
+    if (itemsMap[item.parentId || rootId].isFirstChild) {
+      itemsMap[item.id].parentIsFirstChild = true;
+    }
     if (itemsMap[item.parentId || rootId].isLastChild) {
       itemsMap[item.id].parentIsLastChild = true;
     }
@@ -117,7 +122,7 @@ let dataCache = {};
 $(".dropdown-tree-select2")
   .select2({
     placeholder: "Enter a device",
-    closeOnSelect: false,
+    // closeOnSelect: false,
     selectionCssClass: 'dropdown-tree-select2-selection border-input',
     dropdownCssClass: 'dropdown-tree-select2-dropdown dropdown-tree-select2-devices-dropdown',
     ajax: {
@@ -268,7 +273,7 @@ function formatItem(item) {
   })
     .append($itemImg)
     .append(item.text);
-  
+
   const $itemInfoAndArrow = $("<div>", {
     class: "d-flex justify-content-between"
   }).append($itemInfo);
@@ -277,9 +282,12 @@ function formatItem(item) {
       class: "arrow-down roted-0deg",
       src: "./images/arrow-down.svg",
     });
-    $itemInfoAndArrow.append(arrow);
+    const $imgDiv = $("<div>", {
+      class: "d-flex justify-content-center align-items-center",
+    }).append(arrow);
+    $itemInfoAndArrow.append($imgDiv);
   }
-  
+
   const $item = $("<div>", {
     class: "position-relative"
   })
@@ -289,15 +297,19 @@ function formatItem(item) {
     .attr("data-parent-id", item.parentId);
 
   if (item.numberOfChildren) {
-    if (item.isFirstChild) {
-      $item.prepend(getBorderItem(item.numberOfAncestors, "first"));
-    } else if (item.isLastChild) {
-      $item.prepend(getBorderItem(item.numberOfAncestors, "last"));
-    } else {
-      $item.prepend(getBorderItem(item.numberOfAncestors, "middle"));
+    if (!(item.isFirstChild && item.isLastChild)) {
+      if (item.isFirstChild) {
+        $item.prepend(getBorderItem(item.numberOfAncestors, "first"));
+      } else if (item.isLastChild) {
+        $item.prepend(getBorderItem(item.numberOfAncestors, "last"));
+      } else {
+        $item.prepend(getBorderItem(item.numberOfAncestors, "middle"));
+      }
     }
   } else {
-    $item.prepend(getBorderItem(item.numberOfAncestors - (item.parentIsLastChild ? 1 : 0), "leaf"));
+    if (!(item.parentIsFirstChild && item.parentIsLastChild)) {
+      $item.prepend(getBorderItem(item.numberOfAncestors - (item.parentIsLastChild ? 1 : 0), "leaf"));
+    }
   }
 
   if (item.parentId) {
