@@ -1,3 +1,14 @@
+function setBreadcrumb($dropdownContainer, ancestorTextList){
+  const $breadcrumb = $dropdownContainer.find(".breadcrumb");
+  const breadcrumbHtml = ancestorTextList
+    .reverse()
+    .map(function (text) {
+      return "<span>" + text + "</span>";
+    })
+    .join(" <span class='px-2'>&gt;</span> ");
+  $breadcrumb.html(breadcrumbHtml);
+}
+
 function getBorderItem(numberOfAncestors, type = "first") {
   let $item = null;
 
@@ -121,6 +132,7 @@ function filterEntries(searchTerm, data, itemsMap) {
 let dataCache = {};
 $(".dropdown-tree-select2")
   .select2({
+    width: "100%",
     placeholder: "Enter a device",
     // closeOnSelect: false,
     selectionCssClass: 'dropdown-tree-select2-selection border-input',
@@ -135,6 +147,7 @@ $(".dropdown-tree-select2")
         };
       },
       processResults: function (data, params) {
+        setBreadcrumb($(this.container.$dropdown), ["Category"]);
         // console.log("dataCache", dataCache);
         // console.log("data", data);
 
@@ -194,13 +207,13 @@ $(".dropdown-tree-select2")
     const selectedData = e.params.args.data;
     var $dropdownContainer = $(this).data("select2").$dropdown;
 
-    const ancestorText = [];
+    const ancestorTextList = [];
     const ancestorSet = new Set();
     let $ancestor = $dropdownContainer.find(
       "div[data-id='" + selectedData.id + "']"
     );
     while ($ancestor) {
-      ancestorText.push($ancestor.text());
+      ancestorTextList.push($ancestor.text());
       ancestorSet.add($ancestor.attr("data-id"));
       if ($ancestor.attr("data-parent-id")) {
         $ancestor = $dropdownContainer.find(
@@ -210,8 +223,8 @@ $(".dropdown-tree-select2")
         $ancestor = null;
       }
     }
-    ancestorText.push("Category");
-    // console.log(ancestorText);
+    ancestorTextList.push("Category");
+    // console.log(ancestorTextList);
 
     $dropdownContainer.find("div[data-id]").each(function () {
       const id = $(this).attr("data-id");
@@ -248,14 +261,7 @@ $(".dropdown-tree-select2")
       e.preventDefault();
     }
 
-    const $breadcrumb = $dropdownContainer.find(".breadcrumb");
-    const breadcrumbHtml = ancestorText
-      .reverse()
-      .map(function (text) {
-        return "<span>" + text + "</span>";
-      })
-      .join(" <span class='px-2'>&gt;</span> ");
-    $breadcrumb.html(breadcrumbHtml);
+    setBreadcrumb($dropdownContainer, ancestorTextList);
   });
 
 // Function to format item display in dropdown
