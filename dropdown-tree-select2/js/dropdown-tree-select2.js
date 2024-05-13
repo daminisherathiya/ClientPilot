@@ -1,3 +1,35 @@
+function getBorderItem(numberOfAncestors, type="first"){
+  let $item = null;
+
+  if (type === "first") {
+    $item = $("<div>", {
+      class: "vertical-line start-horizontal-line horizontal-line ps-0"
+    }).append($item);
+  } else if (type === "last") {
+    $item = $("<div>", {
+      class: "vertical-line end-horizontal-line horizontal-line ps-0"
+    }).append($item);
+  } else if (type === "middle"){
+    $item = $("<div>", {
+      class: "vertical-line horizontal-line ps-0"
+    }).append($item);
+  } else {  // leaf
+    $item = $("<div>", {
+      class: "ps-3 ps-lg-5"
+    }).append($item);
+  }
+
+  for (let i = 0; i < numberOfAncestors; i++) {
+    $item = $("<div>", {
+      class: "vertical-line ps-3 ps-lg-5"
+    }).append($item);
+  }
+
+  $item.addClass("position-absolute left-0");
+
+  return $item;
+}
+
 function setUpItemsMap(items, itemsMap) {
   items.forEach((item) => {
     itemsMap[item.id] = item;
@@ -5,10 +37,22 @@ function setUpItemsMap(items, itemsMap) {
 }
 
 function addNumberOfAncestorsAndNumberOfChildren(items, itemsMap) {
+  const rootId = "-1";
+
   items.forEach((item) => {
     item.numberOfAncestors = 0;
     item.numberOfChildren = 0;
+    item.firstChildId = null;
+    item.lastChildId = null;
+    item.isFirstChild = false;
+    item.isLastChild = false;
+    item.parentIsLastChild = false;
   });
+  itemsMap[rootId] = {
+    firstChildId: null,
+    lastChildId: null,
+    parentIsLastChild: null,
+  };
 
   const countAncestors = (item) => {
     let count = 0;
@@ -27,7 +71,26 @@ function addNumberOfAncestorsAndNumberOfChildren(items, itemsMap) {
     if (item.parentId) {
       itemsMap[item.parentId].numberOfChildren++;
     }
+    if (!itemsMap[item.parentId || rootId]) {
+      console.log(item);
+    }
+    if (!itemsMap[item.parentId || rootId].firstChildId) {
+      itemsMap[item.parentId || rootId].firstChildId = item.id;
+      item.isFirstChild = true;
+    }
+    itemsMap[item.parentId || rootId].lastChildId = item.id;
   });
+  items.forEach((item) => {
+    if (item.id === itemsMap[item.parentId || rootId].lastChildId) {
+      item.isLastChild = true;
+    }
+  });
+  items.forEach((item) => {
+    if (itemsMap[item.parentId || rootId].isLastChild) {
+      itemsMap[item.id].parentIsLastChild = true;
+    }
+  });
+  delete itemsMap[rootId];
 }
 
 function collectAncestors(item, itemsMap, ancestorSet) {
@@ -67,6 +130,7 @@ $(".dropdown-tree-select2")
         };
       },
       processResults: function (data, params) {
+        // console.log("dataCache", dataCache);
         // console.log("data", data);
 
         const itemsMap = {};
@@ -90,19 +154,17 @@ $(".dropdown-tree-select2")
         return { results: filteredData };
       },
       transport: function (params, success, failure) {
-        var $request;
-        var term = params.data.q || "";
-        if (term in dataCache) {
-          // If the data is cached, return the cached data
-          success(dataCache[term]);
+        const term = params.data.q || "";
+        const cacheId = params.url;
+
+        if (cacheId in dataCache) {
+          success(dataCache[cacheId]);
           return;
         }
 
-        // If the data is not cached, make the AJAX request
-        $request = $.ajax(params);
+        const $request = $.ajax(params);
         $request.then(function (data) {
-          // Store the data in cache
-          dataCache[term] = data;
+          dataCache[cacheId] = data;
           success(data);
         });
         $request.fail(failure);
@@ -112,6 +174,16 @@ $(".dropdown-tree-select2")
     },
     templateResult: formatItem,
     templateSelection: formatItemSelection,
+  })
+  .on("select2:open", function (e) {
+    var $searchField = $(".select2-search__field");
+    $searchField.prop("placeholder", "Search for a device");
+
+    var $dropdownContainer = $(this).data("select2").$dropdown;
+    $dropdownContainer.find(".breadcrumb").remove();
+    const $breadcrumb = $('<div class="breadcrumb">Category</div>').prependTo(
+      $dropdownContainer.find(".select2-results")
+    );
   })
   .on("select2:selecting", function (e) {
     const selectedData = e.params.args.data;
@@ -133,7 +205,8 @@ $(".dropdown-tree-select2")
         $ancestor = null;
       }
     }
-    console.log(ancestorText);
+    ancestorText.push("Category");
+    // console.log(ancestorText);
 
     $dropdownContainer.find("div[data-id]").each(function () {
       const id = $(this).attr("data-id");
@@ -170,10 +243,7 @@ $(".dropdown-tree-select2")
       e.preventDefault();
     }
 
-    $dropdownContainer.find(".breadcrumb").remove();
-    const $breadcrumb = $('<div class="breadcrumb"></div>').prependTo(
-      $dropdownContainer.find(".select2-results__options")
-    );
+    const $breadcrumb = $dropdownContainer.find(".breadcrumb");
     const breadcrumbHtml = ancestorText
       .reverse()
       .map(function (text) {
@@ -189,29 +259,45 @@ function formatItem(item) {
     return item.text;
   }
 
-  const img = $("<img>", {
+  const $itemImg = $("<img>", {
     class: "item-image me-4",
     src: item.image,
   });
-  const $item1 = $("<div>", {
+  const $itemInfo = $("<div>", {
     class: "py-2"
   })
-    .append(img)
+    .append($itemImg)
     .append(item.text);
-  const $item = $("<div>", {
+  
+  const $itemInfoAndArrow = $("<div>", {
     class: "d-flex justify-content-between"
-  })
-    .append($item1)
-    .addClass("indent-" + item.numberOfAncestors)
-    .attr("data-id", item.id)
-    .attr("data-parent-id", item.parentId);
-
+  }).append($itemInfo);
   if (item.numberOfChildren) {
     const arrow = $("<img>", {
       class: "arrow-down roted-0deg",
       src: "./images/arrow-down.svg",
     });
-    $item.append(arrow);
+    $itemInfoAndArrow.append(arrow);
+  }
+  
+  const $item = $("<div>", {
+    class: "position-relative"
+  })
+    .append($itemInfoAndArrow)
+    .addClass("indent-" + item.numberOfAncestors)
+    .attr("data-id", item.id)
+    .attr("data-parent-id", item.parentId);
+
+  if (item.numberOfChildren) {
+    if (item.isFirstChild) {
+      $item.prepend(getBorderItem(item.numberOfAncestors, "first"));
+    } else if (item.isLastChild) {
+      $item.prepend(getBorderItem(item.numberOfAncestors, "last"));
+    } else {
+      $item.prepend(getBorderItem(item.numberOfAncestors, "middle"));
+    }
+  } else {
+    $item.prepend(getBorderItem(item.numberOfAncestors - (item.parentIsLastChild ? 1 : 0), "leaf"));
   }
 
   if (item.parentId) {

@@ -108,6 +108,9 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
+.left-0 {
+  left: 0;
+}
 
 .rotate-180deg {
   transform: rotate(-180deg) !important;
@@ -193,7 +196,7 @@ body {
 .select2-container--default .dropdown-tree-select2-dropdown .select2-results ul.select2-results__options .select2-results__option--selected {
   background-color: #fff4ec;
 }
-.select2-container--default .dropdown-tree-select2-dropdown .select2-results ul.select2-results__options .breadcrumb {
+.select2-container--default .dropdown-tree-select2-dropdown .select2-results .breadcrumb {
   padding: 0 1.0625rem 1.0625rem 1.0625rem;
   position: sticky;
   top: 0;
