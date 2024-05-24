@@ -173,19 +173,23 @@ $(".dropdown-tree-select2")
       },
       transport: function (params, success, failure) {
         const term = params.data.q || "";
-        const cacheId = params.url;
+        const queryParams = new URLSearchParams({ q: term });
+        const cacheId = `${params.url}?${queryParams.toString()}`;
 
-        if (cacheId in dataCache) {
+        if (dataCache[cacheId]) {
           success(dataCache[cacheId]);
           return;
         }
 
         const $request = $.ajax(params);
-        $request.then(function (data) {
+
+        $request.done(function (data) {
           dataCache[cacheId] = data;
           success(data);
         });
+
         $request.fail(failure);
+
         return $request;
       },
       cache: true,
